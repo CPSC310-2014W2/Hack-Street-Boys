@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'httparty'
+
+gem 'orchestrate'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'

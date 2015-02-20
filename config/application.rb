@@ -22,5 +22,11 @@ module Weathr
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    
+    # Adding the orchestrate.io configuration file
+    # Orchestrate::Application::Connect.config "./lib/orchestrate_config.json";
+    
+    # Orchestrate::Rails::Schema.load "./db/schema.rb";
+    
   end
 end
