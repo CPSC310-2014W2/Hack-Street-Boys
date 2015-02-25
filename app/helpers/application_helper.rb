@@ -6,31 +6,38 @@ module ApplicationHelper
   
   class OpenWeather
     
-    OPEN_WEATHER_KEY = "2b666c53a585682c20061ba22333b137";
+    OPEN_WEATHER_URL = 'http://api.openweathermap.org/data/2.5/';
+    OPEN_WEATHER_KEY = '2b666c53a585682c20061ba22333b137';
     
     # REQUIRE: cityId is a valid city id as defined by Open Weather API
     # EFFECT : return a hash map containing weather data of the given city, in Open Weather API format (in Open Weather API format)
     def self.getCityCurrentWeather ( cityId )
-      open_weather_url = 'http://api.openweathermap.org/data/2.5/weather?id=' + cityId.to_s + '&APPID=' + OPEN_WEATHER_KEY;
-      return JSON.parse( HTTParty.get( open_weather_url.to_s ).to_json, :symbolize_names => true );
+      url = OPEN_WEATHER_URL + 'weather?' + 'id=' + cityId.to_s + '&APPID=' + OPEN_WEATHER_KEY;
+      return getJSONData( url );
     end
     
-    # REQUIRE: valid centralCityLat (latitude) and centralCityLon (longitude), cityCount > 0
-    # EFFECT : return a hash map containing weather data of [cityCount] number cities centering around the central city (in Open Weather API format)
+    # REQUIRE: valid latitude and longitude for a city, cityCount > 0
+    # EFFECT : return a hash map containing weather data of [cityCount] number of cities centering around the central city (in Open Weather API format)
     def self.getCitiesCurrentWeather ( centralCityLat, centralCityLon, cityCount )
-      open_weather_url = 'http://api.openweathermap.org/data/2.5/find?lat=' + centralCityLat.to_s + '&lon=' + centralCityLon.to_s + '&cnt=' + cityCount.to_s + '&APPID=' + OPEN_WEATHER_KEY;
-      return JSON.parse( HTTParty.get( open_weather_url.to_s ).to_json, :symbolize_names => true )
+      url = OPEN_WEATHER_URL + 'find?' + 'lat=' + centralCityLat.to_s + '&lon=' + centralCityLon.to_s + '&cnt=' + cityCount.to_s + '&APPID=' + OPEN_WEATHER_KEY;
+      return getJSONData( url );
     end
     
     # REQUIRE: valid latitude and longitude for a city
-    # EFFECT : return a hash map containing weather forecase data for a particular city with given latitude and longitude
+    # EFFECT : return a hash map containing 16 days weather forecase data for a particular city with given latitude and longitude (in Open Weather API format)
     def self.getCitiesForecastWeather ( cityLat, cityLon )
-      open_weather_url = 'http://api.openweathermap.org/data/2.5/forecast/daily?lat=' + cityLat.to_s + '&lon=' + cityLon.to_s + '&cnt=16&mode=json&APPID=' + OPEN_WEATHER_KEY;
-      return JSON.parse( HTTParty.get( open_weather_url.to_s ).to_json, :symbolize_names => true )
+      url = OPEN_WEATHER_URL + 'forecast/daily?' + 'lat=' + cityLat.to_s + '&lon=' + cityLon.to_s + '&cnt=16&mode=json&APPID=' + OPEN_WEATHER_KEY;
+      return getJSONData( url );
+    end
+    
+    # REQUIRE: valid url for a open weather data request
+    # EFFECT : return a hash map containing open weather data
+    def self.getJSONData ( url )
+      return JSON.parse( HTTParty.get( url.to_s ).to_json, :symbolize_names => true )
     end
     
   end
-  
+
   class OrchestrateDatabase
     
     ORC_API_KEY = "f72b43bb-175a-49ea-826e-dded02aa73f6";
@@ -55,6 +62,10 @@ module ApplicationHelper
       }
     end
     
+    # REQUIRE: cityLat  : the latitude of the central cit
+    #          cityLon  : the longitude of the central city;
+    # EFFECT : Store weather data in Orchestrate.io database in simplied format 
+    #           - (only fields we need: see https://github.com/CPSC310-2014W2/Hack-Street-Boys/issues/24)
     def self.storeCitiesForecastWeather ( cityLat, cityLon )
       client = Orchestrate::Client.new( ORC_API_KEY );
       weatherForecastData = OpenWeather.getCitiesForecastWeather( cityLat, cityLon );
@@ -94,7 +105,8 @@ module ApplicationHelper
       return orc_weather_forecast_data;
     end
     
-    # Helper of convertCityForecastWeather - convert individual forecast weather day for a particular day
+    # REQUIRE: A hash map containing 16 days weather forecast data for a particular city on a particular day
+    # EFFECT : Simplify the weather forecast data for storage to Orchestrate.io database
     def self.convertDailyForecastHelper ( daily_forecast_hash )
       orc_weather_forecast_arr = Array.new;
       daily_forecast_hash.each{ |daily_forecast|
@@ -122,16 +134,19 @@ module ApplicationHelper
   
   class Geocoder
     
+    GOOGLE_URL = 'https://maps.googleapis.com/maps/api/geocode/json?';
     GGEOCODE_API_KEY = "AIzaSyBLpS5MvC4fvI_erjfj7M8gmFXkq_O5aso";
+    INVALID_LAT = 999;
+    INVALID_LNG = 999;
     
     # REQUIRE: An address string
     # EFFECT : return the geocode of the address 
     #           -> ( return { :lat => 999, :lng => 999} if the address string cannot be understood by Google geocode)
     def self.getLatLon ( address )
-      g_geocode_url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + address.to_s.gsub(/\s/,'+') + '&key=' + GGEOCODE_API_KEY;
+      g_geocode_url = GOOGLE_URL + 'address=' + address.to_s.gsub(/\s/,'+') + '&key=' + GGEOCODE_API_KEY;
       response = JSON.parse( HTTParty.get( g_geocode_url.to_s ).to_json, :symbolize_names => true )[:results];
       if ( response == [] )
-        lagLon = { :lat => 999, :lng => 999};
+        lagLon = { :lat => INVALID_LAT, :lng => INVALID_LNG};
       else
         lagLon = response[0][:geometry][:location];
       end

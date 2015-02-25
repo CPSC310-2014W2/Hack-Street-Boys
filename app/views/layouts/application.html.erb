@@ -11,7 +11,7 @@
 <div align="right">
 	<div style="width: 90%"></div>
 	<div style="width: 10%" align="center">
-		<%= link_to "login", root_path %>
+		<%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %>
 	</div>
 </div>
 
@@ -20,7 +20,7 @@
 <div align="center" >
 	<%= button_to "Home", root_path, :method => :get, :class => "coloring" %>
 	<div style="width: 2%; display: inline"></div>
-	<%= button_to "Scheduler", root_path, :method => :get, :class => "coloring" %>
+	<%= button_to "Scheduler", schedules_path, :method => :get, :class => "coloring" %>
 	<div style="width: 2%; display: inline"></div>
 	<%= button_to "Favorite Cities", root_path, :method => :get, :class => "coloring" %>
 	<div style="width: 2%; display: inline"></div>
