@@ -41,8 +41,27 @@ module ApplicationHelper
   class OrchestrateDatabase
     
     ORC_API_KEY = "f72b43bb-175a-49ea-826e-dded02aa73f6";
+      
+    # REQUIRE: An unique google user id that is already stored in Orchestrate.io
+    # EFFECT : Retrieve the hash map google user information from Orchestrate.io with the user id as the key
+    #           - Return nil if the key cannot be found
+    def self.getGoogleUserInfo ( userID )
+      client = Orchestrate::Client.new( ORC_API_KEY );
+      response = client.get( :googleuser, userID.to_s );
+    rescue Orchestrate::API::NotFound;
+      return nil;
+    else      
+      return JSON.parse( response.to_json )["body"];
+    end
+    
+    # REQUIRE: A hash map containing google user information and an unique google user id
+    # EFFECT : Store the user information to Orchestrate.io with the user id as the key
+    def self.storeGoogleUser ( userInfo, userID )
+      client = Orchestrate::Client.new( ORC_API_KEY );
+      client.put( :googleuser, userID, userInfo );
+    end 
         
-    # REQUIRE: A hash map containing weather data of the given city (in Open Weather API format)
+    # REQUIRE: A valid open weather API city id
     # EFFECT : Store current weather data of a given city
     def self.storeCityCurrentWeather ( cityId )
       client = Orchestrate::Client.new( ORC_API_KEY );
@@ -136,17 +155,15 @@ module ApplicationHelper
     
     GOOGLE_URL = 'https://maps.googleapis.com/maps/api/geocode/json?';
     GGEOCODE_API_KEY = "AIzaSyBLpS5MvC4fvI_erjfj7M8gmFXkq_O5aso";
-    INVALID_LAT = 999;
-    INVALID_LNG = 999;
     
     # REQUIRE: An address string
     # EFFECT : return the geocode of the address 
-    #           -> ( return { :lat => 999, :lng => 999} if the address string cannot be understood by Google geocode)
+    #           -> ( return nil if the address string cannot be understood by Google geocode)
     def self.getLatLon ( address )
       g_geocode_url = GOOGLE_URL + 'address=' + address.to_s.gsub(/\s/,'+') + '&key=' + GGEOCODE_API_KEY;
       response = JSON.parse( HTTParty.get( g_geocode_url.to_s ).to_json, :symbolize_names => true )[:results];
       if ( response == [] )
-        lagLon = { :lat => INVALID_LAT, :lng => INVALID_LNG};
+        return nil;
       else
         lagLon = response[0][:geometry][:location];
       end

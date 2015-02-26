@@ -1,21 +1,28 @@
 class User
+  include ApplicationHelper;
   
   attr_accessor :provider, :uid, :name, :oauth_token, :oauth_expires_at
   
-  def initialize( auth )
-    @provider = auth.provider;
-    @uid = auth.uid;
-    @name = auth.info.name;
-    @oauth_token = auth.credentials.token;
-    @oauth_expires_at = Time.at( auth.credentials.expires_at );
+  def initialize( userInfo, userID )
     
-    userHash = Hash.new;
-    userHash["provider"] = @provider;
-    userHash["username"] = @name;
-    userHash["token"] = @oauth_token;
-    userHash["expires"] = @oauth_expires_at.to_i;
+    @provider = userInfo["provider"];
+    @uid = userID;
+    @name = userInfo["username"];
+    @oauth_token = userInfo["token"];
+    @oauth_expires_at = userInfo["expires"];
+        
+    OrchestrateDatabase.storeGoogleUser( userInfo, userID );
     
-    puts( userHash );
+  end
+  
+  def self.findGoogleUser( userID )
+    userInfo = OrchestrateDatabase.getGoogleUserInfo( userID );
+    puts( userInfo );
+    if userInfo
+      return User.new( userInfo, userID );
+    else
+      return nil;
+    end
   end
   
 end
