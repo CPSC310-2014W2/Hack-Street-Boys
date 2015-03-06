@@ -10,11 +10,21 @@ class EventsController < ApplicationController
   end
   
   def new
+
+    eventID = "1234";
+    eventInfo = {
+      title: "This is a new event"
+      startTime:
+      endTime:
+      location: "Vancouver"
+    };
+    response = ScheduleItems.createEvent( eventID, eventInfo );
+    render plain: response;
     
   end
   
   def create
-
+    
   end
   
   def self.getEpochTime( event, time_str )
