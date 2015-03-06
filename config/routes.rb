@@ -10,9 +10,14 @@ Rails.application.routes.draw do
   
   root 'home#index'
   
-  resources :schedules
+  resources :events
+  resources :fav_cities
   resources :sessions, only: [:create, :destroy]
-  resource :home, only: [:index]
+  resources :home, only: [:test_google_latlon, :test_current_weather, :test_store_weather_data] do
+    get :test_google_latlon, :on => :collection
+    get :test_current_weather, :on => :collection
+    get :test_store_weather_data, :on => :collection
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

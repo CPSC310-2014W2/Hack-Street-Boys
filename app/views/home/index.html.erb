@@ -1,2 +1,54 @@
 <h1>Home#index</h1>
 <p>Find me in app/views/home/index.html.erb</p>
+
+<p>The current temperature of Vancouver is: <%= @vancouverweather[:main][:temp] - 273.15 %> degree Celsius</p>
+
+<br>
+
+<%= form_for :home, url: test_google_latlon_home_index_path, :method => :get do |f| %>
+  <p>
+    <%= f.label "Address String" %><br>
+    <%= f.text_field :address %>
+  </p>
+  <%= f.submit "Return the latitude and longitude of the address string" %>  
+<% end %>
+
+<br>
+<br>
+
+<%= form_for :home, url: test_current_weather_home_index_path, :method => :get do |f| %>
+  <p>
+    <%= f.label "Latitude of central city" %><br>
+    <%= f.text_field :lat %>
+  </p>
+  <p>
+    <%= f.label "Longitude of central city" %><br>
+    <%= f.text_field :lng %>
+  </p>
+  </p>
+  <p>
+    <%= f.label "Number of cities" %><br>
+    <%= f.text_field :num %>
+  </p>
+  <%= f.submit "Return the current weather of the given number of cities around the given central city" %>  
+<% end %>
+
+<br>
+<br>
+
+<%= form_for :home, url: test_store_weather_data_home_index_path, :method => :get do |f| %>
+  <p>
+    <%= f.label "Latitude of central city" %><br>
+    <%= f.text_field :lat %>
+  </p>
+  <p>
+    <%= f.label "Longitude of central city" %><br>
+    <%= f.text_field :lng %>
+  </p>
+  </p>
+  <p>
+    <%= f.label "Number of cities" %><br>
+    <%= f.text_field :num %>
+  </p>
+  <%= f.submit "Store the current weather of the given number of cities around the given central city to Orchestrate.io" %>  
+<% end %>
