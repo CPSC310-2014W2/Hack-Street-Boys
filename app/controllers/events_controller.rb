@@ -14,7 +14,15 @@ class EventsController < ApplicationController
   end
   
   def new
-    
+    eventID = "1234";
+    eventInfo = {
+      title: "This is a new event",
+      startTime: "12:00",
+      endTime: "1:00",
+      location: "Vancouver" };
+      
+    response = ScheduleItems.createEvent( eventID, eventInfo );
+    render plain: response;
   end
   
   def create
