@@ -10,7 +10,7 @@ class EventsController < ApplicationController
   end
 
   def show
-    @event = Event.find(params[:id])
+
   end
   
   def new
@@ -18,15 +18,7 @@ class EventsController < ApplicationController
   end
   
   def create
-    @event = Event.new(event_params)
- 
-    @event.save
-    redirect_to @event
-  end
-
-  private
-  def article_params
-    params.require(:event).permit(:title, :description)
+    
   end
   
   def self.getEpochTime( event, time_str )
