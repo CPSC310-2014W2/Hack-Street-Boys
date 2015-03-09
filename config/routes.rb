@@ -7,10 +7,18 @@ Rails.application.routes.draw do
   get 'sessions/create'
   get 'sessions/destroy'
   get 'home/index'
+  get 'events/index'
   
   root 'home#index'
-  
-  resources :events
+
+  resources :events, only: [:showEvent, :editEvent, :newEvent, :createEvent, :deleteEvent, :updateEvent] do
+    get :showEvent, :on => :collection
+    get :editEvent, :on => :collection
+    get :newEvent, :on => :collection
+    post :createEvent, :on => :collection
+    post :deleteEvent, :on => :collection
+    post :updateEvent, :on => :collection
+  end
   resources :fav_cities
   resources :sessions, only: [:create, :destroy]
   resources :home, only: [:test_google_latlon, :test_current_weather, :test_store_weather_data] do
