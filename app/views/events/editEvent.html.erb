@@ -1,5 +1,5 @@
 <%= form_for :events, url: updateEvent_events_path, :method => :post do |f| %>
-  <p>
+  <p style="display:none;">
     <%= f.label "Event ID" %><br>
     <%= f.text_field :eventID, :value => @eventID %>
   </p>

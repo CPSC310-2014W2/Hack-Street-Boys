@@ -12,7 +12,10 @@ class EventsController < ApplicationController
   end
 
   def showEvent
-    
+    userID = current_user().uid;
+    @allEvents = ScheduleItems.getAllEvents(userID)["results"];
+
+    render :json => @allEvents
   end
 
   def editEvent

@@ -1,6 +1,6 @@
-<p><%= current_user.name %></p>
+<%= link_to "Back", events_index_path, :method => :get, :class => "coloring" %>
 
-<%= form_for :events, url: new_event_path, :method => :post do |f| %>
+<%= form_for :events, url: createEvent_events_path, :method => :post do |f| %>
   <p>
     <%= f.label "Event Title" %><br>
     <%= f.text_field :title %>
