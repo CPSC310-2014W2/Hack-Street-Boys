@@ -5,17 +5,20 @@ require 'date'
 
 class EventsController < ApplicationController
   include EventsHelper;
+  include ApplicationHelper;
   
   def index
-    userID = current_user().uid;
-    @allEvents = ScheduleItems.getAllEvents(userID)["results"];
+    if current_user() != nil
+      userID = current_user().uid;
+      @allEvents = ScheduleItems.getAllEvents(userID)["results"];
+    end
   end
 
   def showEvent
-    userID = current_user().uid;
-    @allEvents = ScheduleItems.getAllEvents(userID)["results"];
-    
-    render :json => @allEvents
+    if current_user() != nil
+      userID = current_user().uid;
+      allEvents = ScheduleItems.getAllEvents(userID)["results"];
+    end
   end
 
   def editEvent
@@ -37,6 +40,11 @@ class EventsController < ApplicationController
     description = params[:events]["description"];
     userId = current_user().uid;
 
+    latLon = Geocoder.getLatLon( location );
+
+    jsonData = OpenWeather.getCitiesCurrentWeather( latLon[:lat], latLon[:lng], 1 );
+    weatherDesc = jsonData['list'][0]['weather'][0]['description'];
+
     eventInfo = {
       title: title,
       startDate: startDate,
@@ -45,6 +53,7 @@ class EventsController < ApplicationController
       endTime: endTime,
       location: location,
       description: description,
+      weatherDesc: weatherDesc,
       userId: userId
     };
     response = ScheduleItems.createEvent( eventInfo );
