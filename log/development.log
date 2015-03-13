@@ -32300,3 +32300,399 @@ Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::
 
 
 Started GET "/assets/application-17e4801155788a176bbbc02f37563650.js?body=1" for ::1 at 2015-03-08 19:14:45 -0700
+
+
+Started GET "/fav_cities/new" for ::1 at 2015-03-12 20:48:57 -0700
+Processing by FavCitiesController#new as HTML
+  Rendered fav_cities/new.html.erb within layouts/application (37.4ms)
+Completed 200 OK in 2834ms (Views: 2820.7ms)
+
+
+Started POST "/fav_cities" for ::1 at 2015-03-12 20:49:03 -0700
+Processing by FavCitiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h9LMdUkkj2SCcBz4V/d6EhGhSEVAkwqWdbO/Tq+d/x2cFOesJse69HWiEtnoE85PWIsbZnRZj72oYR8rDWOwDw==", "city"=>{"name"=>"Vancouver"}, "commit"=>"Add new favorite city"}
+Redirected to http://localhost:3000/fav_cities
+Completed 302 Found in 2176ms
+
+
+Started GET "/fav_cities" for ::1 at 2015-03-12 20:49:05 -0700
+Processing by FavCitiesController#index as HTML
+  Rendered fav_cities/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 491ms (Views: 343.9ms)
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-12 20:49:06 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-12 20:49:06 -0700
+
+
+Started GET "/assets/application-73af4000bf7acd7087e8fd41a581e942.css?body=1" for ::1 at 2015-03-12 20:49:06 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-12 20:49:06 -0700
+
+
+Started GET "/assets/schedules-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-12 20:49:06 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-12 20:49:06 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-12 20:49:06 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-12 20:49:06 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-12 20:49:06 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-12 20:49:06 -0700
+
+
+Started GET "/assets/application-17e4801155788a176bbbc02f37563650.js?body=1" for ::1 at 2015-03-12 20:49:06 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-12 20:49:06 -0700
+
+
+Started GET "/assets/schedules-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-12 20:49:06 -0700
+
+
+Started GET "/fav_cities/new" for ::1 at 2015-03-12 20:49:35 -0700
+Processing by FavCitiesController#new as HTML
+  Rendered fav_cities/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 826ms (Views: 825.3ms)
+
+
+Started POST "/fav_cities" for ::1 at 2015-03-12 20:49:39 -0700
+Processing by FavCitiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+O/Kgl14ZP8H1seFtGXMSRJvEI4fEkTtPc16HvljGMvjKeFbMptRb/AEyaQLgXgUW0VDrSvYwcbgH9p7W51X2Q==", "city"=>{"name"=>"Vancouver"}, "commit"=>"Add new favorite city"}
+Redirected to http://localhost:3000/fav_cities
+Completed 302 Found in 1054ms
+
+
+Started GET "/fav_cities" for ::1 at 2015-03-12 20:49:40 -0700
+Processing by FavCitiesController#index as HTML
+  Rendered fav_cities/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 589ms (Views: 455.7ms)
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-12 20:49:41 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-12 20:49:41 -0700
+
+
+Started GET "/assets/schedules-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-12 20:49:41 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-12 20:49:41 -0700
+
+
+Started GET "/assets/application-73af4000bf7acd7087e8fd41a581e942.css?body=1" for ::1 at 2015-03-12 20:49:41 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-12 20:49:41 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-12 20:49:41 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-12 20:49:41 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-12 20:49:41 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-12 20:49:41 -0700
+
+
+Started GET "/assets/schedules-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-12 20:49:41 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-12 20:49:41 -0700
+
+
+Started GET "/assets/application-17e4801155788a176bbbc02f37563650.js?body=1" for ::1 at 2015-03-12 20:49:41 -0700
+
+
+Started GET "/fav_cities/new" for ::1 at 2015-03-12 20:51:31 -0700
+Processing by FavCitiesController#new as HTML
+  Rendered fav_cities/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 919ms (Views: 917.9ms)
+
+
+Started POST "/fav_cities" for ::1 at 2015-03-12 20:51:35 -0700
+Processing by FavCitiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"59HAw3zs/ZohetbgrSpByrVFLHY50fBHyS7UdIwgzez8F+saEw/ICtao2MESzvWX/G9/VQ0bdWwU/HQRLt6C/g==", "city"=>{"name"=>"Vancouver"}, "commit"=>"Add new favorite city"}
+Completed 500 Internal Server Error in 772ms
+
+NameError (undefined local variable or method `favoriteCity' for FavCitiesHelper::Database:Class):
+  app/helpers/fav_cities_helper.rb:16:in `storeFavoriteCity'
+  app/controllers/fav_cities_controller.rb:31:in `create'
+
+
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.2ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.4ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (153.1ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (109.6ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (228.5ms)
+
+
+Started POST "/fav_cities" for ::1 at 2015-03-12 20:51:55 -0700
+Processing by FavCitiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j3X5tEJQL7KSNrQdTRoO2TPb1AyRZGPuDEocSjQ4h4eUs9JtLbMaImXkujzy/rqEevGHL6Wu5sXRmLwvlsbIlQ==", "city"=>{"name"=>"Vancouver"}, "commit"=>"Add new favorite city"}
+Redirected to http://localhost:3000/fav_cities
+Completed 302 Found in 4656ms
+
+
+Started GET "/fav_cities" for ::1 at 2015-03-12 20:52:00 -0700
+Processing by FavCitiesController#index as HTML
+  Rendered fav_cities/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 742ms (Views: 605.3ms)
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-12 20:52:01 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-12 20:52:01 -0700
+
+
+Started GET "/assets/schedules-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-12 20:52:01 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-12 20:52:01 -0700
+
+
+Started GET "/assets/application-73af4000bf7acd7087e8fd41a581e942.css?body=1" for ::1 at 2015-03-12 20:52:01 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-12 20:52:01 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-12 20:52:01 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-12 20:52:01 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-12 20:52:01 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-12 20:52:01 -0700
+
+
+Started GET "/assets/schedules-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-12 20:52:01 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-12 20:52:01 -0700
+
+
+Started GET "/assets/application-17e4801155788a176bbbc02f37563650.js?body=1" for ::1 at 2015-03-12 20:52:01 -0700
+
+
+Started GET "/fav_cities/new" for ::1 at 2015-03-12 20:54:33 -0700
+Processing by FavCitiesController#new as HTML
+  Rendered fav_cities/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 778ms (Views: 777.1ms)
+
+
+Started POST "/fav_cities" for ::1 at 2015-03-12 20:54:36 -0700
+Processing by FavCitiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ISpt2Ba6Q3z5PT0lZGdxQTNIFbJInJRY7kYL8jkmGlo67EYBeVl27A7vMwTbg8UcemJGkXxWEXMzlKuXm9hVSA==", "city"=>{"name"=>"Vancouver"}, "commit"=>"Add new favorite city"}
+Completed 500 Internal Server Error in 953ms
+
+NameError (undefined local variable or method `relations' for FavCitiesHelper::Database:Class):
+  app/helpers/fav_cities_helper.rb:17:in `storeFavoriteCity'
+  app/controllers/fav_cities_controller.rb:31:in `create'
+
+
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.5ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (70.9ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (157.8ms)
+
+
+Started POST "/fav_cities" for ::1 at 2015-03-12 20:55:11 -0700
+Processing by FavCitiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KOSEU2us5MgT/WTI11ul/C4I8jGZLC/VV969iLH+k9IzIq+KBE/RWOQvaulovxGhZyKhEq3mqv6KDB3tEwDcwA==", "city"=>{"name"=>"Vancouver"}, "commit"=>"Add new favorite city"}
+Redirected to http://localhost:3000/fav_cities
+Completed 302 Found in 1387ms
+
+
+Started GET "/fav_cities" for ::1 at 2015-03-12 20:55:12 -0700
+Processing by FavCitiesController#index as HTML
+  Rendered fav_cities/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 569ms (Views: 441.4ms)
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-12 20:55:13 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-12 20:55:13 -0700
+
+
+Started GET "/assets/schedules-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-12 20:55:13 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-12 20:55:13 -0700
+
+
+Started GET "/assets/application-73af4000bf7acd7087e8fd41a581e942.css?body=1" for ::1 at 2015-03-12 20:55:13 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-12 20:55:13 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-12 20:55:13 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-12 20:55:13 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-12 20:55:13 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-12 20:55:13 -0700
+
+
+Started GET "/assets/schedules-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-12 20:55:13 -0700
+
+
+Started GET "/assets/application-17e4801155788a176bbbc02f37563650.js?body=1" for ::1 at 2015-03-12 20:55:13 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-12 20:55:13 -0700
+
+
+Started GET "/fav_cities/new" for ::1 at 2015-03-12 20:57:38 -0700
+Processing by FavCitiesController#new as HTML
+  Rendered fav_cities/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 938ms (Views: 936.9ms)
+
+
+Started POST "/fav_cities" for ::1 at 2015-03-12 20:57:41 -0700
+Processing by FavCitiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eQxjLGJSdM3P1L9AaIBdUoRAd/af3yvkKlgy9g1k5Ydiykj1DbFBXTgGsWHXZOkPzWok1asVrs/3ipKTr5qqlQ==", "city"=>{"name"=>"Vancouver"}, "commit"=>"Add new favorite city"}
+Redirected to http://localhost:3000/fav_cities
+Completed 302 Found in 2039ms
+
+
+Started GET "/fav_cities" for ::1 at 2015-03-12 20:57:43 -0700
+Processing by FavCitiesController#index as HTML
+  Rendered fav_cities/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 518ms (Views: 385.6ms)
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-12 20:57:43 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-12 20:57:43 -0700
+
+
+Started GET "/assets/schedules-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-12 20:57:43 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-12 20:57:43 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-12 20:57:43 -0700
+
+
+Started GET "/assets/application-73af4000bf7acd7087e8fd41a581e942.css?body=1" for ::1 at 2015-03-12 20:57:43 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-12 20:57:43 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-12 20:57:43 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-12 20:57:43 -0700
+
+
+Started GET "/assets/schedules-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-12 20:57:43 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-12 20:57:43 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-12 20:57:43 -0700
+
+
+Started GET "/assets/application-17e4801155788a176bbbc02f37563650.js?body=1" for ::1 at 2015-03-12 20:57:43 -0700
+
+
+Started GET "/fav_cities/new" for ::1 at 2015-03-12 21:11:35 -0700
+Processing by FavCitiesController#new as HTML
+  Rendered fav_cities/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 794ms (Views: 790.9ms)
+
+
+Started POST "/fav_cities" for ::1 at 2015-03-12 21:11:40 -0700
+Processing by FavCitiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9PTawpQDxNZrkODY2t9ezVqPjtBD7kOSU0hIqwB8ZzvvMvEb++DxRpxC7vllO+qQE6Xd83ckxrmOmujOooIoKQ==", "city"=>{"name"=>"Vancouver"}, "commit"=>"Add new favorite city"}
+Redirected to http://localhost:3000/fav_cities
+Completed 302 Found in 1010ms
+
+
+Started GET "/fav_cities" for ::1 at 2015-03-12 21:11:41 -0700
+Processing by FavCitiesController#index as HTML
+  Rendered fav_cities/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 593ms (Views: 466.0ms)
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-12 21:11:42 -0700
+
+
+Started GET "/assets/schedules-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-12 21:11:42 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-12 21:11:42 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-12 21:11:42 -0700
+
+
+Started GET "/assets/application-73af4000bf7acd7087e8fd41a581e942.css?body=1" for ::1 at 2015-03-12 21:11:42 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-12 21:11:42 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-12 21:11:42 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-12 21:11:42 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-12 21:11:42 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-12 21:11:42 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-12 21:11:42 -0700
+
+
+Started GET "/assets/application-17e4801155788a176bbbc02f37563650.js?body=1" for ::1 at 2015-03-12 21:11:42 -0700
+
+
+Started GET "/assets/schedules-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-12 21:11:42 -0700

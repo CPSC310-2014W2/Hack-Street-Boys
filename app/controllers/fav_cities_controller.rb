@@ -12,6 +12,7 @@ class FavCitiesController < ApplicationController
   
   end
   
+  # To test: enter city name and check manually in database if it was added correctly with all correct fields.
   def create
       city = Hash.new
       city[:name] = params[:city]["name"]
@@ -29,7 +30,7 @@ class FavCitiesController < ApplicationController
       userId = "100184922779584864374"
       
       Database.storeFavoriteCity(city, userId)
-      puts Database.retrieveAllFavoriteCities(userId)
+      
       redirect_to fav_cities_path
   end
   

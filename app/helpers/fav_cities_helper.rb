@@ -11,10 +11,10 @@ module FavCitiesHelper
         def self.storeFavoriteCity (city, userId)
             client = Orchestrate::Client.new(ORC_API_KEY);
             cityId = city[:cityId]
-            puts city
+            puts "city: ", city
             client.put(:favoriteCities, cityId, city)
-            client.put_relation(:googleuser, userId, "favorite city", :favoriteCities, cityId)
-            puts "relations: ", client.get_relations(:googleuser, userId, :city)
+            client.put_relation(:googleuser, userId, :favoriteCity, :favoriteCities, cityId)
+            puts "relations: ", client.get_relations(:googleuser, userId, :favoriteCity)
         end
     
         def self.retrieveAllFavoriteCities (userId)
@@ -22,9 +22,9 @@ module FavCitiesHelper
             client = Orchestrate::Client.new(ORC_API_KEY);
             
             jsonOfFavCities = client.get_relations(:googleuser, userId, :city)
-            puts "this is jsonoffavcities", jsonOfFavCities
+            puts "this is jsonoffavcities: ", jsonOfFavCities
             
-            #listOfFavCities = JSON.parse(jsonOfFavCities.to_s)
+            #listOfFavCities = JSON.parse(jsonOfFavCities)
             #puts "this is listoffavcities", listOfFavCities
             
             #return listOfFavCities
@@ -35,7 +35,7 @@ module FavCitiesHelper
             client = Orchestrate::Client.new(ORC_API_KEY);
 
             client.delete(:favoriteCities, cityId)
-            client.delete_relation(:users, "kates-user-id", :follows, :users, "robs-user-id")
+            client.delete_relation(:users, userId, "relations", :favoriteCities, cityId)
         end
     end
 end
