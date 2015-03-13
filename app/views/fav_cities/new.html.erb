@@ -1,0 +1,9 @@
+<h1>Favorite cities</h1>
+
+<%= form_for :city, url: fav_cities_path, :method => :post do |f| %>
+  <p>
+    <%= f.label "Name of city" %><br>
+    <%= f.text_field :name %>
+  </p>
+  <%= f.submit "Add new favorite city" %>  
+<% end %>
