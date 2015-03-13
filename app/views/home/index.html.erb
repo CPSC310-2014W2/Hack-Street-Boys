@@ -1,28 +1,63 @@
-<h1>Home#index</h1>
+<h1>Home - Temporarily used for backend data testing</h1>
 
 <br>
-
-<%= form_for :home, url: test_cities_ids_home_index_path, :method => :get do |f| %>
-  <p>
-    <%= f.label "Address" %><br>
-    <%= f.text_field :address %>
-  </p>
-    <p>
-    <%= f.label "Number of city" %><br>
-    <%= f.text_field :citycount %>
-  </p>
-  <%= f.submit "Return all cities ids around the address given" %>  
-<% end %>
-
-<br>
-<br>
-
+<h2>Functions in application_helper.rb</h2>
 <%= form_for :home, url: test_google_latlon_home_index_path, :method => :get do |f| %>
   <p>
-    <%= f.label "Address String" %><br>
+    address
     <%= f.text_field :address %>
   </p>
-  <%= f.submit "Return the latitude and longitude of the address string" %>  
+  <%= f.submit "Geocoder.getLatLon( address )" %>  
 <% end %>
-
-<br>
+<hr>
+<%= form_for :home, url: test_cities_ids_home_index_path, :method => :get do |f| %>
+  <p>
+    address
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    city_count
+    <%= f.text_field :citycount %>
+  </p>
+  <%= f.submit "OpenWeather.getCitiesIDs(address, citycount)" %>  
+<% end %>
+<hr>
+<%= form_for :home, url: test_get_cities_open_weather_home_index_path, :method => :get do |f| %>
+  <p>
+    lat
+    <%= f.text_field :latitude %>
+  </p>
+  <p>
+    lon
+    <%= f.text_field :longitude %>
+  </p>
+  <p>
+    city_count
+    <%= f.text_field :citycount %>
+  </p>
+  <%= f.submit "OpenWeather.getCitiesCurrentWeather( lat, lon, city_count )" %>  
+<% end %>
+<hr>
+<%= form_for :home, url: test_get_current_weather_home_index_path, :method => :get do |f| %>
+  <p>
+    city_id
+    <%= f.text_field :city_id %>
+  </p>
+  <%= f.submit "OrchestrateDatabase.getCityCurrentWeather( city_id )" %>  
+<% end %>
+<hr>
+<%= form_for :home, url: test_get_daily_forecast_weather_home_index_path, :method => :get do |f| %>
+  <p>
+    city_id
+    <%= f.text_field :city_id %>
+  </p>
+  <%= f.submit "OrchestrateDatabase.getCityDailyForecastWeather( city_id )" %>  
+<% end %>
+<hr>
+<%= form_for :home, url: test_get_three_hourly_forecast_weather_home_index_path, :method => :get do |f| %>
+  <p>
+    city_id
+    <%= f.text_field :city_id %>
+  </p>
+  <%= f.submit "OrchestrateDatabase.getCityThreeHouslyForecastWeather( city_id )" %>  
+<% end %>

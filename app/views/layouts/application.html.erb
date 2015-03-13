@@ -9,8 +9,7 @@
 <body>
 
 <div align="right">
-	<div style="width: 80%"></div>
-	<div style="width: 20%" align="center">
+	<div align="right">
       <% if current_user %>
         Signed in as <strong><%= current_user.name %></strong>!
         <%= link_to "Sign out", signout_path, id: "sign_out" %>

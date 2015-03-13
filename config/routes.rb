@@ -21,9 +21,13 @@ Rails.application.routes.draw do
   end
   resources :fav_cities
   resources :sessions, only: [:create, :destroy]
-  resources :home, only: [:test_cities_ids, :test_google_latlon] do
+  resources :home, only: [:test_cities_ids, :test_get_cities_open_weather, :test_google_latlon, :test_get_current_weather, :test_get_daily_forecast_weather, :test_get_three_hourly_forecast_weather] do
     get :test_cities_ids, :on => :collection
+    get :test_get_cities_open_weather, :on => :collection
     get :test_google_latlon, :on => :collection
+    get :test_get_current_weather, :on => :collection
+    get :test_get_daily_forecast_weather, :on => :collection 
+    get :test_get_three_hourly_forecast_weather, :on => :collection
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
