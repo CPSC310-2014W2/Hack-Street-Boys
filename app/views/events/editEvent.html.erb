@@ -1,0 +1,27 @@
+<%= form_for :events, url: updateEvent_events_path, :method => :post do |f| %>
+  <p>
+    <%= f.label "Event ID" %><br>
+    <%= f.text_field :eventID, :value => @eventID %>
+  </p>
+  <p>
+    <%= f.label "Event Title" %><br>
+    <%= f.text_field :title, :value => @event["title"] %>
+  </p>
+  <p>
+    <%= f.label "Start Time" %><br>
+    <%= f.text_field :startTime, :value => @event["startTime"] %>
+  </p>
+  <p>
+    <%= f.label "End Time" %><br>
+    <%= f.text_field :endTime, :value => @event["endTime"] %>
+  </p>
+  <p>
+    <%= f.label "Location" %><br>
+    <%= f.text_field :location, :value => @event["location"] %>
+  </p>
+  <p>
+    <%= f.label "Description" %><br>
+    <%= f.text_field :description, :value => @event["description"] %>
+  </p>
+  <%= f.submit "Save" %>  
+<% end %>

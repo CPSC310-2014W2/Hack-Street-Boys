@@ -7,16 +7,27 @@ Rails.application.routes.draw do
   get 'sessions/create'
   get 'sessions/destroy'
   get 'home/index'
+  get 'events/index'
   
   root 'home#index'
-  
-  resources :events
+
+  resources :events, only: [:showEvent, :editEvent, :newEvent, :createEvent, :deleteEvent, :updateEvent] do
+    get :showEvent, :on => :collection
+    get :editEvent, :on => :collection
+    get :newEvent, :on => :collection
+    post :createEvent, :on => :collection
+    post :deleteEvent, :on => :collection
+    post :updateEvent, :on => :collection
+  end
   resources :fav_cities
   resources :sessions, only: [:create, :destroy]
-  resources :home, only: [:test_google_latlon, :test_current_weather, :test_store_weather_data] do
+  resources :home, only: [:test_cities_ids, :test_get_cities_open_weather, :test_google_latlon, :test_get_current_weather, :test_get_daily_forecast_weather, :test_get_three_hourly_forecast_weather] do
+    get :test_cities_ids, :on => :collection
+    get :test_get_cities_open_weather, :on => :collection
     get :test_google_latlon, :on => :collection
-    get :test_current_weather, :on => :collection
-    get :test_store_weather_data, :on => :collection
+    get :test_get_current_weather, :on => :collection
+    get :test_get_daily_forecast_weather, :on => :collection 
+    get :test_get_three_hourly_forecast_weather, :on => :collection
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

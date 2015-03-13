@@ -4,29 +4,71 @@ require 'json'
 require 'date'
 
 class EventsController < ApplicationController
+  include EventsHelper;
   
   def index
+    userID = current_user().uid;
+    @allEvents = ScheduleItems.getAllEvents(userID)["results"];
+  end
+
+  def showEvent
     
   end
 
-  def show
-
+  def editEvent
+    @eventID = params[:eventId];
+    @event = ScheduleItems.getEvent( @eventID );
   end
+
+  def newEvent
   
-  def new
-    eventID = "1234";
+  end
+
+  def createEvent
+    title = params[:events]["title"];
+    startTime = params[:events]["startTime"];
+    endTime = params[:events]["endTime"];
+    location = params[:events]["location"];
+    description = params[:events]["description"];
+    userId = current_user().uid;
+
     eventInfo = {
-      title: "This is a new event",
-      startTime: "12:00",
-      endTime: "1:00",
-      location: "Vancouver" };
-      
-    response = ScheduleItems.createEvent( eventID, eventInfo );
-    render plain: response;
+      title: title,
+      startTime: startTime,
+      endTime: endTime,
+      location: location,
+      description: description,
+      userId: userId
+    };
+    response = ScheduleItems.createEvent( eventInfo );
+    redirect_to :back
+  end
+
+  def deleteEvent
+    response = ScheduleItems.deleteEvent( params[:eventId] );
+    redirect_to :back
   end
   
-  def create
-    
+  def updateEvent
+    eventID = params[:events]["eventID"];
+
+    title = params[:events]["title"];
+    startTime = params[:events]["startTime"];
+    endTime = params[:events]["endTime"];
+    location = params[:events]["location"];
+    description = params[:events]["description"];
+    userID = current_user().uid;
+
+    eventInfo = {
+      title: title,
+      startTime: startTime,
+      endTime: endTime,
+      location: location,
+      description: description,
+      userID: userID
+    };
+    response = ScheduleItems.updateEvent( eventID, eventInfo );
+    redirect_to events_index_path
   end
   
   def self.getEpochTime( event, time_str )
