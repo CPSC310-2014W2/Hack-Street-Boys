@@ -7,7 +7,7 @@ module ApplicationHelper
   class OpenWeather
     
     OPEN_WEATHER_URL = 'http://api.openweathermap.org/data/2.5/';
-    OPEN_WEATHER_KEY = '2b666c53a585682c20061ba22333b137';
+    OPEN_WEATHER_KEY = '22c4895672d8d27af51ae93527245806';
     
     # REQUIRE: address         : An address string
     #          city_count      : The nummber of city around the central city
@@ -37,11 +37,12 @@ module ApplicationHelper
       return getJSONData( url );
     end
     
-    # REQUIRE: city_id : a valid city id as defined by Open Weather API
-    #          city_count : number of cities around the given city_id
+    # REQUIRE: latitude   : a valid latitude number
+    #          longitude  : a valid longitude number
+    #          city_count : number of cities around the given location
     # EFFECT : return a hash map containing open weather data of [city_count] number of cities centering around the central city
-    def self.getCitiesCurrentWeather ( city_id, city_count )
-      url = OPEN_WEATHER_URL + 'find?' + 'id=' + city_id.to_s + '&cnt=' + city_count.to_s + '&APPID=' + OPEN_WEATHER_KEY;
+    def self.getCitiesCurrentWeather ( lat, lon, city_count )
+      url = OPEN_WEATHER_URL + 'find?' + 'lat=' + lat.to_s + '&lon=' + lon.to_s + '&cnt=' + city_count.to_s + '&APPID=' + OPEN_WEATHER_KEY;
       return getJSONData( url );
     end
     
@@ -70,6 +71,8 @@ module ApplicationHelper
   class OrchestrateDatabase
     
     ORC_API_KEY = "f72b43bb-175a-49ea-826e-dded02aa73f6";
+    CURRENT_WEATHER_UPDATE_INTERVAL = 600; # 10 minutes
+    FORECAST_WEATHER_UPDATE_INTERVAL = 1800; # 30 minutes
       
     # REQUIRE: user_id   : A valid google user id that is already stored in Orchestrate.io
     # EFFECT : Retrieve the hash map google user information from Orchestrate.io with the user id as the key
@@ -81,6 +84,63 @@ module ApplicationHelper
       return nil;
     else      
       return JSON.parse( response.to_json )["body"];
+    end
+    
+    # REQUIRE: city_id   : A valid city id as defined by Open Weather API
+    # EFFECT : Retrieve the hash map currnet weather data from Orchestrate.io with the city id as the key
+    def self.getCityCurrentWeather ( city_id )
+      client = Orchestrate::Client.new( ORC_API_KEY );
+      response = client.get( :cityweather, city_id.to_s );
+      result = JSON.parse( response.to_json )["body"];
+      time_sin_last_update = Time.now.to_i - result["last_update_time"].to_i;
+      if ( time_sin_last_update > CURRENT_WEATHER_UPDATE_INTERVAL )
+        storeCityCurrentWeather( city_id );
+        result = getCityCurrentWeather( city_id );
+      end
+    rescue Orchestrate::API::NotFound;
+      storeCityCurrentWeather( city_id );
+      result = getCityCurrentWeather( city_id );
+      return result;
+    else      
+      return result;
+    end
+    
+    # REQUIRE: city_id   : A valid city id as defined by Open Weather API
+    # EFFECT : Retrieve the hash map currnet weather data from Orchestrate.io with the city id as the key
+    def self.getCityDailyForecastWeather ( city_id )
+      client = Orchestrate::Client.new( ORC_API_KEY );
+      response = client.get( :cityweatherforecast, city_id.to_s );
+      result = JSON.parse( response.to_json )["body"];
+      time_sin_last_update = Time.now.to_i - result["last_update_time"].to_i;
+      if ( time_sin_last_update > FORECAST_WEATHER_UPDATE_INTERVAL )
+        storeCityForecastWeather( city_id );
+        result = getCityDailyForecastWeather( city_id );
+      end
+    rescue Orchestrate::API::NotFound;
+      storeCityForecastWeather( city_id );
+      result = getCityDailyForecastWeather( city_id );
+      return result;
+    else      
+      return result;
+    end
+    
+    # REQUIRE: city_id   : A valid city id as defined by Open Weather API
+    # EFFECT : Retrieve the hash map currnet weather data from Orchestrate.io with the city id as the key
+    def self.getCityThreeHouslyForecastWeather ( city_id )
+      client = Orchestrate::Client.new( ORC_API_KEY );
+      response = client.get( :city5daysweatherforecast, city_id.to_s );
+      result = JSON.parse( response.to_json )["body"];
+      time_sin_last_update = Time.now.to_i - result["last_update_time"].to_i;
+      if ( time_sin_last_update > FORECAST_WEATHER_UPDATE_INTERVAL )
+        storeCityFiveDaysForcastWeather( city_id );
+        result = getCityThreeHouslyForecastWeather( city_id );
+      end
+    rescue Orchestrate::API::NotFound;
+      storeCityFiveDaysForcastWeather( city_id );
+      result = getCityThreeHouslyForecastWeather( city_id );
+      return result;
+    else      
+      return result;
     end
     
     # REQUIRE: user_info : A hash map containing google user information
@@ -98,15 +158,16 @@ module ApplicationHelper
       client.put( :cityweather, city_id, convertCityCurrentWeather( OpenWeather.getCityCurrentWeather( city_id ) ) );
     end
     
-    # REQUIRE: city_id : a valid city id as defined by Open Weather API
-    #          city_count : number of cities around the given city_id
+    # REQUIRE: latitude   : a valid latitude number
+    #          longitude  : a valid longitude number
+    #          city_count : number of cities around the given location
     # EFFECT : Store weather data in Orchestrate.io database in simplied format 
     #           - (only fields we need: see https://github.com/CPSC310-2014W2/Hack-Street-Boys/issues/23)
-    def self.storeCitiesCurrentWeather ( city_id, city_count )
+    def self.storeCitiesCurrentWeather ( lat, lon, city_count )
       client = Orchestrate::Client.new( ORC_API_KEY );
-      weatherDataList = OpenWeather.getCitiesCurrentWeather( city_id, city_count )[:list];
+      weatherDataList = OpenWeather.getCitiesCurrentWeather( lat, lon, city_count )[:list];
       weatherDataList.each{ |open_weather_hash| 
-        client.put( :cityweather, city_id.to_i, convertCityCurrentWeather( open_weather_hash ) );
+        client.put( :cityweather, open_weather_hash[:id].to_i, convertCityCurrentWeather( open_weather_hash ) );
       }
     end
     
@@ -115,7 +176,7 @@ module ApplicationHelper
     #           - (only fields we need: see https://github.com/CPSC310-2014W2/Hack-Street-Boys/issues/24)
     def self.storeCityForecastWeather ( city_id )
       client = Orchestrate::Client.new( ORC_API_KEY );
-      weatherForecastData = OpenWeather.getCitiesForecastWeather( city_id );
+      weatherForecastData = OpenWeather.getCityForecastWeather( city_id );
       client.put( :cityweatherforecast, city_id.to_i, convertCityForecastWeather( weatherForecastData ) );
     end
     
@@ -132,7 +193,7 @@ module ApplicationHelper
     #           - (only fields we need: see https://github.com/CPSC310-2014W2/Hack-Street-Boys/issues/23)
     def self.convertCityCurrentWeather ( open_weather_hash )
       orc_weather_data = Hash.new;
-      orc_weather_data[:last_update_time]   = open_weather_hash[:dt];
+      orc_weather_data[:last_update_time]   = Time.now.to_i;
       orc_weather_data[:city]               = open_weather_hash[:name];
       orc_weather_data[:lon]                = open_weather_hash[:coord][:lon];
       orc_weather_data[:lat]                = open_weather_hash[:coord][:lat];
@@ -153,11 +214,12 @@ module ApplicationHelper
     # EFFECT : Simplify the weather forecast data for storage to Orchestrate.io database
     def self.convertCityForecastWeather ( open_weather_hash )
       orc_weather_forecast_data = Hash.new;
-      orc_weather_forecast_data[:city]      = open_weather_hash[:city][:name];
-      orc_weather_forecast_data[:lon]       = open_weather_hash[:city][:coord][:lon];
-      orc_weather_forecast_data[:lat]       = open_weather_hash[:city][:coord][:lat];
-      orc_weather_forecast_data[:forecast]  = convertDailyForecastHelper( open_weather_hash[:list] );
-      return orc_weather_forecast_data;
+      orc_weather_forecast_data[:last_update_time]    = Time.now.to_i;
+      orc_weather_forecast_data[:city]                = open_weather_hash[:city][:name];
+      orc_weather_forecast_data[:lon]                 = open_weather_hash[:city][:coord][:lon];
+      orc_weather_forecast_data[:lat]                 = open_weather_hash[:city][:coord][:lat];
+      orc_weather_forecast_data[:forecast]            = convertDailyForecastHelper( open_weather_hash[:list] );
+      return orc_weather_forecast_data; 
     end
     
     # REQUIRE: A hash map containing 16 days weather forecast data for a particular city on a particular day
@@ -187,9 +249,37 @@ module ApplicationHelper
     
     # REQUIRE: A hash map containing 5 days 3 hours weather forecast data for a pariticular city
     # EFFECT : simplify the weather forecast data for storage to Orchestrate.io database
-    # TODO
-    def self.convertFiveDaysForecastWeather( five_days_forecast )
-      return five_days_forecast;
+    def self.convertFiveDaysForecastWeather( open_weather_hash )
+      orc_weather_forecast_data = Hash.new;
+      orc_weather_forecast_data[:last_update_time]    = Time.now.to_i;
+      orc_weather_forecast_data[:city]                = open_weather_hash[:city][:name];
+      orc_weather_forecast_data[:lon]                 = open_weather_hash[:city][:coord][:lon];
+      orc_weather_forecast_data[:lat]                 = open_weather_hash[:city][:coord][:lat];
+      orc_weather_forecast_data[:forecast]            = convertHourlyForecastHelper( open_weather_hash[:list] );
+      return orc_weather_forecast_data;
+    end
+    
+    # REQUIRE: A hash map containing 5 days 3 hourly weather forecast data for a particular city
+    # EFFECT : Simplify the weather forecast data for storage to Orchestrate.io database
+    def self.convertHourlyForecastHelper ( three_hourly_forecast_hash )
+      orc_weather_forecast_arr = Array.new;
+      three_hourly_forecast_hash.each{ |three_hourly_forecast|
+        three_hourly_hash = Hash.new;
+        three_hourly_hash[:forecast_time]        = three_hourly_forecast[:dt];
+        three_hourly_hash[:conditionid]          = three_hourly_forecast[:weather][0][:id];
+        three_hourly_hash[:weather]              = three_hourly_forecast[:weather][0][:main];
+        three_hourly_hash[:weather_des]          = three_hourly_forecast[:weather][0][:description];
+        three_hourly_hash[:temp]                 = three_hourly_forecast[:main][:temp];
+        three_hourly_hash[:temp_max]             = three_hourly_forecast[:main][:temp_max];
+        three_hourly_hash[:temp_min]             = three_hourly_forecast[:main][:temp_min];
+        three_hourly_hash[:humidity]             = three_hourly_forecast[:main][:humidity];
+        three_hourly_hash[:wind_speed]           = three_hourly_forecast[:wind][:speed];
+        three_hourly_hash[:wind_deg]             = three_hourly_forecast[:wind][:deg];
+        three_hourly_hash[:clouds]               = three_hourly_forecast[:clouds];
+        three_hourly_hash[:rain]                 = three_hourly_forecast[:rain];
+        orc_weather_forecast_arr << three_hourly_hash;
+      }
+      return orc_weather_forecast_arr;
     end
     
   end

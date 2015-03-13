@@ -2,8 +2,6 @@ class HomeController < ApplicationController
   include ApplicationHelper;
   
   def index
-    @vancouverweather = OpenWeather.getCityCurrentWeather("6173331");
-    puts @vancouverweather;
   end
   
   def test_cities_ids
@@ -16,7 +14,10 @@ class HomeController < ApplicationController
   def test_google_latlon
     address = params[:home]["address"];
     latLon = Geocoder.getLatLon( address );
-    render plain: latLon;
+    #render plain: latLon;
+    
+    #OrchestrateDatabase.storeCityForecastWeather( 495260 );
+    render plain: OrchestrateDatabase.getCityDailyForecastWeather( 495260 );
   end
   
 end
