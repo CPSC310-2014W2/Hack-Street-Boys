@@ -18,6 +18,8 @@ class EventsController < ApplicationController
     if current_user() != nil
       userID = current_user().uid;
       allEvents = ScheduleItems.getAllEvents(userID)["results"];
+    
+      render :json => allEvents
     end
   end
 
