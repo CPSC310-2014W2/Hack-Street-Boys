@@ -14,7 +14,7 @@ class EventsController < ApplicationController
   def showEvent
     userID = current_user().uid;
     @allEvents = ScheduleItems.getAllEvents(userID)["results"];
-
+    
     render :json => @allEvents
   end
 
@@ -24,11 +24,13 @@ class EventsController < ApplicationController
   end
 
   def newEvent
-  
+
   end
 
   def createEvent
     title = params[:events]["title"];
+    startDate = params[:events]["startDate"];
+    endDate = params[:events]["endDate"];
     startTime = params[:events]["startTime"];
     endTime = params[:events]["endTime"];
     location = params[:events]["location"];
@@ -37,6 +39,8 @@ class EventsController < ApplicationController
 
     eventInfo = {
       title: title,
+      startDate: startDate,
+      endDate: endDate,
       startTime: startTime,
       endTime: endTime,
       location: location,
@@ -56,19 +60,23 @@ class EventsController < ApplicationController
     eventID = params[:events]["eventID"];
 
     title = params[:events]["title"];
+    startDate = params[:events]["startDate"];
+    endDate = params[:events]["endDate"];
     startTime = params[:events]["startTime"];
     endTime = params[:events]["endTime"];
     location = params[:events]["location"];
     description = params[:events]["description"];
-    userID = current_user().uid;
+    userId = current_user().uid;
 
     eventInfo = {
       title: title,
+      startDate: startDate,
+      endDate: endDate,
       startTime: startTime,
       endTime: endTime,
       location: location,
       description: description,
-      userID: userID
+      userId: userId
     };
     response = ScheduleItems.updateEvent( eventID, eventInfo );
     redirect_to events_index_path

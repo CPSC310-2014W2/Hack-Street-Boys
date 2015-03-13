@@ -11,8 +11,8 @@
   <% @allEvents.each do |event| %>
     <tr>
       <td><%= event["value"]["title"] %></td>
-        <td><%= event["value"]["startTime"] %></td>
-        <td><%= event["value"]["endTime"] %></td>
+        <td><%= event["value"]["startDate"] %>T<%= event["value"]["startTime"] %></td>
+        <td><%= event["value"]["endDate"] %>T<%= event["value"]["endTime"] %></td>
         <td><%= event["value"]["location"] %></td>
         <td><%= event["value"]["description"] %></td>
         <td><%= link_to 'Edit', editEvent_events_path(:eventId => event["path"]["key"]) %></td>

@@ -154,11 +154,11 @@ $(document).ready(function(){
 	                for (key in data) {
 	                	events.push({
 	                        title: data[key].value.title,
-	                        start: data[key].value.startTime,
-	                        end: data[key].value.endTime,
+	                        start: data[key].value.startDate + 'T' + data[key].value.startTime,
+	                        end: data[key].value.endDate + 'T' + data[key].value.endTime,
 	                        description: data[key].value.description
 	                    });
-	                	console.log(data[key].value);
+	                	console.log(data[key].value.startDate + 'T' + data[key].value.startTime);
 	                };
 	                callback(events);
 	            },
