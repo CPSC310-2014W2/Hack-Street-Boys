@@ -15,12 +15,12 @@ class HomeController < ApplicationController
     lat = params[:home]["latitude"];
     lon = params[:home]["longitude"];
     citycount = params[:home]["citycount"];
-    render plain: OpenWeather.getCitiesCurrentWeather( lat, lon, citycount);
+    render plain: ForecastWeather.getCityCurrentWeather( lat, lon );
   end
   
   def test_google_latlon
     address = params[:home]["address"];
-    render plain: Geocoder.getLatLon( address );
+    render plain: Geocoder.getLatLon( Geocoder.getGeoInfo( address ) );
   end
   
   def test_get_current_weather

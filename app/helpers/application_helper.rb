@@ -1,8 +1,13 @@
 require 'orchestrate'
 require 'httparty'
 require 'json'
+require 'forecast_io'
 
 module ApplicationHelper
+  
+  class ForecastWeather
+    
+  end
   
   class OpenWeather
     
@@ -73,7 +78,64 @@ module ApplicationHelper
     ORC_API_KEY = "f72b43bb-175a-49ea-826e-dded02aa73f6";
     CURRENT_WEATHER_UPDATE_INTERVAL = 600; # 10 minutes
     FORECAST_WEATHER_UPDATE_INTERVAL = 1800; # 30 minutes
+    
+    FORECAST_IO_API_KEY = '0fecf5693b3a3c4e8849287ad39aac41';
+    WEATHER_UPDATE_INTERVAL = 3600; # 1 hour
+    
+    def self.getCityCurrentWeather ( address )
+      geoInfo = Geocoder.getGeoInfo( address );
+      if ( Geocoder.isValidAddress( geoInfo ) )    
+        cityNameKey = Geocoder.getCityNameKey( geoInfo );    
+      else
+        return nil;
+      end
+      client = Orchestrate::Client.new( ORC_API_KEY );
+      response = client.get( :cityweather, cityNameKey.to_s ); 
+      if ( isValidOrchestrateResponse( response ) )
+        result = JSON.parse( response.to_json )["body"];
+      else
+        return nil;
+      end      
+      time_sin_last_update = Time.now.to_i - result["last_update_time"].to_i;
+      if ( time_sin_last_update > WEATHER_UPDATE_INTERVAL )
+        updateWeatherData( geoInfo ); 
+        result = getCityCurrentWeather( address );
+      end
+      rescue Orchestrate::API::NotFound;
+        updateWeatherData( geoInfo );
+        result = getCityCurrentWeather( address );
+      else
+        return result;
+    end
+    
+    def self.updateWeatherData ( geoInfo )
       
+      client = Orchestrate::Client.new( ORC_API_KEY );
+      
+      latLon = Geocoder.getLatLon( geoInfo );
+      lat = latLon[:lat];
+      lon = latLon[:lng];
+      
+      ForecastIO.api_key = FORECAST_IO_API_KEY;
+
+      forecast = ForecastIO.forecast( lat.to_i, lon.to_i );
+
+      forecast_hash = Hash.new; 
+      forecast_hash[:last_update_time] = Time.now.to_i;
+      forecast_hash[:currently] = forecast.currently;
+      forecast_hash[:hourly] = forecast.hourly.except!("summary");
+      forecast_hash[:daily_this_week] = forecast.daily.except!("summary");
+      
+      forecast_data = JSON.parse( forecast_hash.to_json, :symbolize_names => true );
+      
+      client.put( :cityweather, Geocoder.getCityNameKey( geoInfo ), forecast_data );
+
+    end
+    
+    def self.isValidOrchestrateResponse( response ) 
+      return response.has_key?("body");
+    end
+    
     # REQUIRE: user_id   : A valid google user id that is already stored in Orchestrate.io
     # EFFECT : Retrieve the hash map google user information from Orchestrate.io with the user id as the key
     #           - Return nil if the key cannot be found
@@ -88,22 +150,22 @@ module ApplicationHelper
     
     # REQUIRE: city_id   : A valid city id as defined by Open Weather API
     # EFFECT : Retrieve the hash map currnet weather data from Orchestrate.io with the city id as the key
-    def self.getCityCurrentWeather ( city_id )
-      client = Orchestrate::Client.new( ORC_API_KEY );
-      response = client.get( :cityweather, city_id.to_s );
-      result = JSON.parse( response.to_json )["body"];
-      time_sin_last_update = Time.now.to_i - result["last_update_time"].to_i;
-      if ( time_sin_last_update > CURRENT_WEATHER_UPDATE_INTERVAL )
-        storeCityCurrentWeather( city_id );
-        result = getCityCurrentWeather( city_id );
-      end
-    rescue Orchestrate::API::NotFound;
-      storeCityCurrentWeather( city_id );
-      result = getCityCurrentWeather( city_id );
-      return result;
-    else      
-      return result;
-    end
+    #def self.getCityCurrentWeather ( city_id )
+    #  client = Orchestrate::Client.new( ORC_API_KEY );
+    #  response = client.get( :cityweather, city_id.to_s );
+    #  result = JSON.parse( response.to_json )["body"];
+    #  time_sin_last_update = Time.now.to_i - result["last_update_time"].to_i;
+    #  if ( time_sin_last_update > CURRENT_WEATHER_UPDATE_INTERVAL )
+    #    storeCityCurrentWeather( city_id );
+    #    result = getCityCurrentWeather( city_id );
+    #  end
+    #rescue Orchestrate::API::NotFound;
+    #  storeCityCurrentWeather( city_id );
+    #  result = getCityCurrentWeather( city_id );
+    #  return result;
+    #else      
+    #  return result;
+    #end
     
     # REQUIRE: city_id   : A valid city id as defined by Open Weather API
     # EFFECT : Retrieve the hash map currnet weather data from Orchestrate.io with the city id as the key
@@ -289,18 +351,61 @@ module ApplicationHelper
     GOOGLE_URL = 'https://maps.googleapis.com/maps/api/geocode/json?';
     GGEOCODE_API_KEY = "AIzaSyBLpS5MvC4fvI_erjfj7M8gmFXkq_O5aso";
     
-    # REQUIRE: An address string
-    # EFFECT : return the geocode of the address 
-    #           -> ( return nil if the address string cannot be understood by Google geocode)
-    def self.getLatLon ( address )
+    # REQUIRE: A valid geoInfo Hash Map
+    # EFFECT : return a hash map { :lat => [...], :lng => [...]}
+    def self.getLatLon ( geoInfo )
+      return geoInfo[0][:geometry][:location];;
+    end
+    
+    def self.getGeoInfo( address )
       g_geocode_url = GOOGLE_URL + 'address=' + address.to_s.gsub(/\s/,'+') + '&key=' + GGEOCODE_API_KEY;
       response = JSON.parse( HTTParty.get( g_geocode_url.to_s ).to_json, :symbolize_names => true )[:results];
       if ( response == [] )
         return nil;
       else
-        lagLon = response[0][:geometry][:location];
+        return response;
+      end      
+    end
+    
+    def self.isValidAddress ( geoInfo )
+      
+      if ( geoInfo == [] || geoInfo == nil )
+        return false;
       end
-      return lagLon;
+      
+      if ( !( geoInfo[0].has_key?(:address_components) ) )
+        return false;
+      end
+      
+      addr_compon_arr = geoInfo[0][:address_components];
+      addr_types = Array.new;
+      addr_compon_arr.each { |component|
+        addr_types << component[:types][0];
+        if ( component[:types][0] == "country" && component[:long_name] != "Canada" && component[:long_name] != "United States" )
+          return false;
+        end
+      }
+      if ( addr_types.include?("locality") && addr_types.include?("country") )
+        return true;
+      end
+      return false;
+    end
+    
+    def self.getCityNameKey ( geoInfo )
+      addr_compon_arr = geoInfo[0][:address_components];
+      
+      city = "";
+      country = "";
+      
+      addr_compon_arr.each { |component|
+        if ( component[:types][0] == "locality" )
+          city = component[:short_name];
+        end
+        if ( component[:types][0] == "country")
+          country = component[:short_name];
+        end
+      }
+      return city + "_" + country;
     end
     
   end
