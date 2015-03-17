@@ -2,15 +2,33 @@
 
 <br>
 <h2>Functions in application_helper.rb</h2>
+
+
 <%= form_for :home, url: test_google_latlon_home_index_path, :method => :get do |f| %>
   <p>
     address
     <%= f.text_field :address %>
   </p>
-  <%= f.submit "Geocoder.getLatLon( address )" %>  
+  <%= f.submit "Geocoder.getGeoInfo( address )" %>  
 <% end %>
+<p>Return nil if the address does not belong to any particular city (e.g. "Canada", "123" and empty string etc), so it will print nothing.</p>
 <hr>
-<%= form_for :home, url: test_cities_ids_home_index_path, :method => :get do |f| %>
+
+
+<%= form_for :home, url: test_get_city_weather_home_index_path, :method => :get do |f| %>
+  <p>
+    address
+    <%= f.text_field :address %>
+  </p>
+  <%= f.submit "OrchestrateDatabase.getCityWeatherData( Geocoder.getGeoInfo( address ) )" %>  
+<% end %>
+<p>Return the weather data of the address if the address belongs to a particular city</p>
+<p>NOTE: The update frequency of the data is an hour, so inputting a different address of the same city within an hour will not change the 'last_update_time' field</p>
+<p>Return nil if the address does not belong to any particular city (e.g. "Canada", "123" and empty string etc), so it will print nothing.</p>
+<hr>
+
+
+<%= form_for :home, url: test_get_cities_weather_home_index_path, :method => :get do |f| %>
   <p>
     address
     <%= f.text_field :address %>
@@ -19,45 +37,12 @@
     city_count
     <%= f.text_field :citycount %>
   </p>
-  <%= f.submit "OpenWeather.getCitiesIDs(address, citycount)" %>  
+  <%= f.submit "OrchestrateDatabase.getCitiesWeatherData( Geocoder.getCitiesGeoInfo( Geocoder.getSurroundingLatLons( Geocoder.getGeoInfo( address ), citycount.to_i ) ) )" %>  
 <% end %>
+<p>Return an array of weather data for all surrounding cities centering the inputted address if the address belongs to a city</p>
+<p>NOTE: Same as before, the update frequency of each city is an hour</p>
+<p>NOTE: The unique key to each city is '[city name]_[country code]', for vancouver, it is 'Vancouver_CA'</p>
+<p>NOTE: Do not abuse the city_counts. API calls to google geocoding are limited!</p>
+<p>The update frequency of the data is an hour, so inputting a different address of the same city within an hour will not change the 'last_update_time' field</p>
+<p>Return nil if the address does not belong to any particular city (e.g. "Canada", "123" and empty string etc), so it will print nothing.</p>
 <hr>
-<%= form_for :home, url: test_get_cities_open_weather_home_index_path, :method => :get do |f| %>
-  <p>
-    lat
-    <%= f.text_field :latitude %>
-  </p>
-  <p>
-    lon
-    <%= f.text_field :longitude %>
-  </p>
-  <p>
-    city_count
-    <%= f.text_field :citycount %>
-  </p>
-  <%= f.submit "OpenWeather.getCitiesCurrentWeather( lat, lon, city_count )" %>  
-<% end %>
-<hr>
-<%= form_for :home, url: test_get_current_weather_home_index_path, :method => :get do |f| %>
-  <p>
-    city_id
-    <%= f.text_field :city_id %>
-  </p>
-  <%= f.submit "OrchestrateDatabase.getCityCurrentWeather( city_id )" %>  
-<% end %>
-<hr>
-<%= form_for :home, url: test_get_daily_forecast_weather_home_index_path, :method => :get do |f| %>
-  <p>
-    city_id
-    <%= f.text_field :city_id %>
-  </p>
-  <%= f.submit "OrchestrateDatabase.getCityDailyForecastWeather( city_id )" %>  
-<% end %>
-<hr>
-<%= form_for :home, url: test_get_three_hourly_forecast_weather_home_index_path, :method => :get do |f| %>
-  <p>
-    city_id
-    <%= f.text_field :city_id %>
-  </p>
-  <%= f.submit "OrchestrateDatabase.getCityThreeHouslyForecastWeather( city_id )" %>  
-<% end %>
