@@ -384,6 +384,7 @@ module ApplicationHelper
     end
     
     def self.generateLatLons ( latLonArray, count )
+      puts "Generating latitude and longitude pairs..." #TODO
       latLonArray.each { |latLon|
         tempArr = [ 
           shiftLatLon( latLon,  0.5,  0.0 ), 
@@ -392,11 +393,14 @@ module ApplicationHelper
           shiftLatLon( latLon,  0.0, -0.5 ) ];
         
         tempArr.each { |shiftedLatLon|
+          if ( latLonArray.length >= count )
+            #TODO 
+            created = latLonArray.length - count;
+            puts created.to_s + " pair(s) created...";
+            return latLonArray;
+          end
           if ( !( latLonArray.include?( shiftedLatLon ) ) )
             latLonArray << shiftedLatLon;
-          end
-          if ( latLonArray.length == count )
-            return latLonArray;
           end
         }    
       }
