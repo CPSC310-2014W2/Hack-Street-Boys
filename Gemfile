@@ -1,11 +1,12 @@
 source 'https://rubygems.org'
 
+# Weather data source: http://forecast.io/
 gem 'forecast_io'
-
+# Http request client
 gem 'httparty'
-
+# Remote database: https://orchestrate.io/
 gem 'orchestrate'
-
+# Google login client: https://github.com/jaredonline/google-authenticator 
 gem "omniauth-google-oauth2", "~> 0.2.1"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
