@@ -32696,3 +32696,2442 @@ Started GET "/assets/application-17e4801155788a176bbbc02f37563650.js?body=1" for
 
 
 Started GET "/assets/schedules-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-12 21:11:42 -0700
+
+
+Started GET "/events/newEvent" for ::1 at 2015-03-17 22:57:18 -0700
+Processing by EventsController#newEvent as HTML
+  Rendered events/newEvent.html.erb within layouts/application (43.8ms)
+Completed 200 OK in 1061ms (Views: 1052.3ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 22:57:19 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 22:57:19 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 22:57:19 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 22:57:19 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 22:57:19 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 373ms (Views: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-03-17 22:57:21 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 650ms (Views: 649.3ms)
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 22:57:21 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 22:57:21 -0700
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 22:57:21 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 22:57:21 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 22:57:22 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 347ms (Views: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-03-17 22:57:23 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 347ms (Views: 346.7ms)
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 22:57:23 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 355ms (Views: 0.2ms)
+
+
+Started GET "/events/index" for ::1 at 2015-03-17 22:57:24 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 574ms (Views: 119.0ms)
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 22:57:25 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 345ms (Views: 0.2ms)
+
+
+Started GET "/signout" for ::1 at 2015-03-17 22:57:26 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for ::1 at 2015-03-17 22:57:26 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (34.8ms)
+Completed 200 OK in 134ms (Views: 133.9ms)
+
+
+Started GET "/" for ::1 at 2015-03-17 22:57:28 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 99ms (Views: 98.3ms)
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 22:57:28 -0700
+Processing by EventsController#showEvent as JSON
+Completed 500 Internal Server Error in 8ms
+
+ActionView::MissingTemplate (Missing template events/showEvent, application/showEvent with {:locale=>[:en], :formats=>[:json, :js, :html, :text, :js, :css, :ics, :csv, :vcf, :png, :jpeg, :gif, :bmp, :tiff, :mpeg, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/tuncay_ceferli/GitHub/Weathr/app/views"
+):
+  actionview (4.2.0) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.0) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.0) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.0) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.0) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.0) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.0) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.0) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.0) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.0) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.0) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.0) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.2.0) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.2.0) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.0) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_process_action_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/builder.rb:59:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/missing_template.text.erb (0.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (17.8ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (76.3ms)
+
+
+Started GET "/events/index" for ::1 at 2015-03-17 22:57:29 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 102ms (Views: 101.3ms)
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 22:57:29 -0700
+Processing by EventsController#showEvent as JSON
+Completed 500 Internal Server Error in 8ms
+
+ActionView::MissingTemplate (Missing template events/showEvent, application/showEvent with {:locale=>[:en], :formats=>[:json, :js, :html, :text, :js, :css, :ics, :csv, :vcf, :png, :jpeg, :gif, :bmp, :tiff, :mpeg, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/tuncay_ceferli/GitHub/Weathr/app/views"
+):
+  actionview (4.2.0) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.0) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.0) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.0) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.0) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.0) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.0) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.0) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.0) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.0) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.0) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.0) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.2.0) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.2.0) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.0) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_process_action_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/builder.rb:59:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/missing_template.text.erb (0.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (14.9ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (32.9ms)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2015-03-17 22:57:30 -0700
+(google_oauth2) Request phase initiated.
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2015-03-17 22:57:30 -0700
+(google_oauth2) Request phase initiated.
+
+
+Started GET "/auth/google_oauth2/callback?state=1889e786a4efa78711965919c79d763366db91f857dd4679&code=4/2ch3dvhhuEnkXIuYO9VEmGqIdrQtoQpAFK5acI-ujpk.8jgYMMYy3tkVEnp6UAPFm0FarOpWmAI" for ::1 at 2015-03-17 22:57:32 -0700
+(google_oauth2) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"1889e786a4efa78711965919c79d763366db91f857dd4679", "code"=>"4/2ch3dvhhuEnkXIuYO9VEmGqIdrQtoQpAFK5acI-ujpk.8jgYMMYy3tkVEnp6UAPFm0FarOpWmAI", "provider"=>"google_oauth2"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 732ms
+
+
+Started GET "/" for ::1 at 2015-03-17 22:57:39 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 479ms (Views: 478.7ms)
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 22:57:39 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 476ms (Views: 0.2ms)
+
+
+Started GET "/events/index" for ::1 at 2015-03-17 22:57:42 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 591ms (Views: 105.8ms)
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 22:57:43 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 500ms (Views: 0.1ms)
+
+
+Started GET "/events/newEvent" for ::1 at 2015-03-17 22:57:44 -0700
+Processing by EventsController#newEvent as HTML
+  Rendered events/newEvent.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 521ms (Views: 520.7ms)
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 22:57:45 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 488ms (Views: 0.2ms)
+
+
+Started POST "/events/createEvent" for ::1 at 2015-03-17 22:57:58 -0700
+Processing by EventsController#createEvent as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U4g4CgooPRLtBTqvIF6UVeDdzdGEavzUBLs9G2CvGhNYxBNWZOQnJ2i/pRtuNsuF7IhhomzA7tU3rQnbC6a1zw==", "events"=>{"title"=>"event 1", "startDate"=>"2015-03-17", "endDate"=>"2015-03-17", "startTime"=>"00:00:00", "endTime"=>"00:00:00", "location"=>"Burnaby", "description"=>"asas"}, "commit"=>"Add new event"}
+Completed 500 Internal Server Error in 957ms
+
+NoMethodError (undefined method `has_key?' for "B":String):
+  app/helpers/application_helper.rb:253:in `isValidAddress'
+  app/helpers/application_helper.rb:123:in `getLatLon'
+  app/controllers/events_controller.rb:45:in `createEvent'
+
+
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.5ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (16.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (32.8ms)
+
+
+Started GET "/events/newEvent" for ::1 at 2015-03-17 23:00:02 -0700
+Processing by EventsController#newEvent as HTML
+  Rendered events/newEvent.html.erb within layouts/application (44.6ms)
+Completed 200 OK in 829ms (Views: 820.6ms)
+
+
+Started GET "/" for ::1 at 2015-03-17 23:00:04 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 347ms (Views: 346.0ms)
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:00:04 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 367ms (Views: 0.2ms)
+
+
+Started GET "/events/index" for ::1 at 2015-03-17 23:00:05 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 462ms (Views: 105.2ms)
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:00:06 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 351ms (Views: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-03-17 23:03:11 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1730ms (Views: 1729.8ms)
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:03:13 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 346ms (Views: 0.2ms)
+
+
+Started GET "/events/index" for ::1 at 2015-03-17 23:03:19 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 1096ms (Views: 101.8ms)
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:03:20 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 474ms (Views: 0.2ms)
+
+
+Started GET "/events/newEvent" for ::1 at 2015-03-17 23:03:21 -0700
+Processing by EventsController#newEvent as HTML
+  Rendered events/newEvent.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 463ms (Views: 462.6ms)
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:03:22 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 477ms (Views: 0.2ms)
+
+
+Started POST "/events/createEvent" for ::1 at 2015-03-17 23:03:39 -0700
+Processing by EventsController#createEvent as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AaPDhg1sj0xkK1geP9SDNp++67J/+K258sJCtu/rnzEK7+jaY6CVeeGRx6pxvNzmk+tHwZdSv7jB1HZ2hOIw7Q==", "events"=>{"title"=>"event 1", "startDate"=>"2015-03-17", "endDate"=>"2015-03-17", "startTime"=>"00:00:00", "endTime"=>"00:00:00", "location"=>"Burnaby", "description"=>"asas"}, "commit"=>"Add new event"}
+Completed 500 Internal Server Error in 1464ms
+
+NoMethodError (undefined method `has_key?' for "B":String):
+  app/helpers/application_helper.rb:253:in `isValidAddress'
+  app/helpers/application_helper.rb:123:in `getLatLon'
+  app/controllers/events_controller.rb:45:in `createEvent'
+
+
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.0ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (15.6ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (36.7ms)
+
+
+Started GET "/events/newEvent" for ::1 at 2015-03-17 23:13:03 -0700
+Processing by EventsController#newEvent as HTML
+  Rendered events/newEvent.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 3133ms (Views: 3132.5ms)
+
+
+Started POST "/events/createEvent" for ::1 at 2015-03-17 23:14:41 -0700
+Processing by EventsController#createEvent as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KCnmhajgeFj0M8ThKKPxdXCm1AN+HdYy1lMgB668SMcjZc3ZxixibXGJW1Vmy66lfPN4cJa3xDPlRRTHxbXnGw==", "events"=>{"title"=>"event 1", "startDate"=>"2015-03-17", "endDate"=>"2015-03-17", "startTime"=>"00:00:00", "endTime"=>"00:00:00", "location"=>"burnaby", "description"=>"asas"}, "commit"=>"Add new event"}
+Completed 500 Internal Server Error in 535ms
+
+NoMethodError (undefined method `has_key?' for "b":String):
+  app/helpers/application_helper.rb:253:in `isValidAddress'
+  app/helpers/application_helper.rb:123:in `getLatLon'
+  app/controllers/events_controller.rb:45:in `createEvent'
+
+
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (14.4ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (30.2ms)
+
+
+Started GET "/events/newEvent" for ::1 at 2015-03-17 23:14:48 -0700
+Processing by EventsController#newEvent as HTML
+  Rendered events/newEvent.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 966ms (Views: 965.6ms)
+
+
+Started POST "/events/createEvent" for ::1 at 2015-03-17 23:15:03 -0700
+Processing by EventsController#createEvent as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kz3DTG74E1unx5/IgGEvo/t4AlwlnQedNol1GSIb+NmYcegQADQJbiJ9AHzOCXBz9y2uL803FZwFn0HZSRJXBQ==", "events"=>{"title"=>"event 1", "startDate"=>"2015-03-17", "endDate"=>"2015-03-17", "startTime"=>"00:00:00", "endTime"=>"00:00:00", "location"=>"Vancouver", "description"=>"asas"}, "commit"=>"Add new event"}
+Completed 500 Internal Server Error in 874ms
+
+NoMethodError (undefined method `has_key?' for "V":String):
+  app/helpers/application_helper.rb:253:in `isValidAddress'
+  app/helpers/application_helper.rb:123:in `getLatLon'
+  app/controllers/events_controller.rb:45:in `createEvent'
+
+
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.9ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (15.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (30.5ms)
+
+
+Started POST "/events/createEvent" for ::1 at 2015-03-17 23:15:39 -0700
+Processing by EventsController#createEvent as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KCnmhajgeFj0M8ThKKPxdXCm1AN+HdYy1lMgB668SMcjZc3ZxixibXGJW1Vmy66lfPN4cJa3xDPlRRTHxbXnGw==", "events"=>{"title"=>"event 1", "startDate"=>"2015-03-17", "endDate"=>"2015-03-17", "startTime"=>"00:00:00", "endTime"=>"00:00:00", "location"=>"burnaby", "description"=>"asas"}, "commit"=>"Add new event"}
+Completed 500 Internal Server Error in 2753ms
+
+NoMethodError (undefined method `has_key?' for "burnaby":String):
+  app/helpers/application_helper.rb:253:in `isValidAddress'
+  app/helpers/application_helper.rb:123:in `getLatLon'
+  app/controllers/events_controller.rb:45:in `createEvent'
+
+
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (16.0ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (34.8ms)
+
+
+Started GET "/" for ::1 at 2015-03-17 23:17:32 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3226ms (Views: 3225.4ms)
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:17:35 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 345ms (Views: 0.2ms)
+
+
+Started GET "/events/index" for ::1 at 2015-03-17 23:17:36 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 537ms (Views: 152.5ms)
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:17:37 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 351ms (Views: 0.2ms)
+
+
+Started GET "/events/newEvent" for ::1 at 2015-03-17 23:17:38 -0700
+Processing by EventsController#newEvent as HTML
+  Rendered events/newEvent.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 442ms (Views: 441.2ms)
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:17:39 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 345ms (Views: 0.2ms)
+
+
+Started POST "/events/createEvent" for ::1 at 2015-03-17 23:17:57 -0700
+Processing by EventsController#createEvent as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jDbGLjYgKORWzWO/7IPRw+EKMkeyw5eMqMuJsn5edR6Heu1yWOwy0dN3/Aui644T7V+eNFpphY2b3b1yFVfawg==", "events"=>{"title"=>"Event 1", "startDate"=>"2015-03-17", "endDate"=>"2015-03-17", "startTime"=>"00:00:00", "endTime"=>"02:00:00", "location"=>"Vancouver", "description"=>"testing"}, "commit"=>"Add new event"}
+Completed 500 Internal Server Error in 939ms
+
+NameError (undefined local variable or method `weatherDesc' for #<EventsController:0x007fa30e0e9080>):
+  app/controllers/events_controller.rb:55:in `createEvent'
+
+
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.0ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (33.4ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (12.4ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (59.9ms)
+
+
+Started GET "/events/newEvent" for ::1 at 2015-03-17 23:19:18 -0700
+Processing by EventsController#newEvent as HTML
+  Rendered events/newEvent.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 2753ms (Views: 2752.3ms)
+
+
+Started POST "/events/createEvent" for ::1 at 2015-03-17 23:19:21 -0700
+Processing by EventsController#createEvent as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jDbGLjYgKORWzWO/7IPRw+EKMkeyw5eMqMuJsn5edR6Heu1yWOwy0dN3/Aui644T7V+eNFpphY2b3b1yFVfawg==", "events"=>{"title"=>"Event 1", "startDate"=>"2015-03-17", "endDate"=>"2015-03-17", "startTime"=>"00:00:00", "endTime"=>"02:00:00", "location"=>"Vancouver", "description"=>"testing"}, "commit"=>"Add new event"}
+Completed 500 Internal Server Error in 519ms
+
+NameError (undefined local variable or method `weatherDesc' for #<EventsController:0x007fa308ac0190>):
+  app/controllers/events_controller.rb:55:in `createEvent'
+
+
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (15.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (29.6ms)
+
+
+Started POST "/events/createEvent" for ::1 at 2015-03-17 23:19:28 -0700
+Processing by EventsController#createEvent as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jDbGLjYgKORWzWO/7IPRw+EKMkeyw5eMqMuJsn5edR6Heu1yWOwy0dN3/Aui644T7V+eNFpphY2b3b1yFVfawg==", "events"=>{"title"=>"Event 1", "startDate"=>"2015-03-17", "endDate"=>"2015-03-17", "startTime"=>"00:00:00", "endTime"=>"02:00:00", "location"=>"Vancouver", "description"=>"testing"}, "commit"=>"Add new event"}
+Completed 500 Internal Server Error in 869ms
+
+NoMethodError (undefined method `has_key?' for "Vancouver":String):
+  app/helpers/application_helper.rb:253:in `isValidAddress'
+  app/helpers/application_helper.rb:123:in `getLatLon'
+  app/controllers/events_controller.rb:45:in `createEvent'
+
+
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (47.7ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (61.4ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (16.6ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (34.1ms)
+
+
+Started GET "/events/newEvent" for ::1 at 2015-03-17 23:19:33 -0700
+Processing by EventsController#newEvent as HTML
+  Rendered events/newEvent.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 460ms (Views: 459.0ms)
+
+
+Started POST "/events/createEvent" for ::1 at 2015-03-17 23:24:21 -0700
+Processing by EventsController#createEvent as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zTDQiidQUBS3RqHuJqGRqd50YpdNv8TWO1PbYJMS4FbGfPvWSZxKITL8Plpoyc550iHO5KUV1tcIRe+g+BtPig==", "events"=>{"title"=>"Event 1", "startDate"=>"2015-03-17", "endDate"=>"2015-03-17", "startTime"=>"00:00:00", "endTime"=>"00:00:00", "location"=>"Vancouver", "description"=>"Testing"}, "commit"=>"Add new event"}
+Completed 500 Internal Server Error in 598ms
+
+NoMethodError (undefined method `getGeoInfo' for #<EventsController:0x007fa30ca10598>):
+  app/controllers/events_controller.rb:45:in `createEvent'
+
+
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (42.0ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (60.6ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (12.5ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (29.1ms)
+
+
+Started POST "/events/createEvent" for ::1 at 2015-03-17 23:25:23 -0700
+Processing by EventsController#createEvent as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zTDQiidQUBS3RqHuJqGRqd50YpdNv8TWO1PbYJMS4FbGfPvWSZxKITL8Plpoyc550iHO5KUV1tcIRe+g+BtPig==", "events"=>{"title"=>"Event 1", "startDate"=>"2015-03-17", "endDate"=>"2015-03-17", "startTime"=>"00:00:00", "endTime"=>"00:00:00", "location"=>"Vancouver", "description"=>"Testing"}, "commit"=>"Add new event"}
+Completed 500 Internal Server Error in 2729ms
+
+NoMethodError (undefined method `getGeoInfo' for #<EventsController:0x007fa30e098950>):
+  app/controllers/events_controller.rb:45:in `createEvent'
+
+
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.0ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (12.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (26.3ms)
+
+
+Started POST "/events/createEvent" for ::1 at 2015-03-17 23:26:04 -0700
+Processing by EventsController#createEvent as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zTDQiidQUBS3RqHuJqGRqd50YpdNv8TWO1PbYJMS4FbGfPvWSZxKITL8Plpoyc550iHO5KUV1tcIRe+g+BtPig==", "events"=>{"title"=>"Event 1", "startDate"=>"2015-03-17", "endDate"=>"2015-03-17", "startTime"=>"00:00:00", "endTime"=>"00:00:00", "location"=>"Vancouver", "description"=>"Testing"}, "commit"=>"Add new event"}
+Completed 500 Internal Server Error in 999ms
+
+NameError (undefined local variable or method `weatherDesc' for #<EventsController:0x007fa3097d5ec0>):
+  app/controllers/events_controller.rb:58:in `createEvent'
+
+
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.5ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (16.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (31.9ms)
+
+
+Started POST "/events/createEvent" for ::1 at 2015-03-17 23:26:42 -0700
+Processing by EventsController#createEvent as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zTDQiidQUBS3RqHuJqGRqd50YpdNv8TWO1PbYJMS4FbGfPvWSZxKITL8Plpoyc550iHO5KUV1tcIRe+g+BtPig==", "events"=>{"title"=>"Event 1", "startDate"=>"2015-03-17", "endDate"=>"2015-03-17", "startTime"=>"00:00:00", "endTime"=>"00:00:00", "location"=>"Vancouver", "description"=>"Testing"}, "commit"=>"Add new event"}
+Redirected to http://localhost:3000/events/newEvent?
+Completed 302 Found in 2835ms
+
+
+Started GET "/events/newEvent" for ::1 at 2015-03-17 23:26:45 -0700
+Processing by EventsController#newEvent as HTML
+  Rendered events/newEvent.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 343ms (Views: 342.6ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:26:45 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:26:45 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:26:45 -0700
+
+
+Started GET "/assets/application-8a0758642c3d5340a9e64c3f9882de38.css?body=1" for ::1 at 2015-03-17 23:26:45 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:26:45 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-17 23:26:45 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-17 23:26:45 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:26:45 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:26:45 -0700
+
+
+Started GET "/assets/application-c216f0eff118ced3f590758ba4ea0f8d.js?body=1" for ::1 at 2015-03-17 23:26:45 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-17 23:26:45 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:26:45 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:26:45 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:26:45 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 355ms (Views: 0.5ms)
+
+
+Started POST "/events/createEvent" for ::1 at 2015-03-17 23:27:00 -0700
+Processing by EventsController#createEvent as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kEvQqwk+0KQqYDWv57xWTdx3FFPaWYa/G2xT2xc+D6ObB/v3Z/LKka/aqhup1Amd0CK4IDLzlL4oemcbfDegfw==", "events"=>{"title"=>"Event 1", "startDate"=>"2015-03-17", "endDate"=>"2015-03-17", "startTime"=>"00:00:00", "endTime"=>"00:00:00", "location"=>"burnaby", "description"=>"gasas"}, "commit"=>"Add new event"}
+Redirected to http://localhost:3000/events/newEvent?
+Completed 302 Found in 1130ms
+
+
+Started GET "/events/newEvent" for ::1 at 2015-03-17 23:27:01 -0700
+Processing by EventsController#newEvent as HTML
+  Rendered events/newEvent.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 585ms (Views: 584.4ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:27:02 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:27:02 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:27:02 -0700
+
+
+Started GET "/assets/application-8a0758642c3d5340a9e64c3f9882de38.css?body=1" for ::1 at 2015-03-17 23:27:02 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-17 23:27:02 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:27:02 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-17 23:27:02 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:27:02 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:27:02 -0700
+
+
+Started GET "/assets/application-c216f0eff118ced3f590758ba4ea0f8d.js?body=1" for ::1 at 2015-03-17 23:27:02 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-17 23:27:02 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:27:02 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:27:02 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:27:02 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 478ms (Views: 0.3ms)
+
+
+Started GET "/events/index" for ::1 at 2015-03-17 23:27:05 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 644ms (Views: 98.7ms)
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:27:06 -0700
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:27:06 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-17 23:27:06 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:27:06 -0700
+
+
+Started GET "/assets/application-8a0758642c3d5340a9e64c3f9882de38.css?body=1" for ::1 at 2015-03-17 23:27:06 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:27:06 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-17 23:27:06 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:27:06 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:27:06 -0700
+
+
+Started GET "/assets/application-c216f0eff118ced3f590758ba4ea0f8d.js?body=1" for ::1 at 2015-03-17 23:27:06 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-17 23:27:06 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:27:06 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:27:06 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:27:06 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 550ms (Views: 0.4ms)
+
+
+Started GET "/events/editEvent?eventId=08e076910f20ef1c" for ::1 at 2015-03-17 23:27:12 -0700
+Processing by EventsController#editEvent as HTML
+  Parameters: {"eventId"=>"08e076910f20ef1c"}
+  Rendered events/editEvent.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 1120ms (Views: 475.9ms)
+
+
+Started POST "/events/updateEvent" for ::1 at 2015-03-17 23:27:20 -0700
+Processing by EventsController#updateEvent as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"71HLSY/MtKlPIlGWtLi9CDcURDkprpbbUPF5OF2/t17kHeAV4QCunMqYziL60OLYO0HoSsEEhNpj5034NrYYgg==", "events"=>{"eventID"=>"08e076910f20ef1c", "title"=>"Event 1", "startDate"=>"2015-03-17", "endDate"=>"2015-03-17", "startTime"=>"00:00:00", "endTime"=>"00:00:00", "location"=>"Vancouver", "description"=>"eeeeehhh"}, "commit"=>"Save"}
+Redirected to http://localhost:3000/events/index
+Completed 302 Found in 1119ms
+
+
+Started GET "/events/index" for ::1 at 2015-03-17 23:27:21 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 587ms (Views: 104.0ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:27:22 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:27:22 -0700
+
+
+Started GET "/assets/application-8a0758642c3d5340a9e64c3f9882de38.css?body=1" for ::1 at 2015-03-17 23:27:22 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:27:22 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:27:22 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-17 23:27:22 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-17 23:27:22 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:27:22 -0700
+
+
+Started GET "/assets/application-c216f0eff118ced3f590758ba4ea0f8d.js?body=1" for ::1 at 2015-03-17 23:27:22 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:27:22 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-17 23:27:22 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:27:22 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:27:22 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:27:22 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 485ms (Views: 0.5ms)
+
+
+Started GET "/events/editEvent?eventId=08e076910f20ef1c" for ::1 at 2015-03-17 23:27:28 -0700
+Processing by EventsController#editEvent as HTML
+  Parameters: {"eventId"=>"08e076910f20ef1c"}
+  Rendered events/editEvent.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 1075ms (Views: 455.7ms)
+
+
+Started POST "/events/updateEvent" for ::1 at 2015-03-17 23:27:30 -0700
+Processing by EventsController#updateEvent as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fq46b7lRu8X+khlSnPxRRbssVaeZiCKnVpKA5LWZH2wd4hEz152h8HsohubSlA6Vt3n51HEiMKZlhLQk3pCwsA==", "events"=>{"eventID"=>"08e076910f20ef1c", "title"=>"Event 1", "startDate"=>"2015-03-17", "endDate"=>"2015-03-17", "startTime"=>"00:00:00", "endTime"=>"00:00:00", "location"=>"Vancouver", "description"=>"eeeeehhh"}, "commit"=>"Save"}
+Redirected to http://localhost:3000/events/index
+Completed 302 Found in 640ms
+
+
+Started GET "/events/index" for ::1 at 2015-03-17 23:27:31 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 579ms (Views: 111.8ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:27:31 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:27:31 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:27:32 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:27:32 -0700
+
+
+Started GET "/assets/application-8a0758642c3d5340a9e64c3f9882de38.css?body=1" for ::1 at 2015-03-17 23:27:32 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-17 23:27:32 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:27:32 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-17 23:27:32 -0700
+
+
+Started GET "/assets/application-c216f0eff118ced3f590758ba4ea0f8d.js?body=1" for ::1 at 2015-03-17 23:27:32 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:27:32 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:27:32 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-17 23:27:32 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:27:32 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:27:32 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 476ms (Views: 0.5ms)
+
+
+Started GET "/events/index" for ::1 at 2015-03-17 23:27:33 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 577ms (Views: 100.9ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:27:34 -0700
+
+
+Started GET "/assets/application-8a0758642c3d5340a9e64c3f9882de38.css?body=1" for ::1 at 2015-03-17 23:27:34 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:27:34 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-17 23:27:34 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-17 23:27:34 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:27:34 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:27:34 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:27:34 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:27:34 -0700
+
+
+Started GET "/assets/application-c216f0eff118ced3f590758ba4ea0f8d.js?body=1" for ::1 at 2015-03-17 23:27:34 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-17 23:27:34 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:27:34 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:27:34 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:27:34 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 483ms (Views: 0.5ms)
+
+
+Started POST "/events/deleteEvent?eventId=08e076d29c20ba9f" for ::1 at 2015-03-17 23:27:38 -0700
+Processing by EventsController#deleteEvent as HTML
+  Parameters: {"authenticity_token"=>"Nz01729wWvpjnwUfdtQFoyXrH2mhOYYCPzy+XGr4U9A8cR6zAbxAz+Ylmqs4vFpzKb6zGkmTlAMMKoqcAfH8DA==", "eventId"=>"08e076d29c20ba9f"}
+Redirected to http://localhost:3000/events/index?
+Completed 302 Found in 118ms
+
+
+Started GET "/events/index" for ::1 at 2015-03-17 23:27:38 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 598ms (Views: 126.6ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:27:38 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:27:38 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:27:38 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:27:38 -0700
+
+
+Started GET "/assets/application-8a0758642c3d5340a9e64c3f9882de38.css?body=1" for ::1 at 2015-03-17 23:27:38 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-17 23:27:38 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:27:38 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-17 23:27:38 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:27:38 -0700
+
+
+Started GET "/assets/application-c216f0eff118ced3f590758ba4ea0f8d.js?body=1" for ::1 at 2015-03-17 23:27:38 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:27:38 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-17 23:27:38 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:27:38 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:27:38 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 495ms (Views: 0.5ms)
+
+
+Started POST "/events/deleteEvent?eventId=08e076910f20ef1c" for ::1 at 2015-03-17 23:27:42 -0700
+Processing by EventsController#deleteEvent as HTML
+  Parameters: {"authenticity_token"=>"V2bopkY7MBUmuUlEEuA4sFAZrdz2WJm+UXiOIQYLvfpcKsP6KPcqIKMD1vBciGdgXEwBrx7yi79ibrrhbQISJg==", "eventId"=>"08e076910f20ef1c"}
+Redirected to http://localhost:3000/events/index?
+Completed 302 Found in 121ms
+
+
+Started GET "/events/index" for ::1 at 2015-03-17 23:27:42 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 586ms (Views: 113.5ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:27:42 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-17 23:27:42 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:27:42 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:27:42 -0700
+
+
+Started GET "/assets/application-8a0758642c3d5340a9e64c3f9882de38.css?body=1" for ::1 at 2015-03-17 23:27:42 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:27:42 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-17 23:27:42 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:27:42 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:27:42 -0700
+
+
+Started GET "/assets/application-c216f0eff118ced3f590758ba4ea0f8d.js?body=1" for ::1 at 2015-03-17 23:27:42 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-17 23:27:42 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:27:42 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:27:42 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:27:42 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 474ms (Views: 0.2ms)
+
+
+Started GET "/events/newEvent" for ::1 at 2015-03-17 23:27:44 -0700
+Processing by EventsController#newEvent as HTML
+  Rendered events/newEvent.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 474ms (Views: 473.6ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:27:44 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:27:44 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:27:44 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:27:44 -0700
+
+
+Started GET "/assets/application-8a0758642c3d5340a9e64c3f9882de38.css?body=1" for ::1 at 2015-03-17 23:27:44 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-17 23:27:44 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:27:44 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-17 23:27:44 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:27:44 -0700
+
+
+Started GET "/assets/application-c216f0eff118ced3f590758ba4ea0f8d.js?body=1" for ::1 at 2015-03-17 23:27:44 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:27:44 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-17 23:27:44 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:27:44 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:27:44 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 470ms (Views: 0.2ms)
+
+
+Started POST "/events/createEvent" for ::1 at 2015-03-17 23:28:21 -0700
+Processing by EventsController#createEvent as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1vuIvDXt7QiRRc65E9pWCFL9fbjBXkhmzwh1RD7idgLdt6PgWyH3PRT/UQ1dsgnYXqjRyyn0Wmf8HkGEVevZ3g==", "events"=>{"title"=>"Biking", "startDate"=>"2015-03-17", "endDate"=>"2015-03-17", "startTime"=>"15:30:00", "endTime"=>"19:00:00", "location"=>"Whistler", "description"=>"Fun!!!"}, "commit"=>"Add new event"}
+Redirected to http://localhost:3000/events/newEvent?
+Completed 302 Found in 2775ms
+
+
+Started GET "/events/newEvent" for ::1 at 2015-03-17 23:28:24 -0700
+Processing by EventsController#newEvent as HTML
+  Rendered events/newEvent.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 347ms (Views: 346.2ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:28:24 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:28:24 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:28:24 -0700
+
+
+Started GET "/assets/application-8a0758642c3d5340a9e64c3f9882de38.css?body=1" for ::1 at 2015-03-17 23:28:24 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:28:24 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-17 23:28:24 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-17 23:28:24 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:28:24 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:28:24 -0700
+
+
+Started GET "/assets/application-c216f0eff118ced3f590758ba4ea0f8d.js?body=1" for ::1 at 2015-03-17 23:28:24 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-17 23:28:24 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:28:24 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:28:24 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:28:24 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 363ms (Views: 0.2ms)
+
+
+Started GET "/events/index" for ::1 at 2015-03-17 23:28:27 -0700
+Processing by EventsController#index as HTML
+  Parameters: {"authenticity_token"=>"+DFr3FR4nZTcdy+GFFf/HAU6vXHdU8eqy260xtzuQLfzfUCAOrSHoVnNsDJaP6DMCW8RAjX51av4eIAGt+fvaw=="}
+  Rendered events/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 462ms (Views: 113.5ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:28:28 -0700
+
+
+Started GET "/assets/application-8a0758642c3d5340a9e64c3f9882de38.css?body=1" for ::1 at 2015-03-17 23:28:28 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:28:28 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:28:28 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:28:28 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-17 23:28:28 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-17 23:28:28 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:28:28 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:28:28 -0700
+
+
+Started GET "/assets/application-c216f0eff118ced3f590758ba4ea0f8d.js?body=1" for ::1 at 2015-03-17 23:28:28 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-17 23:28:28 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:28:28 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:28:28 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:28:28 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 357ms (Views: 0.3ms)
+
+
+Started GET "/events/editEvent?eventId=08e078141d20ef1d" for ::1 at 2015-03-17 23:28:36 -0700
+Processing by EventsController#editEvent as HTML
+  Parameters: {"eventId"=>"08e078141d20ef1d"}
+  Rendered events/editEvent.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 1147ms (Views: 471.6ms)
+
+
+Started POST "/events/updateEvent" for ::1 at 2015-03-17 23:28:40 -0700
+Processing by EventsController#updateEvent as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X3wMEtE7dgkmL/4pyQg9NpAd+9xBvQ4y8HJxOxwVAYdUMCdOv/dsPKOVYZ2HYGLmnEhXr6kXHDPDZEX7dxyuWw==", "events"=>{"eventID"=>"08e078141d20ef1d", "title"=>"Biking", "startDate"=>"2015-03-17", "endDate"=>"2015-03-17", "startTime"=>"00:00:00", "endTime"=>"00:00:00", "location"=>"Whistler", "description"=>"Fun"}, "commit"=>"Save"}
+Redirected to http://localhost:3000/events/index
+Completed 302 Found in 609ms
+
+
+Started GET "/events/index" for ::1 at 2015-03-17 23:28:41 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 604ms (Views: 119.3ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:28:41 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:28:41 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-17 23:28:41 -0700
+
+
+Started GET "/assets/application-8a0758642c3d5340a9e64c3f9882de38.css?body=1" for ::1 at 2015-03-17 23:28:41 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:28:41 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:28:41 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-17 23:28:41 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:28:41 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:28:41 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:28:41 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-17 23:28:41 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:28:41 -0700
+
+
+Started GET "/assets/application-c216f0eff118ced3f590758ba4ea0f8d.js?body=1" for ::1 at 2015-03-17 23:28:41 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:28:41 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 525ms (Views: 0.4ms)
+
+
+Started GET "/events/index" for ::1 at 2015-03-17 23:28:45 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 632ms (Views: 116.8ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:28:46 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:28:46 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:28:46 -0700
+
+
+Started GET "/assets/application-8a0758642c3d5340a9e64c3f9882de38.css?body=1" for ::1 at 2015-03-17 23:28:46 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:28:46 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-17 23:28:46 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-17 23:28:46 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:28:46 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:28:46 -0700
+
+
+Started GET "/assets/application-c216f0eff118ced3f590758ba4ea0f8d.js?body=1" for ::1 at 2015-03-17 23:28:46 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-17 23:28:46 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:28:46 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:28:46 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:28:46 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 471ms (Views: 0.4ms)
+
+
+Started GET "/events/newEvent" for ::1 at 2015-03-17 23:30:35 -0700
+Processing by EventsController#newEvent as HTML
+  Rendered events/newEvent.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 3023ms (Views: 3022.6ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:30:38 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:30:38 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-17 23:30:38 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:30:38 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:30:38 -0700
+
+
+Started GET "/assets/application-8a0758642c3d5340a9e64c3f9882de38.css?body=1" for ::1 at 2015-03-17 23:30:38 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-17 23:30:38 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:30:38 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-17 23:30:38 -0700
+
+
+Started GET "/assets/application-c216f0eff118ced3f590758ba4ea0f8d.js?body=1" for ::1 at 2015-03-17 23:30:38 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:30:38 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:30:38 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:30:38 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:30:38 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 361ms (Views: 0.3ms)
+
+
+Started POST "/events/createEvent" for ::1 at 2015-03-17 23:31:03 -0700
+Processing by EventsController#createEvent as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GbH1m/mbzy85aaQH4IfhBh0EFBI+eTF7iKMcEn7/t0YS/d7Hl1fVGrzTO7Ou777WEVG4YdbTI3q7tSjSFfYYmg==", "events"=>{"title"=>"hiking", "startDate"=>"2015-03-17", "endDate"=>"2015-03-17", "startTime"=>"01:30:00", "endTime"=>"05:30:00", "location"=>"Burnaby", "description"=>"Fun!!!"}, "commit"=>"Add new event"}
+Redirected to http://localhost:3000/events/newEvent?
+Completed 302 Found in 1114ms
+
+
+Started GET "/events/newEvent" for ::1 at 2015-03-17 23:31:04 -0700
+Processing by EventsController#newEvent as HTML
+  Rendered events/newEvent.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 481ms (Views: 480.5ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:31:05 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:31:05 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-17 23:31:05 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:31:05 -0700
+
+
+Started GET "/assets/application-8a0758642c3d5340a9e64c3f9882de38.css?body=1" for ::1 at 2015-03-17 23:31:05 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:31:05 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-17 23:31:05 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:31:05 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:31:05 -0700
+
+
+Started GET "/assets/application-c216f0eff118ced3f590758ba4ea0f8d.js?body=1" for ::1 at 2015-03-17 23:31:05 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-17 23:31:05 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:31:05 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:31:05 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:31:05 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 470ms (Views: 0.5ms)
+
+
+Started GET "/events/index" for ::1 at 2015-03-17 23:31:07 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 593ms (Views: 115.1ms)
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:31:07 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:31:07 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:31:07 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-17 23:31:07 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-17 23:31:07 -0700
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:31:07 -0700
+
+
+Started GET "/assets/application-8a0758642c3d5340a9e64c3f9882de38.css?body=1" for ::1 at 2015-03-17 23:31:07 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:31:07 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:31:07 -0700
+
+
+Started GET "/assets/application-c216f0eff118ced3f590758ba4ea0f8d.js?body=1" for ::1 at 2015-03-17 23:31:07 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-17 23:31:07 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:31:07 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:31:07 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:31:07 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 493ms (Views: 0.5ms)
+
+
+Started GET "/events/editEvent?eventId=08e07a87bb20baa0" for ::1 at 2015-03-17 23:31:20 -0700
+Processing by EventsController#editEvent as HTML
+  Parameters: {"eventId"=>"08e07a87bb20baa0"}
+  Rendered events/editEvent.html.erb within layouts/application (53.7ms)
+Completed 200 OK in 1150ms (Views: 508.4ms)
+
+
+Started POST "/events/updateEvent" for ::1 at 2015-03-17 23:31:26 -0700
+Processing by EventsController#updateEvent as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jYCrFcAvB/9ebsrncpHK5eMQ73slrkvduf9hVZ1xO4SGzIBJruMdytvUVVM8+ZU170VDCM0EWdyK6VWV9niUWA==", "events"=>{"eventID"=>"08e07a87bb20baa0", "title"=>"hiking", "startDate"=>"2015-03-17", "endDate"=>"2015-03-17", "startTime"=>"00:00:00", "endTime"=>"00:00:00", "location"=>"Burnaby", "description"=>"Fun"}, "commit"=>"Save"}
+Redirected to http://localhost:3000/events/index
+Completed 302 Found in 1118ms
+
+
+Started GET "/events/index" for ::1 at 2015-03-17 23:31:28 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 583ms (Views: 113.9ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:31:28 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:31:28 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:31:28 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-17 23:31:28 -0700
+
+
+Started GET "/assets/application-8a0758642c3d5340a9e64c3f9882de38.css?body=1" for ::1 at 2015-03-17 23:31:28 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:31:28 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-17 23:31:28 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:31:28 -0700
+
+
+Started GET "/assets/application-c216f0eff118ced3f590758ba4ea0f8d.js?body=1" for ::1 at 2015-03-17 23:31:28 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:31:28 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:31:28 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-17 23:31:28 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:31:28 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:31:28 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 475ms (Views: 0.5ms)
+
+
+Started GET "/events/newEvent" for ::1 at 2015-03-17 23:32:30 -0700
+Processing by EventsController#newEvent as HTML
+  Rendered events/newEvent.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 759ms (Views: 758.7ms)
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:32:31 -0700
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:32:31 -0700
+
+
+Started GET "/assets/application-8a0758642c3d5340a9e64c3f9882de38.css?body=1" for ::1 at 2015-03-17 23:32:31 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:32:31 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:32:31 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-17 23:32:31 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-17 23:32:31 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:32:31 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:32:31 -0700
+
+
+Started GET "/assets/application-c216f0eff118ced3f590758ba4ea0f8d.js?body=1" for ::1 at 2015-03-17 23:32:31 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-17 23:32:31 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:32:31 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:32:31 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:32:31 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 351ms (Views: 0.5ms)
+
+
+Started POST "/events/createEvent" for ::1 at 2015-03-17 23:32:49 -0700
+Processing by EventsController#createEvent as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/UhGYKAvZusBhwiVNW/C+0cQIaE8s0y9RC8vLX/kbA/2BG08zuN83oQ9lyF7B50rS0WN0tQZXrx3ORvtFO3D0w==", "events"=>{"title"=>"Event 1", "startDate"=>"2015-03-17", "endDate"=>"2015-03-17", "startTime"=>"00:00:00", "endTime"=>"00:00:00", "location"=>"Burnaby", "description"=>"asaasasa"}, "commit"=>"Add new event"}
+Redirected to http://localhost:3000/events/newEvent?
+Completed 302 Found in 1393ms
+
+
+Started GET "/events/newEvent" for ::1 at 2015-03-17 23:32:50 -0700
+Processing by EventsController#newEvent as HTML
+  Rendered events/newEvent.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 464ms (Views: 463.5ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:32:51 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:32:51 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:32:51 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:32:51 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-17 23:32:51 -0700
+
+
+Started GET "/assets/application-8a0758642c3d5340a9e64c3f9882de38.css?body=1" for ::1 at 2015-03-17 23:32:51 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-17 23:32:51 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:32:51 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:32:51 -0700
+
+
+Started GET "/assets/application-c216f0eff118ced3f590758ba4ea0f8d.js?body=1" for ::1 at 2015-03-17 23:32:51 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-17 23:32:51 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:32:51 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:32:51 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:32:51 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 483ms (Views: 0.6ms)
+
+
+Started GET "/events/index" for ::1 at 2015-03-17 23:32:52 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 639ms (Views: 105.3ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:32:53 -0700
+
+
+Started GET "/assets/application-8a0758642c3d5340a9e64c3f9882de38.css?body=1" for ::1 at 2015-03-17 23:32:53 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:32:53 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:32:53 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-17 23:32:53 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:32:53 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-17 23:32:53 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:32:53 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:32:53 -0700
+
+
+Started GET "/assets/application-c216f0eff118ced3f590758ba4ea0f8d.js?body=1" for ::1 at 2015-03-17 23:32:53 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:32:53 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-17 23:32:53 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:32:53 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:32:53 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 486ms (Views: 0.6ms)
+
+
+Started GET "/events/index" for ::1 at 2015-03-17 23:33:21 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 1124ms (Views: 107.9ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:33:22 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:33:22 -0700
+
+
+Started GET "/assets/application-8a0758642c3d5340a9e64c3f9882de38.css?body=1" for ::1 at 2015-03-17 23:33:22 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:33:22 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:33:22 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-17 23:33:22 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-17 23:33:22 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:33:22 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:33:22 -0700
+
+
+Started GET "/assets/application-c216f0eff118ced3f590758ba4ea0f8d.js?body=1" for ::1 at 2015-03-17 23:33:22 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-17 23:33:22 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:33:22 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:33:22 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:33:22 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 496ms (Views: 0.8ms)
+
+
+Started GET "/events/newEvent" for ::1 at 2015-03-17 23:33:24 -0700
+Processing by EventsController#newEvent as HTML
+  Rendered events/newEvent.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 499ms (Views: 498.3ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:33:25 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:33:25 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:33:25 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:33:25 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-17 23:33:25 -0700
+
+
+Started GET "/assets/application-8a0758642c3d5340a9e64c3f9882de38.css?body=1" for ::1 at 2015-03-17 23:33:25 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-17 23:33:25 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:33:25 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:33:25 -0700
+
+
+Started GET "/assets/application-c216f0eff118ced3f590758ba4ea0f8d.js?body=1" for ::1 at 2015-03-17 23:33:25 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-17 23:33:25 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:33:25 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:33:25 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:33:25 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 490ms (Views: 0.6ms)
+
+
+Started POST "/events/createEvent" for ::1 at 2015-03-17 23:33:44 -0700
+Processing by EventsController#createEvent as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DbU99f6CaUjtyhv3cgzXWvXeZHwoXfBKUW2/+UPnDGwG+RapkE5zfWhwhEM8ZIiK+YvID8D34ktie4s5KO6jsA==", "events"=>{"title"=>"event 1", "startDate"=>"2015-03-17", "endDate"=>"2015-03-17", "startTime"=>"00:00:00", "endTime"=>"00:00:00", "location"=>"Richmond", "description"=>"qwerty"}, "commit"=>"Add new event"}
+Completed 500 Internal Server Error in 900ms
+
+TypeError (no implicit conversion of Symbol into Integer):
+  app/helpers/application_helper.rb:257:in `[]'
+  app/helpers/application_helper.rb:257:in `isValidAddress'
+  app/helpers/application_helper.rb:123:in `getLatLon'
+  app/controllers/events_controller.rb:45:in `createEvent'
+
+
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.4ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (12.4ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tuncay_ceferli/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (27.0ms)
+
+
+Started POST "/events/createEvent" for ::1 at 2015-03-17 23:36:19 -0700
+Processing by EventsController#createEvent as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DbU99f6CaUjtyhv3cgzXWvXeZHwoXfBKUW2/+UPnDGwG+RapkE5zfWhwhEM8ZIiK+YvID8D34ktie4s5KO6jsA==", "events"=>{"title"=>"event 1", "startDate"=>"2015-03-17", "endDate"=>"2015-03-17", "startTime"=>"00:00:00", "endTime"=>"00:00:00", "location"=>"Richmond", "description"=>"qwerty"}, "commit"=>"Add new event"}
+Redirected to http://localhost:3000/events/newEvent?
+Completed 302 Found in 2864ms
+
+
+Started GET "/events/newEvent" for ::1 at 2015-03-17 23:36:22 -0700
+Processing by EventsController#newEvent as HTML
+  Rendered events/newEvent.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 378ms (Views: 377.6ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:36:22 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:36:22 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:36:22 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-17 23:36:22 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:36:22 -0700
+
+
+Started GET "/assets/application-8a0758642c3d5340a9e64c3f9882de38.css?body=1" for ::1 at 2015-03-17 23:36:22 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-17 23:36:22 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:36:22 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:36:22 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-17 23:36:22 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:36:22 -0700
+
+
+Started GET "/assets/application-c216f0eff118ced3f590758ba4ea0f8d.js?body=1" for ::1 at 2015-03-17 23:36:22 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:36:22 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:36:22 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 354ms (Views: 0.8ms)
+
+
+Started GET "/events/index" for ::1 at 2015-03-17 23:36:24 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 478ms (Views: 118.7ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:36:24 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:36:24 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-17 23:36:24 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:36:24 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:36:24 -0700
+
+
+Started GET "/assets/application-8a0758642c3d5340a9e64c3f9882de38.css?body=1" for ::1 at 2015-03-17 23:36:24 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-17 23:36:24 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:36:24 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:36:24 -0700
+
+
+Started GET "/assets/application-c216f0eff118ced3f590758ba4ea0f8d.js?body=1" for ::1 at 2015-03-17 23:36:24 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-17 23:36:24 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:36:24 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:36:24 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:36:24 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 498ms (Views: 1.6ms)
+
+
+Started GET "/events/editEvent?eventId=08e07c25c8206b6a" for ::1 at 2015-03-17 23:36:26 -0700
+Processing by EventsController#editEvent as HTML
+  Parameters: {"eventId"=>"08e07c25c8206b6a"}
+  Rendered events/editEvent.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 456ms (Views: 332.7ms)
+
+
+Started POST "/events/updateEvent" for ::1 at 2015-03-17 23:36:31 -0700
+Processing by EventsController#updateEvent as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6eh89Nlu5JHGfKqVm3wKS5H1bCNJOvOBwFLnrFyoaDLipFeot6L+pEPGNSHVFFWbnaDAUKGQ4YDzRNNsN6HH7g==", "events"=>{"eventID"=>"08e07c25c8206b6a", "title"=>"Event 1", "startDate"=>"2015-03-17", "endDate"=>"2015-03-17", "startTime"=>"00:00:00", "endTime"=>"00:00:00", "location"=>"Burnaby", "description"=>"gdfdfd"}, "commit"=>"Save"}
+Redirected to http://localhost:3000/events/index
+Completed 302 Found in 1117ms
+
+
+Started GET "/events/index" for ::1 at 2015-03-17 23:36:32 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 592ms (Views: 119.5ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:36:33 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:36:33 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-17 23:36:33 -0700
+
+
+Started GET "/assets/application-8a0758642c3d5340a9e64c3f9882de38.css?body=1" for ::1 at 2015-03-17 23:36:33 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:36:33 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:36:33 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-17 23:36:33 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:36:33 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:36:33 -0700
+
+
+Started GET "/assets/application-c216f0eff118ced3f590758ba4ea0f8d.js?body=1" for ::1 at 2015-03-17 23:36:33 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-17 23:36:33 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:36:33 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:36:33 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:36:33 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 493ms (Views: 0.7ms)
+
+
+Started GET "/events/newEvent" for ::1 at 2015-03-17 23:36:39 -0700
+Processing by EventsController#newEvent as HTML
+  Rendered events/newEvent.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 957ms (Views: 956.2ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:36:40 -0700
+
+
+Started GET "/assets/application-8a0758642c3d5340a9e64c3f9882de38.css?body=1" for ::1 at 2015-03-17 23:36:40 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:36:40 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:36:40 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:36:40 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-17 23:36:40 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-17 23:36:40 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:36:40 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:36:40 -0700
+
+
+Started GET "/assets/application-c216f0eff118ced3f590758ba4ea0f8d.js?body=1" for ::1 at 2015-03-17 23:36:40 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-17 23:36:40 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:36:40 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:36:40 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:36:40 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 469ms (Views: 0.6ms)
+
+
+Started POST "/events/createEvent" for ::1 at 2015-03-17 23:37:26 -0700
+Processing by EventsController#createEvent as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IO/ZykHBuB95otA8A/Ye7xfUuAcqfLSWF3OhDeG1+HMro/KWLw2iKvwYT4hNnkE/G4EUdMLWppckZZXNirxXrw==", "events"=>{"title"=>"Sailing", "startDate"=>"2015-03-17", "endDate"=>"2015-03-17", "startTime"=>"14:00:00", "endTime"=>"18:00:00", "location"=>"Victoria", "description"=>"testing"}, "commit"=>"Add new event"}
+Redirected to http://localhost:3000/events/newEvent?
+Completed 302 Found in 3156ms
+
+
+Started GET "/events/newEvent" for ::1 at 2015-03-17 23:37:30 -0700
+Processing by EventsController#newEvent as HTML
+  Rendered events/newEvent.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 326ms (Views: 325.2ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:37:30 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-17 23:37:30 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:37:30 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:37:30 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:37:30 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-17 23:37:30 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-17 23:37:30 -0700
+
+
+Started GET "/assets/application-8a0758642c3d5340a9e64c3f9882de38.css?body=1" for ::1 at 2015-03-17 23:37:30 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:37:30 -0700
+
+
+Started GET "/assets/application-c216f0eff118ced3f590758ba4ea0f8d.js?body=1" for ::1 at 2015-03-17 23:37:30 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:37:30 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:37:30 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:37:30 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:37:30 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 362ms (Views: 0.8ms)
+
+
+Started GET "/events/index" for ::1 at 2015-03-17 23:37:32 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 530ms (Views: 103.8ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:37:33 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:37:33 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:37:33 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:37:33 -0700
+
+
+Started GET "/assets/application-8a0758642c3d5340a9e64c3f9882de38.css?body=1" for ::1 at 2015-03-17 23:37:33 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-17 23:37:33 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:37:33 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-17 23:37:33 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:37:33 -0700
+
+
+Started GET "/assets/application-c216f0eff118ced3f590758ba4ea0f8d.js?body=1" for ::1 at 2015-03-17 23:37:33 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:37:33 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-17 23:37:33 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:37:33 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:37:33 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 348ms (Views: 0.9ms)
+
+
+Started POST "/events/deleteEvent?eventId=08e07f5e4c20ef1e" for ::1 at 2015-03-17 23:37:55 -0700
+Processing by EventsController#deleteEvent as HTML
+  Parameters: {"authenticity_token"=>"XxCLmxbyoTKZOYJa3koPxvae/FJn5l86Z2D2W2TDP+9UXKDHeD67BxyDHe6QIlAW+stQIY9MTTtUdsKbD8qQMw==", "eventId"=>"08e07f5e4c20ef1e"}
+Redirected to http://localhost:3000/events/index?
+Completed 302 Found in 605ms
+
+
+Started GET "/events/index" for ::1 at 2015-03-17 23:37:56 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 600ms (Views: 114.9ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:37:56 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:37:56 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:37:56 -0700
+
+
+Started GET "/assets/application-8a0758642c3d5340a9e64c3f9882de38.css?body=1" for ::1 at 2015-03-17 23:37:56 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-17 23:37:56 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:37:56 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-17 23:37:56 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:37:56 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:37:56 -0700
+
+
+Started GET "/assets/application-c216f0eff118ced3f590758ba4ea0f8d.js?body=1" for ::1 at 2015-03-17 23:37:56 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-17 23:37:56 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:37:56 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:37:56 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:37:56 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 501ms (Views: 0.7ms)
+
+
+Started GET "/events/index" for ::1 at 2015-03-17 23:39:02 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3284ms (Views: 122.7ms)
+
+
+Started GET "/assets/events-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:39:05 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-17 23:39:05 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:39:05 -0700
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:39:05 -0700
+
+
+Started GET "/assets/application-8a0758642c3d5340a9e64c3f9882de38.css?body=1" for ::1 at 2015-03-17 23:39:05 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-17 23:39:05 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:39:05 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-17 23:39:05 -0700
+
+
+Started GET "/assets/application-c216f0eff118ced3f590758ba4ea0f8d.js?body=1" for ::1 at 2015-03-17 23:39:05 -0700
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:39:05 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-17 23:39:05 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:39:05 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-17 23:39:05 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-03-17 23:39:05 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 358ms (Views: 0.7ms)
