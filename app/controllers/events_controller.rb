@@ -4,17 +4,93 @@ require 'json'
 require 'date'
 
 class EventsController < ApplicationController
+  include EventsHelper;
+  include ApplicationHelper;
   
   def index
-    
+    if current_user() != nil
+      userID = current_user().uid;
+      @allEvents = ScheduleItems.getAllEvents(userID)["results"];
+    end
   end
-  
-  def new
-    
-  end
-  
-  def create
 
+  def showEvent
+    if current_user() != nil
+      userID = current_user().uid;
+      allEvents = ScheduleItems.getAllEvents(userID)["results"];
+    
+      render :json => allEvents
+    end
+  end
+
+  def editEvent
+    @eventID = params[:eventId];
+    @event = ScheduleItems.getEvent( @eventID );
+  end
+
+  def newEvent
+
+  end
+
+  def createEvent
+    title = params[:events]["title"];
+    startDate = params[:events]["startDate"];
+    endDate = params[:events]["endDate"];
+    startTime = params[:events]["startTime"];
+    endTime = params[:events]["endTime"];
+    location = params[:events]["location"];
+    description = params[:events]["description"];
+    userId = current_user().uid;
+
+    latLon = Geocoder.getLatLon( location );
+
+    jsonData = OpenWeather.getCitiesCurrentWeather( latLon[:lat], latLon[:lng], 1 );
+    weatherDesc = jsonData['list'][0]['weather'][0]['description'];
+
+    eventInfo = {
+      title: title,
+      startDate: startDate,
+      endDate: endDate,
+      startTime: startTime,
+      endTime: endTime,
+      location: location,
+      description: description,
+      weatherDesc: weatherDesc,
+      userId: userId
+    };
+    response = ScheduleItems.createEvent( eventInfo );
+    redirect_to :back
+  end
+
+  def deleteEvent
+    response = ScheduleItems.deleteEvent( params[:eventId] );
+    redirect_to :back
+  end
+  
+  def updateEvent
+    eventID = params[:events]["eventID"];
+
+    title = params[:events]["title"];
+    startDate = params[:events]["startDate"];
+    endDate = params[:events]["endDate"];
+    startTime = params[:events]["startTime"];
+    endTime = params[:events]["endTime"];
+    location = params[:events]["location"];
+    description = params[:events]["description"];
+    userId = current_user().uid;
+
+    eventInfo = {
+      title: title,
+      startDate: startDate,
+      endDate: endDate,
+      startTime: startTime,
+      endTime: endTime,
+      location: location,
+      description: description,
+      userId: userId
+    };
+    response = ScheduleItems.updateEvent( eventID, eventInfo );
+    redirect_to events_index_path
   end
   
   def self.getEpochTime( event, time_str )

@@ -1,15 +1,19 @@
 source 'https://rubygems.org'
 
+# Weather data source: http://forecast.io/
+gem 'forecast_io'
+# Http request client
 gem 'httparty'
-
+# Remote database: https://orchestrate.io/
 gem 'orchestrate'
-
+# Google login client: https://github.com/jaredonline/google-authenticator 
 gem "omniauth-google-oauth2", "~> 0.2.1"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
+# gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

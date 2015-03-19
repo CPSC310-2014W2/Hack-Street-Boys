@@ -1,31 +1,38 @@
+require 'json'
+
 class HomeController < ApplicationController
   include ApplicationHelper;
   
   def index
-    @vancouverweather = OpenWeather.getCityCurrentWeather("6173331");
-    puts @vancouverweather;
+    
   end
   
   def test_google_latlon
     address = params[:home]["address"];
-    latLon = Geocoder.getLatLon( address );
-    render plain: latLon;
+    render plain: JSON.pretty_generate( Geocoder.getGeoInfo( address ) );
   end
   
-  def test_current_weather
-    lat = params[:home]["lat"];
-    lng = params[:home]["lng"];
-    num = params[:home]["num"];
-    jsonData = OpenWeather.getCitiesCurrentWeather( lat, lng, num );
-    render plain: jsonData;
+  def test_get_city_weather
+    address = params[:home]["address"];
+    data = OrchestrateDatabase.getCityWeatherData( Geocoder.getGeoInfo( address ) );
+    if ( data == nil )
+      render plain: data;
+    else
+      render plain: JSON.pretty_generate( data );
+    end
+    
   end
   
-  def test_store_weather_data
-    lat = params[:home]["lat"];
-    lng = params[:home]["lng"];
-    num = params[:home]["num"];
-    response = OrchestrateDatabase.storeCitiesCurrentWeather( lat, lng, num );
-    render plain: response;
+  def test_get_cities_weather
+    address = params[:home]["address"];
+    citycount = params[:home]["citycount"];
+    data = Geocoder.getCitiesGeoInfo( Geocoder.getSurroundingLatLons( Geocoder.getGeoInfo( address ), citycount.to_i ) );
+    if ( data == nil )
+      render plain: data;
+    else
+      render plain: JSON.pretty_generate( OrchestrateDatabase.getCitiesWeatherData( data ) );
+    end
+    
   end
   
 end
