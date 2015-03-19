@@ -1,5 +1,13 @@
 <div id="settingpanel-container" align="center">
-  <div id="panel" align="center" >
+  <div id="panel" align="left" >
   	<h2 align="left">Set Your City:</h2>
+  	<%= form_for :setting, url: setting_update_path, :method => :get do |f| %>
+  		<p>
+    		<%= f.label "Enter your city, following country name" %><br>
+    		<%= f.text_field :address %>
+  		</p>
+  		<%= f.submit "Update your city" %>  
+	<% end %>
+	<p>Your selected city is:</p>
   </div>
 </div>
