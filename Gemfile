@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'gmaps4rails'
+
 # Weather data source: http://forecast.io/
 gem 'forecast_io'
 # Http request client

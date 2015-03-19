@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'sessions/create'
   get 'sessions/destroy'
   get 'home/index'
+  get 'setting/index'
   get 'events/index'
   
   root 'home#index'
@@ -26,6 +27,7 @@ Rails.application.routes.draw do
     get :test_get_city_weather, :on => :collection
     get :test_get_cities_weather, :on => :collection
   end
+  resources :setting, only: [ :index ]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
