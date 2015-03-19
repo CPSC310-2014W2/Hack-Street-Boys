@@ -1,23 +1,21 @@
-<%= form_for :events, url: updateEvent_events_path, :method => :post do |f| %>
-  <p style="display:none;">
-    <%= f.label "Event ID" %><br>
-    <%= f.text_field :eventID, :value => @eventID %>
-  </p>
+<%= link_to "Back", events_index_path, :method => :get, :class => "coloring" %>
+
+<%= form_for :events, url: createEvent_events_path, :method => :post do |f| %>
   <p>
     <%= f.label "Event Title" %><br>
-    <%= f.text_field :title, :value => @event["title"] %>
+    <%= f.text_field :title, required: true%>
   </p>
   <p>
     <%= f.label "Start Date" %><br>
-    <%= f.text_field :startDate, :value => @event["startDate"]%>
+    <%= f.text_field :startDate,  placeholder: "yyyy-mm-dd", required: true%>
   </p>
   <p>
     <%= f.label "End Date" %><br>
-    <%= f.text_field :endDate, :value => @event["endDate"]%>
+    <%= f.text_field :endDate, placeholder: "yyyy-mm-dd", required: true%>
   </p>
   <p>
     <%= f.label "Start Time" %><br>
-    <%= f.select :startTime,
+    <%= f.select :startTime, 
       [
         ['12:00am', '00:00:00'],
         ['12:30am', '00:30:00'], 
@@ -68,13 +66,12 @@
         ['10:30pm', '22:30:00'],
         ['11:00pm', '23:00:00'],
         ['11:30pm', '23:30:00']
-      ], 
-      :value => @event["startTime"]
+      ] 
     %>
   </p>
   <p>
     <%= f.label "End Time" %><br>
-    <%= f.select :endTime,
+    <%= f.select :endTime, 
       [
         ['12:00am', '00:00:00'],
         ['12:30am', '00:30:00'], 
@@ -125,17 +122,16 @@
         ['10:30pm', '22:30:00'],
         ['11:00pm', '23:00:00'],
         ['11:30pm', '23:30:00']
-      ], 
-      :value => @event["startTime"]
+      ]
     %>
   </p>
   <p>
     <%= f.label "Location" %><br>
-    <%= f.text_field :location, :value => @event["location"] %>
+    <%= f.text_field :location, placeholder: "Enter city or address", required: true %>
   </p>
   <p>
     <%= f.label "Description" %><br>
-    <%= f.text_field :description, :value => @event["description"] %>
+    <%= f.text_field :description %>
   </p>
-  <%= f.submit "Save" %>  
+  <%= f.submit "Add new event" %>  
 <% end %>

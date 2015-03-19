@@ -3,7 +3,12 @@
 <head>
   <title>Weathr</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag "//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.css" %>
+
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js" %>
+  <%= csrf_meta_tags %>
+  <%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.js" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -24,7 +29,7 @@
 <div align="center" >
 	<%= button_to "Home", root_path, :method => :get, :class => "coloring" %>
 	<div style="width: 2%; display: inline"></div>
-	<%= button_to "Scheduler", events_index_path, :method => :get, :class => "coloring" %>
+	<%= button_to "Calender", events_index_path, :method => :get, :class => "coloring" %>
 	<div style="width: 2%; display: inline"></div>
 	<%= button_to "Favorite Cities", fav_cities_path, :method => :get, :class => "coloring" %>
 	<div style="width: 2%; display: inline"></div>
