@@ -1,0 +1,16 @@
+<div id="settingpanel-container" align="center">
+  <div id="panel" align="left" >
+  	<h2 align="left">Set Your City:</h2>
+  	<%= form_for :setting, url: setting_update_path, :method => :get do |f| %>
+  		<p>
+    		<%= f.label "Set your home city to receive the most relevant weather data!" %>
+    		<br>
+    		<br>
+    		<%= f.label "Address: " %> <%= f.text_field :address %>
+  		    <%= f.submit "Update your city" %>  
+            <p id="error" style="color: red"><%= flash[:error] %></p>
+  		</p>
+	<% end %>
+	<p>Current city is: <%= @current_city %></p>
+  </div>
+</div>
