@@ -115,7 +115,7 @@ module ApplicationHelper
   class Geocoder
     
     GOOGLE_URL = 'https://maps.googleapis.com/maps/api/geocode/json?';
-    GGEOCODE_API_KEY = "AIzaSyBLpS5MvC4fvI_erjfj7M8gmFXkq_O5aso";
+    GGEOCODE_API_KEY = "AIzaSyDvsyIuTEZzQCXsZZXT2dQhn9foP66qH60";
     
     # REQUIRE: A valid geoInfo Hash Map
     # EFFECT : return a hash map { :lat => [...], :lng => [...]}

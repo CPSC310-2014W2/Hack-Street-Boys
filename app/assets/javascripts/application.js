@@ -146,7 +146,6 @@ $(document).ready(function(){
 		events: function(start, end, timezone, callback) {
 	        $.ajax({
 	            url: '/events/showEvent',
-	            dataType: 'xml',
 	            type: "GET",
 				dataType: "json",
 	            success: function(data) {

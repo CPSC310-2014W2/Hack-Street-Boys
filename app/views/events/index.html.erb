@@ -1,24 +1,27 @@
 <% if @allEvents != nil %> 
   <table style="margin: 40px;">
     <tr>
+      <th>City Key</th>
       <th>Title</th>
       <th>Start</th>
       <th>End</th>
       <th>Location</th>
       <th>Description</th>
+      <th>User Id</th>
       <th colspan="3"></th>
     </tr>
     <% @allEvents.each do |event| %>
     <tr>
+      <td><%= event["value"]["cityKey"] %></td>
       <td><%= event["value"]["title"] %></td>
-        <td><%= event["value"]["startDate"] %>T<%= event["value"]["startTime"] %></td>
-        <td><%= event["value"]["endDate"] %>T<%= event["value"]["endTime"] %></td>
-        <td><%= event["value"]["location"] %></td>
-        <td><%= event["value"]["description"] %></td>
-        <td><%= event["value"]["weatherDesc"] %></td>
+      <td><%= event["value"]["startDate"] %>T<%= event["value"]["startTime"] %></td>
+      <td><%= event["value"]["endDate"] %>T<%= event["value"]["endTime"] %></td>
+      <td><%= event["value"]["location"] %></td>
+      <td><%= event["value"]["description"] %></td>
+      <td><%= event["value"]["userId"] %></td>
 
-        <td><%= link_to 'Edit', editEvent_events_path(:eventId => event["path"]["key"]) %></td>
-        <td><%= link_to 'Delete', deleteEvent_events_path(:eventId => event["path"]["key"]), method: :post %></td>
+      <td><%= link_to 'Edit', editEvent_events_path(:eventId => event["path"]["key"]) %></td>
+      <td><%= link_to 'Delete', deleteEvent_events_path(:eventId => event["path"]["key"]), method: :post %></td>
     </tr>
     <% end %>
   </table>

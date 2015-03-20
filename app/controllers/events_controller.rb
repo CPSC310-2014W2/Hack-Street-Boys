@@ -42,28 +42,26 @@ class EventsController < ApplicationController
     description = params[:events]["description"];
     userId = current_user().uid;
 
-    latLon = Geocoder.getLatLon( location );
+    geoInfo = Geocoder.getGeoInfo( location );
+    validAddress = Geocoder.isValidAddress(geoInfo);
 
-    jsonData = OpenWeather.getCitiesCurrentWeather( latLon[:lat], latLon[:lng], 1 );
-    weatherDesc = jsonData['list'][0]['weather'][0]['description'];
-
-    eventInfo = {
-      title: title,
-      startDate: startDate,
-      endDate: endDate,
-      startTime: startTime,
-      endTime: endTime,
-      location: location,
-      description: description,
-      weatherDesc: weatherDesc,
-      userId: userId
-    };
-    response = ScheduleItems.createEvent( eventInfo );
-    redirect_to :back
-  end
-
-  def deleteEvent
-    response = ScheduleItems.deleteEvent( params[:eventId] );
+    if validAddress
+      cityNameKey = Geocoder.getCityNameKey(geoInfo);
+      eventInfo = {
+        cityKey: cityNameKey,
+        title: title,
+        startDate: startDate,
+        endDate: endDate,
+        startTime: startTime,
+        endTime: endTime,
+        location: location,
+        description: description,
+        userId: userId
+      };
+      response = ScheduleItems.createEvent( eventInfo );
+    else
+      render :json => "not valid address"
+    end
     redirect_to :back
   end
   
@@ -79,18 +77,32 @@ class EventsController < ApplicationController
     description = params[:events]["description"];
     userId = current_user().uid;
 
-    eventInfo = {
-      title: title,
-      startDate: startDate,
-      endDate: endDate,
-      startTime: startTime,
-      endTime: endTime,
-      location: location,
-      description: description,
-      userId: userId
-    };
-    response = ScheduleItems.updateEvent( eventID, eventInfo );
+    geoInfo = Geocoder.getGeoInfo( location );
+    validAddress = Geocoder.isValidAddress(geoInfo);
+
+    if validAddress
+      cityNameKey = Geocoder.getCityNameKey(geoInfo);
+      eventInfo = {
+        cityKey: cityNameKey,
+        title: title,
+        startDate: startDate,
+        endDate: endDate,
+        startTime: startTime,
+        endTime: endTime,
+        location: location,
+        description: description,
+        userId: userId
+      };
+      response = ScheduleItems.updateEvent( eventID, eventInfo );
+    else
+      render :json => "not valid address"
+    end
     redirect_to events_index_path
+  end
+
+  def deleteEvent
+    response = ScheduleItems.deleteEvent( params[:eventId] );
+    redirect_to :back
   end
   
   def self.getEpochTime( event, time_str )
