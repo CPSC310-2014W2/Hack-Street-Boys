@@ -3,7 +3,14 @@ Rails.application.routes.draw do
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroy', as: 'signout'
+
+  get 'auth/:provider/callback', to: 'sessions#createFacebookUser'
+  get 'auth/failure', to: redirect('/')
+  get 'signout', to: 'sessions#destroyFacebookUser', as: 'facebook_signout'
   
+
+  get 'sessions/createFacebookUser'
+  get 'sessions/destroyFacebookUser'
   get 'sessions/create'
   get 'sessions/destroy'
   get 'home/index'
