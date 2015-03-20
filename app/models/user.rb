@@ -17,7 +17,6 @@ class User
   
   def self.findGoogleUser( userID )
     userInfo = OrchestrateDatabase.getGoogleUserInfo( userID );
-    puts( userInfo );
     if userInfo
       return User.new( userInfo, userID );
     else

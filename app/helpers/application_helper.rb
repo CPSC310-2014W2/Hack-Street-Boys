@@ -22,9 +22,7 @@ module ApplicationHelper
       else
         return nil;
       end
-      client = Orchestrate::Client.new( ORC_API_KEY );
-      puts "Querying Orchestrate.io"; #TODO
-      response = client.get( :cityweather, cityNameKey.to_s ); 
+      response = queryOrchestrate( :cityweather, cityNameKey.to_s ); 
       if ( isValidOrchestrateResponse( JSON.parse( response.to_json ) ) )
         result = JSON.parse( response.to_json )["body"];
       else
@@ -36,26 +34,22 @@ module ApplicationHelper
         result = getCityWeatherData( geoInfo );
       end
       rescue Orchestrate::API::NotFound;
-        puts "Key not found in Orchestrate.io"; #TODO
+        puts "getCityWeatherData: Key not found in Orchestrate.io"; #TODO
         updateWeatherData( geoInfo );
         result = getCityWeatherData( geoInfo );
       else
         return result;
     end
     
-    # REQUIRE: geoInfoArray         : an array of hash maps containing geoInfo for a list of city locations
-    # EFFECT : return an array of weather data of an array of addresses ( in the form of geoInfo Hash map )
+    # REQUIRE: geoInfoArray         : an array of hash maps containing geoInfo for a list of valid city locations
+    # EFFECT : return a hash map of weather data for the given list of cities with the cityNameKey as key
     #          - if the geoInfoArray is an empty array, return nil
-    #          - if any geoInfo element of the geoInfoArray is invalid (invalid address) the return element 
-    #            of the corresponding weather data array will be nil as well 
-    def self.getCitiesWeatherData( geoInfoArray )
+    def self.getCitiesWeatherData ( geoInfoArray )
       if ( geoInfoArray == nil )
         return nil;
       end
       citiesWeatherData = Hash.new;
       geoInfoArray.each { |geoInfo|
-        puts "Pausing to reserve forecast.io API calls frequency"; #TODO
-        sleep 0.2;
         key = Geocoder.getCityNameKey( geoInfo );
         citiesWeatherData[key] = getCityWeatherData( geoInfo );
       }
@@ -68,11 +62,14 @@ module ApplicationHelper
     #                automatically update weather data in Orchestrate.io if the weather data requested is over an
     #                hour old in Orchestrate.io
     def self.updateWeatherData ( geoInfo )      
-      puts "Querying forecast.io"; #TODO      
-      client = Orchestrate::Client.new( ORC_API_KEY );      
       latLon = Geocoder.getLatLon( geoInfo );
+      updateOrchestrate( :cityweather, Geocoder.getCityNameKey( geoInfo ), queryForecastIO( latLon ) );
+    end
+    
+    def self.queryForecastIO ( latLon )
       lat = latLon[:lat];
       lon = latLon[:lng];      
+      puts "querying forecast.io"; #TODO     
       ForecastIO.api_key = FORECAST_IO_API_KEY;
       forecast = ForecastIO.forecast( lat.to_i, lon.to_i );
       forecast_hash = Hash.new; 
@@ -81,8 +78,7 @@ module ApplicationHelper
       forecast_hash[:currently] = forecast.currently;
       forecast_hash[:hourly] = forecast.hourly.except!("summary");
       forecast_hash[:daily_this_week] = forecast.daily.except!("summary");      
-      forecast_data = JSON.parse( forecast_hash.to_json, :symbolize_names => true );      
-      client.put( :cityweather, Geocoder.getCityNameKey( geoInfo ), forecast_data );
+      return JSON.parse( forecast_hash.to_json, :symbolize_names => true );          
     end
     
     # REQUIRE: response             : a json response from Orchestrate.io
@@ -95,8 +91,7 @@ module ApplicationHelper
     # EFFECT : Retrieve the hash map google user information from Orchestrate.io with the user id as the key
     #           - Return nil if the key cannot be found
     def self.getGoogleUserInfo ( user_id )
-      client = Orchestrate::Client.new( ORC_API_KEY );
-      response = client.get( :googleuser, user_id.to_s );
+      response = queryOrchestrate( :googleuser, user_id.to_s );
     rescue Orchestrate::API::NotFound;
       return nil;
     else      
@@ -114,16 +109,14 @@ module ApplicationHelper
     # REQUIRE: cityNameKey        : a city name key in the form '[city name]_[country code]' e.g. Vancouver_CA
     # EFFECT : return the geoInfo corresponding to the said cityNameKey
     def self.getGeoInfoByKey( cityNameKey )
-      client = Orchestrate::Client.new( ORC_API_KEY );
-      puts "Querying Orchestrate.io for geo infor data for " + cityNameKey; #TODO
-      response = client.get( :citygeoinfo, cityNameKey.to_s ); 
+      response = queryOrchestrate( :citygeoinfo, cityNameKey.to_s ); 
       if ( isValidOrchestrateResponse( JSON.parse( response.to_json ) ) )
         result = JSON.parse( response.to_json, :symbolize_names => true )[:body][:geoInfo];
       else
         return nil;
       end
       rescue Orchestrate::API::NotFound;
-        puts "Key not found in Orchestrate.io"; #TODO
+        puts "getGeoInfoByKey: cityNameKey not found in Orchestrate.io"; #TODO
         geoInfo = Geocoder.getGeoInfo( cityNameKey );
         if ( Geocoder.isValidAddress( geoInfo ) )
           updateGeoInfo( geoInfo );
@@ -138,13 +131,31 @@ module ApplicationHelper
     # REQUIRE: geoInfo        : A geoInfo hash map of a particular Canadian or US city
     # EFFECT : store/update the Orchestrate.io database with the said geoInfo Hash 
     def self.updateGeoInfo( geoInfo )
-      client = Orchestrate::Client.new( ORC_API_KEY );
       if ( Geocoder.isValidAddress( geoInfo ) )
         cityNameKey = Geocoder.getCityNameKey( geoInfo );
         geoInfoData = Hash.new;
         geoInfoData[:geoInfo] = geoInfo;
-        client.put( :citygeoinfo, cityNameKey, geoInfoData );
+        updateOrchestrate( :citygeoinfo, cityNameKey, geoInfoData );
       end
+    end
+    
+    ######################################################
+    # Helper
+    ######################################################
+    
+    
+    def self.queryOrchestrate( collection, key ) 
+      client = Orchestrate::Client.new( ORC_API_KEY );
+      puts "Querying Orchestrate: " + collection.to_s + ", " + key.to_s; #TODO
+      response = client.get( collection, key ); 
+      return response;
+    end
+    
+    def self.updateOrchestrate( collection, key, value ) 
+      client = Orchestrate::Client.new( ORC_API_KEY );
+      puts "Updating Orchestrate: " + collection.to_s + ", " + key.to_s; #TODO
+      response = client.put( collection, key, value ); 
+      return response;
     end
     
   end
@@ -273,7 +284,6 @@ module ApplicationHelper
       lat = latLon[:lat];
       lon = latLon[:lng];
       g_geocode_url = GOOGLE_URL + 'latlng=' + lat.to_s + ',' + lon.to_s + '&key=' + GGEOCODE_API_KEY;
-      puts g_geocode_url;
       response = JSON.parse( HTTParty.get( g_geocode_url.to_s ).to_json, :symbolize_names => true )[:results];
       if ( response == [] )
         return nil;
@@ -336,7 +346,6 @@ module ApplicationHelper
       end
       geoInfoArray = Array.new;
       latLonArray.each { |latLon|
-        puts "Pausing to reserve google reverse geocoding API calls frequency"; #TODO
         sleep 0.2;
         geoInfoArray << getReverseGeoInfo( latLon );
       }
@@ -354,7 +363,6 @@ module ApplicationHelper
         if ( isValidAddress( geoInfo ) && !( cityKeyArray.include? cityNameKey ) )
           noDuplicateArray << geoInfo;
           cityKeyArray << cityNameKey;
-          puts cityNameKey; #TODO
         end
       }
       return noDuplicateArray;
