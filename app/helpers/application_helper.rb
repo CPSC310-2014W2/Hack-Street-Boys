@@ -55,7 +55,7 @@ module ApplicationHelper
       citiesWeatherData = Hash.new;
       geoInfoArray.each { |geoInfo|
         puts "Pausing to reserve forecast.io API calls frequency"; #TODO
-        sleep 0.5;
+        sleep 0.2;
         key = Geocoder.getCityNameKey( geoInfo );
         citiesWeatherData[key] = getCityWeatherData( geoInfo );
       }
@@ -77,6 +77,7 @@ module ApplicationHelper
       forecast = ForecastIO.forecast( lat.to_i, lon.to_i );
       forecast_hash = Hash.new; 
       forecast_hash[:last_update_time] = Time.now.to_i;
+      forecast_hash[:latLon] = latLon;
       forecast_hash[:currently] = forecast.currently;
       forecast_hash[:hourly] = forecast.hourly.except!("summary");
       forecast_hash[:daily_this_week] = forecast.daily.except!("summary");      
@@ -108,16 +109,66 @@ module ApplicationHelper
     def self.storeGoogleUser ( user_info, user_id )
       client = Orchestrate::Client.new( ORC_API_KEY );
       client.put( :googleuser, user_id, user_info );
+    end
+    
+    # REQUIRE: cityNameKey        : a city name key in the form '[city name]_[country code]' e.g. Vancouver_CA
+    # EFFECT : return the geoInfo corresponding to the said cityNameKey
+    def self.getGeoInfoByKey( cityNameKey )
+      client = Orchestrate::Client.new( ORC_API_KEY );
+      puts "Querying Orchestrate.io for geo infor data for " + cityNameKey; #TODO
+      response = client.get( :citygeoinfo, cityNameKey.to_s ); 
+      if ( isValidOrchestrateResponse( JSON.parse( response.to_json ) ) )
+        result = JSON.parse( response.to_json, :symbolize_names => true )[:body][:geoInfo];
+      else
+        return nil;
+      end
+      rescue Orchestrate::API::NotFound;
+        puts "Key not found in Orchestrate.io"; #TODO
+        geoInfo = Geocoder.getGeoInfo( cityNameKey );
+        if ( Geocoder.isValidAddress( geoInfo ) )
+          updateGeoInfo( geoInfo );
+          return geoInfo;
+        else
+          return nil;
+        end
+      else
+        return result;
     end 
+    
+    # REQUIRE: geoInfo        : A geoInfo hash map of a particular Canadian or US city
+    # EFFECT : store/update the Orchestrate.io database with the said geoInfo Hash 
+    def self.updateGeoInfo( geoInfo )
+      client = Orchestrate::Client.new( ORC_API_KEY );
+      if ( Geocoder.isValidAddress( geoInfo ) )
+        cityNameKey = Geocoder.getCityNameKey( geoInfo );
+        geoInfoData = Hash.new;
+        geoInfoData[:geoInfo] = geoInfo;
+        client.put( :citygeoinfo, cityNameKey, geoInfoData );
+      end
+    end
     
   end
   
   class Geocoder
     
     GOOGLE_URL = 'https://maps.googleapis.com/maps/api/geocode/json?';
-    GGEOCODE_API_KEY = "AIzaSyBLpS5MvC4fvI_erjfj7M8gmFXkq_O5aso";
+    GGEOCODE_API_KEY = "AIzaSyCOvnSbUGSJfQFEZfAHk7zgpP83f9QJrp8";
     
-    # REQUIRE: A valid geoInfo Hash Map
+    # REQUIRE: address            : a string address
+    # EFFECT : return a geoInfo hash map based on google geocoder
+    #          - if google geocoder return no result, return nil
+    def self.getGeoInfo( address )
+      g_geocode_url = GOOGLE_URL + 'address=' + address.to_s.gsub(/\s/,'+') + '&key=' + GGEOCODE_API_KEY;
+      puts "Querying google geocoder at: " + g_geocode_url;
+      response = JSON.parse( HTTParty.get( g_geocode_url.to_s ).to_json, :symbolize_names => true )[:results];
+      if ( response == [] )
+        return nil;
+      else
+        return response;
+      end      
+    end
+    
+    # REQUIRE: A valid geoInfo Hash Map (i.e. a city address belonging to a Canadian or US City)
     # EFFECT : return a hash map { :lat => [...], :lng => [...]}
     def self.getLatLon ( geoInfo )
       if ( isValidAddress( geoInfo ) )
@@ -125,6 +176,16 @@ module ApplicationHelper
       else
         return nil;
       end
+    end
+    
+    # REQUIRE: An array of valid geoInfo Hash Maps
+    # EFFECT : return an array of latitude and longitude pair hash map
+    def self.getLatLonArray ( geoInfoArray )
+      latLonArray = Array.new;
+      geoInfoArray.each{ |geoInfo|
+          latLonArray << geoInfo[0][:geometry][:location];
+      }
+      return latLonArray;
     end
     
     # REQUIRE: geoInfo            : a geoInfo of a particular city address 
@@ -156,9 +217,6 @@ module ApplicationHelper
         
         tempArr.each { |shiftedLatLon|
           if ( latLonArray.length >= count )
-            #TODO 
-            created = latLonArray.length - count;
-            puts created.to_s + " pair(s) created...";
             return latLonArray;
           end
           if ( !( latLonArray.include?( shiftedLatLon ) ) )
@@ -206,24 +264,6 @@ module ApplicationHelper
       shiftedLatLon[:lat] = shiftedLat;
       shiftedLatLon[:lng] = shiftedLon;
       return shiftedLatLon;
-    end
-    
-    # REQUIRE: address            : a string address
-    # EFFECT : return a geoInfo hash map based on google geocoder
-    def self.getGeoInfo( address )
-      g_geocode_url = GOOGLE_URL + 'address=' + address.to_s.gsub(/\s/,'+') + '&key=' + GGEOCODE_API_KEY;
-      response = JSON.parse( HTTParty.get( g_geocode_url.to_s ).to_json, :symbolize_names => true )[:results];
-      if ( response == [] )
-        return nil;
-      else
-        return response;
-      end      
-    end
-    
-    # REQUIRE: cityNameKey        : an unique key representing a city in Orchestrate.io e.g. 'Vancouver_CA'
-    # EFFECT : return a geoInfo of that particular cityNameKey
-    def self.getGeoInfoByKey( cityNameKey )
-    
     end
     
     # REQUIRE: latLon             : a latitude and longitude pair hash map
@@ -278,7 +318,7 @@ module ApplicationHelper
       
       addr_compon_arr.each { |component|
         if ( component[:types][0] == "locality" )
-          city = component[:short_name];
+          city = component[:long_name];
         end
         if ( component[:types][0] == "country")
           country = component[:short_name];
@@ -297,7 +337,7 @@ module ApplicationHelper
       geoInfoArray = Array.new;
       latLonArray.each { |latLon|
         puts "Pausing to reserve google reverse geocoding API calls frequency"; #TODO
-        sleep 0.5;
+        sleep 0.2;
         geoInfoArray << getReverseGeoInfo( latLon );
       }
       return removeDuplicateGeoInfos( geoInfoArray );
