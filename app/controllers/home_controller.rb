@@ -8,7 +8,7 @@ class HomeController < ApplicationController
     cityNameKey = RelationshipHelper.getUserCityNameKey( current_user.uid );
     if ( current_user && cityNameKey )
       geoInfo = OrchestrateDatabase.getGeoInfoByKey( cityNameKey );
-      @latLons = Geocoder.getSurroundingLatLons( geoInfo, 5 );
+      @latLons = Geocoder.getSurroundingLatLons( geoInfo, 3 );
       @geoInfos = Geocoder.getCitiesGeoInfo( @latLons );
       @currentWeather = OrchestrateDatabase.getCitiesWeatherData( @geoInfos );
       @weatherArray = Array.new;

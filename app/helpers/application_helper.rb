@@ -66,6 +66,8 @@ module ApplicationHelper
       updateOrchestrate( :cityweather, Geocoder.getCityNameKey( geoInfo ), queryForecastIO( latLon ) );
     end
     
+    # REQUIRE: latLon               : a latitude and longitude pair
+    # EFFECT : return a hash map containing the forecast data from Forecast.io
     def self.queryForecastIO ( latLon )
       lat = latLon[:lat];
       lon = latLon[:lng];      
@@ -79,12 +81,6 @@ module ApplicationHelper
       forecast_hash[:hourly] = forecast.hourly.except!("summary");
       forecast_hash[:daily_this_week] = forecast.daily.except!("summary");      
       return JSON.parse( forecast_hash.to_json, :symbolize_names => true );          
-    end
-    
-    # REQUIRE: response             : a json response from Orchestrate.io
-    # EFFECT : return true if the orchestrate response contains a body 
-    def self.isValidOrchestrateResponse( response ) 
-      return response.has_key?("body");
     end
     
     # REQUIRE: user_id              : A valid google user id that is already stored in Orchestrate.io
@@ -106,7 +102,7 @@ module ApplicationHelper
       client.put( :googleuser, user_id, user_info );
     end
     
-    # REQUIRE: cityNameKey        : a city name key in the form '[city name]_[country code]' e.g. Vancouver_CA
+    # REQUIRE: cityNameKey          : a city name key in the form '[city name]_[country code]' e.g. Vancouver_CA
     # EFFECT : return the geoInfo corresponding to the said cityNameKey
     def self.getGeoInfoByKey( cityNameKey )
       response = queryOrchestrate( :citygeoinfo, cityNameKey.to_s ); 
@@ -143,6 +139,11 @@ module ApplicationHelper
     # Helper
     ######################################################
     
+    # REQUIRE: response             : a json response from Orchestrate.io
+    # EFFECT : return true if the orchestrate response contains a body 
+    def self.isValidOrchestrateResponse( response ) 
+      return response.has_key?("body");
+    end
     
     def self.queryOrchestrate( collection, key ) 
       client = Orchestrate::Client.new( ORC_API_KEY );
