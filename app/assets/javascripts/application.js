@@ -152,6 +152,7 @@ $(document).ready(function(){
 	                var events = [];
 	                for (key in data) {
 	                	events.push({
+                            key: data[key].path.key,
 	                        title: data[key].value.title,
 	                        start: data[key].value.startDate + 'T' + data[key].value.startTime,
 	                        end: data[key].value.endDate + 'T' + data[key].value.endTime,
@@ -165,12 +166,19 @@ $(document).ready(function(){
 					console.log("Ajax error!");
 				}
 	        });
-	    }
-		
-	    // dayClick: function(date, jsEvent, view) {
-	    //     // change the day's background color just for fun
-	    //     $(this).css('background-color', 'red');
-	    // }
+	    },
+
+        eventClick: function(event, jsEvent, view) {
+            window.location.href = "editEvent?eventId=" + event.key;
+        },
+
+        eventMouseover: function( event, jsEvent, view ) { 
+            $('html,body').css('cursor','pointer');
+        },
+
+        eventMouseout: function( event, jsEvent, view ) { 
+            $('html,body').css('cursor','auto');
+        }
 	});
 	// $('#create_event_dialog, #desc_dialog').on('submit', "#event_form", function(event) {
  //    	var $spinner = $('.spinner');
