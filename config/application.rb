@@ -30,7 +30,11 @@ module Weathr
     # Adding the orchestrate.io configuration file
     # Orchestrate::Application::Connect.config "./lib/orchestrate_config.json";
     
-    # Orchestrate::Rails::Schema.load "./db/schema.rb";
+    # Orchestrate::Rails::Schema.load "./db/schema.rb";.
+    
+    config.action_dispatch.default_headers = {
+      'X-Frame-Options' => 'ALLOWALL'
+    }
     
   end
 end
