@@ -1,4 +1,5 @@
 require 'json'
+require 'date'
 
 class HomeController < ApplicationController
   include ApplicationHelper;
@@ -8,7 +9,7 @@ class HomeController < ApplicationController
     if ( current_user )
       cityNameKey = RelationshipHelper.getUserCityNameKey( current_user.uid );
       if ( cityNameKey )
-        @geoInfos = OrchestrateDatabase.geoInfoSearchByKey( cityNameKey, 10, 100 );
+        @geoInfos = OrchestrateDatabase.geoInfoSearchByKey( cityNameKey, 20, 200 );
         @latLons = Geocoder.getLatLonArray( @geoInfos );
         @currentWeather = OrchestrateDatabase.getCitiesWeatherData( @geoInfos );
         @weatherArray = Array.new;

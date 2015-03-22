@@ -14,7 +14,7 @@
 
 <br>
 
-  <% if current_user %>
+<% if current_user %>
 	<iframe 
 		id="forecast_embed" 
 		type="text/html" 
@@ -23,8 +23,8 @@
 		width="100%" 
 		src="http://forecast.io/embed/#lat=<%=@lat%>&lon=<%=@lng%>&name=<%=@city%>&color=#00aaff&font=Georgia&units=uk"> 
 	</iframe>
-  <% else %>
+<% else %>
     <%= link_to "Sign in with Google for weather of your city", "/auth/google_oauth2", id: "sign_in", :class => "signin_button" %>
-  <% end %>
+<% end %>
 
 
