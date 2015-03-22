@@ -21,7 +21,7 @@
 		frameborder="0" 
 		height="245" 
 		width="100%" 
-		src="http://forecast.io/embed/#lat=<%=@lat%>&lon=<%=@lng%>&name=<%=@city%>&color=#00aaff&font=Georgia&units=uk"> 
+		src="https://forecast.io/embed/#lat=<%=@lat%>&lon=<%=@lng%>&name=<%=@city%>&color=#00aaff&font=Georgia&units=uk"> 
 	</iframe>
 <% else %>
     <%= link_to "Sign in with Google for weather of your city", "/auth/google_oauth2", id: "sign_in", :class => "signin_button" %>
