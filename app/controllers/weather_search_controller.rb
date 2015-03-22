@@ -1,0 +1,2 @@
+class WeatherSearchController < ApplicationController
+end
