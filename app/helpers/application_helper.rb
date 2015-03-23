@@ -143,7 +143,6 @@ module ApplicationHelper
       else
         return result;
     end 
-<<<<<<< HEAD
     
     # REQUIRE: geoInfo        : A geoInfo hash map of a particular Canadian or US city
     # EFFECT : store/update the Orchestrate.io database with the said geoInfo Hash 
@@ -200,8 +199,7 @@ module ApplicationHelper
       response = client.put( collection, key, value ); 
       return response;
     end
-    
-=======
+
 
     def self.storeFacebookUser ( uid, name )
       client = Orchestrate::Client.new(ORC_API_KEY);
@@ -216,8 +214,6 @@ module ApplicationHelper
     else      
       return JSON.parse( response.to_json )["body"];
     end
-
->>>>>>> tunjay_branch
   end
   
   class Geocoder

@@ -3,15 +3,12 @@ Rails.application.routes.draw do
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroy', as: 'signout'
-<<<<<<< HEAD
-  get 'weather_search', to: 'weather_search#index'
-=======
 
   get 'auth/:provider/callback', to: 'sessions#createFacebookUser'
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroyFacebookUser', as: 'facebook_signout'
->>>>>>> tunjay_branch
   
+  get 'weather_search', to: 'weather_search#index'
 
   get 'sessions/createFacebookUser'
   get 'sessions/destroyFacebookUser'
