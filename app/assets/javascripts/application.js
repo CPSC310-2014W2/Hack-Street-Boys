@@ -145,17 +145,19 @@ $(document).ready(function(){
             week: 'MMM D YYYY',
             day: 'MMMM D YYYY'
         },
+        fixedWeekCount: false,
 		events: function(start, end, timezone, callback) {
 	        $.ajax({
 	            url: '/events/showEvent',
 	            type: "GET",
 				dataType: "json",
 	            success: function(data) {
+                    console.log(data);
 	                var events = [];
 	                for (key in data) {
 	                	events.push({
                             key: data[key].path.key,
-	                        title: data[key].value.title,
+	                        title: data[key].value.title + ' - ' + data[key].value.weatherTemp + '°F',
 	                        start: data[key].value.startDate + 'T' + data[key].value.startTime,
 	                        end: data[key].value.endDate + 'T' + data[key].value.endTime,
 	                        description: data[key].value.description

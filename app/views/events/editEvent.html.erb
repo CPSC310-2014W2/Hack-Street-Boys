@@ -1,3 +1,5 @@
+<%= link_to "Back", events_index_path, :method => :get, :class => "coloring" %>
+
 <%= form_for :events, url: updateEvent_events_path, :method => :post do |f| %>
   <p style="display:none;">
     <%= f.label "Event ID" %><br>

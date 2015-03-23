@@ -11,6 +11,33 @@ class EventsController < ApplicationController
     if current_user() != nil
       userID = current_user().uid;
       @allEvents = ScheduleItems.getAllEvents(userID)["results"];
+   
+      @allEvents.each do |event|
+        weather = OrchestrateDatabase.getCityWeatherData( Geocoder.getGeoInfo( event['value']['location'] ) );
+        event['weatherSummary'] = weather['currently']['summary'];
+        event['weatherTemp'] = weather['currently']['temperature'];
+      end
+    end
+  end
+
+  def test
+    if current_user() != nil
+      userID = current_user().uid;
+      allEvents = ScheduleItems.getAllEvents(userID)["results"];
+    
+      allEvents.each do |event|
+        weather = OrchestrateDatabase.getCityWeatherData( Geocoder.getGeoInfo( allEvents[0]['value']['location'] ) );
+        event['value']['weatherSummary'] = weather['currently']['summary'];
+        event['value']['weatherTemp'] = weather['currently']['temperature'];
+      
+        startDateUnix = Date.parse( event['value']['startDate'] ).to_time.to_i;
+        endDateUnix = Date.parse( event['value']['endDate'] ).to_time.to_i;
+
+        event['value']['startDateUnix'] = startDateUnix;
+        event['value']['endDateUnix'] = endDateUnix;
+      end 
+
+      render :json => allEvents
     end
   end
 
@@ -19,6 +46,12 @@ class EventsController < ApplicationController
       userID = current_user().uid;
       allEvents = ScheduleItems.getAllEvents(userID)["results"];
     
+      allEvents.each do |event|
+        weather = OrchestrateDatabase.getCityWeatherData( Geocoder.getGeoInfo( event['value']['location'] ) );
+        event['value']['weatherSummary'] = weather['currently']['summary'];
+        event['value']['weatherTemp'] = weather['currently']['temperature'];
+      end 
+
       render :json => allEvents
     end
   end
@@ -62,7 +95,7 @@ class EventsController < ApplicationController
     else
       render :json => "not valid address"
     end
-    redirect_to :back
+    redirect_to events_index_path
   end
   
   def updateEvent

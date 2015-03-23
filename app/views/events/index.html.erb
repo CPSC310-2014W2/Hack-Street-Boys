@@ -8,6 +8,8 @@
       <th>Location</th>
       <th>Description</th>
       <th>User Id</th>
+      <th>Temp</th>
+      <th>Summary</th>
       <th colspan="3"></th>
     </tr>
     <% @allEvents.each do |event| %>
@@ -19,6 +21,8 @@
       <td><%= event["value"]["location"] %></td>
       <td><%= event["value"]["description"] %></td>
       <td><%= event["value"]["userId"] %></td>
+      <td><%= event["weatherTemp"] %></td>
+      <td><%= event["weatherSummary"] %></td>
 
       <td><%= link_to 'Edit', editEvent_events_path(:eventId => event["path"]["key"]) %></td>
       <td><%= link_to 'Delete', deleteEvent_events_path(:eventId => event["path"]["key"]), method: :post %></td>
