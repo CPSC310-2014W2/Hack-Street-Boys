@@ -52,16 +52,28 @@
 			</div>
 		</div>		
 		<div id="result-container" align="center">
-			<div>Result: <%= @forecastData.length %></div>
-			<% @forecastData.each do |key, value| %>
-			    <div align="left"><strong><%=key.gsub('_',', ')%></strong></div>
-			    <br>
-			    <% value["data"].each do |daily| %>
-			    	<div align="left"><%= Time.at(daily["time"]).to_date %>: <%=daily["summary"]%></div>
-			    	<br>
-			    <% end %>
-			    <hr>
+			
+			<% if @forecastData %>
+				<% if @forecastData.length > 1 %>
+					<div><%= @forecastData.length %> cities have weather that match your preferences within the next seven days</div>
+				<% elsif @forecastData.length == 1  %>
+					<div><%= @forecastData.length %> city has weather that match your preference in the next seven days</div>				
+				<% else  %>
+					<div>Result: No matching weather found in nearby area</div>
+				<% end %>
+				<% @forecastData.each do |key, value| %>
+				    <div align="left"><strong><%=key.gsub('_',', ')%></strong></div>
+				    <br>
+				    <% value["data"].each do |daily| %>
+				    	<div align="left"><%= Time.at(daily["time"]).to_date %>: <%=daily["summary"]%></div>
+				    	<br>
+				    <% end %>
+				    <hr>
+				<% end %>
+			<% else %>
+				<div>Result: No matching weather found in nearby area</div>
 			<% end %>
+			
 		</div>	
 		<div id="map1-container" align="center">
 		  <div id="map1" align="center" >
