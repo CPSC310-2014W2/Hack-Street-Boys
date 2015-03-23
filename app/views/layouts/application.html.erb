@@ -16,10 +16,12 @@
 <div align="right">
 	<div align="right">
       <% if current_user %>
-        Signed in as <strong><%= current_user.name %></strong>!
-        <%= link_to "Sign out", signout_path, id: "sign_out" %>
+        <%= link_to "Setting", setting_index_path, id: "user_setting", :class => "setting_button" %>
+        <div style="width: 25%; display: inline"></div>
+        Signed in as <strong><%= current_user.name %></strong>
+        <%= link_to "Sign out", signout_path, id: "sign_out", :class => "signout_button" %>
       <% else %>
-        <%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %>
+        <%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in", :class => "signin_button" %>
       <% end %>
 	</div>
 </div>
@@ -40,13 +42,9 @@
 
 <div align="center" >
 	<%= button_to "Home", root_path, :method => :get, :class => "coloring" %>
-	<div style="width: 2%; display: inline"></div>
 	<%= button_to "Calender", events_index_path, :method => :get, :class => "coloring" %>
-	<div style="width: 2%; display: inline"></div>
 	<%= button_to "Favorite Cities", fav_cities_path, :method => :get, :class => "coloring" %>
-	<div style="width: 2%; display: inline"></div>
-	<%= button_to "Weather Search", root_path, :method => :get, :class => "coloring" %>
-	<div style="width: 2%; display: inline"></div>
+	<%= button_to "Weather Search", weather_search_path, :method => :get, :class => "coloring" %>
 	<%= button_to "Trip Planner", root_path, :method => :get, :class => "coloring" %>
 </div>
 
