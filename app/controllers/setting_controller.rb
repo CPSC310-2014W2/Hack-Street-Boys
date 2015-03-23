@@ -7,21 +7,17 @@ class SettingController < ApplicationController
   include SettingHelper;
   
   def index
-    # - If the user is not logged in, the link to setting page should not be visible to the 
-    #   to the user, as set in the application.html.erb
-    # - If the user manually input ../setting/index to the url without logging in, the user
-    #   will be redirected back to the home page
     if ( current_user == nil )
       redirect_to root_path
+      return
     end
     @current_city = RelationshipHelper.getUserCityNameKey( current_user.uid );
   end
   
   def update
-    
     address = params[:setting]["address"];
     # Check that the the user's inputted address is valid, if it is valid, update Orchestrate with the geoInfo
-    # else redirect back to setting #TODO implement warning message
+    # else redirect back to setting 
     geoInfo = Geocoder.getGeoInfo( address );
     if ( Geocoder.isValidAddress( geoInfo ) )
       OrchestrateDatabase.updateGeoInfo( geoInfo )
@@ -46,6 +42,11 @@ class SettingController < ApplicationController
       RelationshipHelper.createUserCityRelation( userID, newCityNameKey );
     end
     redirect_to setting_index_path
+  end
+  
+  # Helper
+  def self.isUserLoggedIn
+    return current_user
   end
   
 end

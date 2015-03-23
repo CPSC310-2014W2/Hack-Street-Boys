@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'rails_12factor', group: :production
 gem 'gmaps4rails'
 
 # Weather data source: http://forecast.io/
