@@ -26,6 +26,18 @@
 	</div>
 </div>
 
+<div align="right">
+  <div align="right">
+  <% if current_facebook_user %>
+    Signed in as <strong><%= current_facebook_user.name %></strong>!
+    <%= link_to "Sign out", facebook_signout_path, id: "facebook_sign_out" %>
+  <% else %>
+    <%= link_to "Sign in with Facebook", "/auth/facebook", id: "facebook_sign_in" %>
+  <% end %>
+</div>
+</div>
+
+
 <h1 align="center">Weather Application</h1>
 
 <div align="center" >

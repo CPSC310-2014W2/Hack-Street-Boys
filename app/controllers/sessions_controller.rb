@@ -13,6 +13,18 @@ class SessionsController < ApplicationController
     redirect_to root_path
   end
   
+
+  def createFacebookUser
+    user = FacebookUser.from_omniauth(env["omniauth.auth"])
+    session[:user_id] = user.id
+    redirect_to root_path
+  end
+
+  def destroyFacebookUser
+    session[:user_id] = nil
+    redirect_to root_path
+  end
+
   private
   def getUserInfoHash( auth )
     userHash = Hash.new;

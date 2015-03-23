@@ -199,7 +199,21 @@ module ApplicationHelper
       response = client.put( collection, key, value ); 
       return response;
     end
-    
+
+
+    def self.storeFacebookUser ( uid, name )
+      client = Orchestrate::Client.new(ORC_API_KEY);
+      client.put( :facebookuser, uid, name);
+    end
+
+    def self.getFacebookUser ( uid )
+      client = Orchestrate::Client.new(ORC_API_KEY);
+      response = client.get( :facebookuser, uid.to_s );
+    rescue Orchestrate::API::NotFound;
+      return nil;
+    else      
+      return JSON.parse( response.to_json )["body"];
+    end
   end
   
   class Geocoder

@@ -8,4 +8,6 @@ Rails.application.config.middleware.use OmniAuth::Builder do
     },
     :prompt => "select_account"
   }
+
+  provider :facebook, "1580886888863240", "ae3fb5bb852f674054d34fdb0801463f"
 end

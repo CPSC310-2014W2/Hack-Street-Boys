@@ -42,10 +42,10 @@ class EventsController < ApplicationController
     description = params[:events]["description"];
     userId = current_user().uid;
 
-    latLon = Geocoder.getLatLon( location );
-
-    jsonData = OpenWeather.getCitiesCurrentWeather( latLon[:lat], latLon[:lng], 1 );
-    weatherDesc = jsonData['list'][0]['weather'][0]['description'];
+    # Needed when getting the weather data for the location of an event
+    #latLon = Geocoder.getLatLon( location );
+    #jsonData = OpenWeather.getCitiesCurrentWeather( latLon[:lat], latLon[:lng], 1 );
+    #weatherDesc = jsonData['list'][0]['weather'][0]['description'];
 
     eventInfo = {
       title: title,
@@ -55,7 +55,7 @@ class EventsController < ApplicationController
       endTime: endTime,
       location: location,
       description: description,
-      weatherDesc: weatherDesc,
+      #weatherDesc: weatherDesc,
       userId: userId
     };
     response = ScheduleItems.createEvent( eventInfo );
