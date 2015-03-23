@@ -1,49 +1,30 @@
-<h1>Home - Temporarily used for backend data testing</h1>
+<script src="//maps.google.com/maps/api/js?v=3.13&amp;sensor=false&amp;libraries=geometry" type="text/javascript"></script>
+<script src='//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js' type='text/javascript'></script>
+<script src='//google-maps-utility-library-v3.googlecode.com/svn/trunk/richmarker/src/richmarker-compiled.js' type='text/javascript'></script>
 
 <br>
-<h2>Functions in application_helper.rb</h2>
+ 
+<div id="map-container" align="center">
+  <div id="map" align="center" >
+  	<script type="text/javascript">
+  	buildMap(<%=raw @hash.to_json %>);
+  	</script>
+  </div>
+</div>
 
+<br>
 
-<%= form_for :home, url: test_google_latlon_home_index_path, :method => :get do |f| %>
-  <p>
-    address
-    <%= f.text_field :address %>
-  </p>
-  <%= f.submit "Geocoder.getGeoInfo( address )" %>  
+<% if current_user %>
+	<iframe 
+		id="forecast_embed" 
+		type="text/html" 
+		frameborder="0" 
+		height="245" 
+		width="100%" 
+		src="https://forecast.io/embed/#lat=<%=@lat%>&lon=<%=@lng%>&name=<%=@city%>&color=#00aaff&font=Georgia&units=uk"> 
+	</iframe>
+<% else %>
+    <%= link_to "Sign in with Google for weather of your city", "/auth/google_oauth2", id: "sign_in", :class => "signin_button" %>
 <% end %>
-<p>Return nil if the address does not belong to any particular city (e.g. "Canada", "123" and empty string etc), so it will print nothing.</p>
-<hr>
 
 
-<%= form_for :home, url: test_get_city_weather_home_index_path, :method => :get do |f| %>
-  <p>
-    address
-    <%= f.text_field :address %>
-  </p>
-  <%= f.submit "OrchestrateDatabase.getCityWeatherData( Geocoder.getGeoInfo( address ) )" %>  
-<% end %>
-<p>Return the weather data of the address if the address belongs to a particular city</p>
-<p>NOTE: The update frequency of the data is an hour, so inputting a different address of the same city within an hour will not change the 'last_update_time' field</p>
-<p>Return nil if the address does not belong to any particular city (e.g. "Canada", "123" and empty string etc), so it will print nothing.</p>
-<hr>
-
-
-<%= form_for :home, url: test_get_cities_weather_home_index_path, :method => :get do |f| %>
-  <p>
-    address
-    <%= f.text_field :address %>
-  </p>
-  <p>
-    city_count
-    <%= f.text_field :citycount %>
-  </p>
-  <%= f.submit "OrchestrateDatabase.getCitiesWeatherData( Geocoder.getCitiesGeoInfo( Geocoder.getSurroundingLatLons( Geocoder.getGeoInfo( address ), citycount.to_i ) ) )" %>  
-<% end %>
-<p>Return an array of weather data for all surrounding cities centering the inputted address if the address belongs to a city</p>
-<p>NOTE: Same as before, the update frequency of each city is an hour</p>
-<p>NOTE: The unique key to each city is '[city name]_[country code]', for vancouver, it is 'Vancouver_CA'</p>
-<p>NOTE: Do not abuse the city_counts. API calls to google geocoding are limited!</p>
-<p>NOTE: BE PATIENT! The speed of this query is purposefully tuned down to really make sure that API calls do not exceed limit. This can be turned back up easily if necessary.</p>
-<p>The update frequency of the data is an hour, so inputting a different address of the same city within an hour will not change the 'last_update_time' field</p>
-<p>Return nil if the address does not belong to any particular city (e.g. "Canada", "123" and empty string etc), so it will print nothing.</p>
-<hr>

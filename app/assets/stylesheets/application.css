@@ -24,6 +24,21 @@
 	 width: 15%;	 
 }
 
+.setting_button {
+	text-align: center;
+	padding: 15px;
+}
+
+.signin_button {
+	text-align: center;
+	padding: 5px;
+}
+
+.signout_button {
+	text-align: center;
+	padding: 5px;
+}
+
 /*Test*/
 body{
   	font-size: 12px;
