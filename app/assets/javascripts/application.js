@@ -154,10 +154,15 @@ $(document).ready(function(){
 	            success: function(data) {
                     console.log(data);
 	                var events = [];
+                    console.log(data);
 	                for (key in data) {
+                        var tempRange = ''; 
+                        if (data[key].value.weatherTempMin && data[key].value.weatherTempMax) {
+                            tempRange = ' : ' + data[key].value.weatherTempMin + '°F' + ' - ' + data[key].value.weatherTempMax + '°F';
+                        }
 	                	events.push({
                             key: data[key].path.key,
-	                        title: data[key].value.title + ' - ' + data[key].value.weatherTemp + '°F',
+	                        title: data[key].value.title + tempRange,
 	                        start: data[key].value.startDate + 'T' + data[key].value.startTime,
 	                        end: data[key].value.endDate + 'T' + data[key].value.endTime,
 	                        description: data[key].value.description

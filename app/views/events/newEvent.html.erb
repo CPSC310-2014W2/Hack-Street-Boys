@@ -130,6 +130,16 @@
     <%= f.text_field :location, placeholder: "Enter city or address", required: true %>
   </p>
   <p>
+    <%= f.label "Weather preference" %><br>
+    <%= f.select :weatherPreference, 
+      [
+        ['rain'],
+        ['partly-cloudy-day'], 
+        ['sunny'],
+      ]
+    %>
+  </p>
+  <p>
     <%= f.label "Description" %><br>
     <%= f.text_field :description %>
   </p>

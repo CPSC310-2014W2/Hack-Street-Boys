@@ -13,9 +13,25 @@ class EventsController < ApplicationController
       @allEvents = ScheduleItems.getAllEvents(userID)["results"];
    
       @allEvents.each do |event|
-        weather = OrchestrateDatabase.getCityWeatherData( Geocoder.getGeoInfo( event['value']['location'] ) );
-        event['weatherSummary'] = weather['currently']['summary'];
-        event['weatherTemp'] = weather['currently']['temperature'];
+        startDateUnix = Date.parse( event['value']['startDate'] ).to_time.to_i;
+        endDateUnix = Date.parse( event['value']['endDate'] ).to_time.to_i;
+
+        weather = OrchestrateDatabase.getCityWeatherData( Geocoder.getGeoInfo( @allEvents[0]['value']['location'] ) );
+        dailyWeather = weather['daily_this_week']['data'];
+
+        dailyWeather.each do |day|
+          if day['time'] == startDateUnix
+            event['value']['weatherSummary'] = day['summary'];
+            event['value']['icon'] = day['icon'];
+            event['value']['weatherTempMin'] = day['temperatureMin'];
+            event['value']['weatherTempMax'] = day['temperatureMax'];
+            if day['icon'] != event['value']['weatherPreference'] && event['value']['weatherPreference']
+              event['value']['ifReschedule'] = true;
+            else
+              event['value']['ifReschedule'] = false;
+            end
+          end
+        end
       end
     end
   end
@@ -26,17 +42,29 @@ class EventsController < ApplicationController
       allEvents = ScheduleItems.getAllEvents(userID)["results"];
     
       allEvents.each do |event|
-        weather = OrchestrateDatabase.getCityWeatherData( Geocoder.getGeoInfo( allEvents[0]['value']['location'] ) );
-        event['value']['weatherSummary'] = weather['currently']['summary'];
-        event['value']['weatherTemp'] = weather['currently']['temperature'];
-      
         startDateUnix = Date.parse( event['value']['startDate'] ).to_time.to_i;
         endDateUnix = Date.parse( event['value']['endDate'] ).to_time.to_i;
 
-        event['value']['startDateUnix'] = startDateUnix;
-        event['value']['endDateUnix'] = endDateUnix;
-      end 
+        weather = OrchestrateDatabase.getCityWeatherData( Geocoder.getGeoInfo( allEvents[0]['value']['location'] ) );
+        dailyWeather = weather['daily_this_week']['data'];
 
+        dailyWeather.each do |day|
+          if day['time'] == startDateUnix
+            event['value']['weatherSummary'] = day['summary'];
+            event['value']['icon'] = day['icon'];
+            event['value']['weatherTempMin'] = day['temperatureMin'];
+            event['value']['weatherTempMax'] = day['temperatureMax'];
+            if day['icon'] != event['value']['weatherPreference'] && event['value']['weatherPreference']
+              event['value']['ifReschedule'] = true;
+            else
+              event['value']['ifReschedule'] = false;
+            end
+          end
+        end
+      end
+      
+      weather = OrchestrateDatabase.getCityWeatherData( Geocoder.getGeoInfo( 'victoria, bc' ));
+      
       render :json => allEvents
     end
   end
@@ -47,10 +75,21 @@ class EventsController < ApplicationController
       allEvents = ScheduleItems.getAllEvents(userID)["results"];
     
       allEvents.each do |event|
-        weather = OrchestrateDatabase.getCityWeatherData( Geocoder.getGeoInfo( event['value']['location'] ) );
-        event['value']['weatherSummary'] = weather['currently']['summary'];
-        event['value']['weatherTemp'] = weather['currently']['temperature'];
-      end 
+        startDateUnix = Date.parse( event['value']['startDate'] ).to_time.to_i;
+        endDateUnix = Date.parse( event['value']['endDate'] ).to_time.to_i;
+
+        weather = OrchestrateDatabase.getCityWeatherData( Geocoder.getGeoInfo( allEvents[0]['value']['location'] ) );
+        dailyWeather = weather['daily_this_week']['data'];
+
+        dailyWeather.each do |day|
+          if day['time'] == startDateUnix
+            event['value']['weatherSummary'] = day['summary'];
+            event['value']['weatherTempMin'] = day['temperatureMin'];
+            event['value']['weatherTempMax'] = day['temperatureMax'];
+            # event['value']['icon'] = day['icon'];
+          end
+        end
+      end
 
       render :json => allEvents
     end
@@ -72,6 +111,7 @@ class EventsController < ApplicationController
     startTime = params[:events]["startTime"];
     endTime = params[:events]["endTime"];
     location = params[:events]["location"];
+    weatherPreference = params[:events]["weatherPreference"];
     description = params[:events]["description"];
     userId = current_user().uid;
 
@@ -88,6 +128,7 @@ class EventsController < ApplicationController
         startTime: startTime,
         endTime: endTime,
         location: location,
+        weatherPreference: weatherPreference,
         description: description,
         userId: userId
       };
@@ -107,6 +148,7 @@ class EventsController < ApplicationController
     startTime = params[:events]["startTime"];
     endTime = params[:events]["endTime"];
     location = params[:events]["location"];
+    weatherPreference = params[:events]["weatherPreference"];
     description = params[:events]["description"];
     userId = current_user().uid;
 
@@ -123,6 +165,7 @@ class EventsController < ApplicationController
         startTime: startTime,
         endTime: endTime,
         location: location,
+        weatherPreference: weatherPreference,
         description: description,
         userId: userId
       };
@@ -148,5 +191,5 @@ class EventsController < ApplicationController
     
     return Time.parse( datetime ).to_time.to_i
   end
-  
+
 end
