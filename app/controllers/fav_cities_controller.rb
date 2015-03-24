@@ -34,14 +34,18 @@ class FavCitiesController < ApplicationController
       redirect_to fav_cities_path
   end
   
+  # To test: Enter city name and check that favorite cities are displayed in the console.
   def show
       userId = "100184922779584864374"
       cities = Database.retrieveAllFavoriteCities(userId)
   end
   
+   # To test: delete and check manually in database if it was correctly removed.
   def delete
-      userId = "100184922779584864374"
+        userId = "100184922779584864374"
+        cityId = OpenWeather.getCitiesIDs(params[:city]["name"],1)[0]
       
-      deleteFavoriteCity(userId, cityId)
+        deleteFavoriteCity(userId, cityId)
+        redirect_to fav_cities_path
   end
 end
