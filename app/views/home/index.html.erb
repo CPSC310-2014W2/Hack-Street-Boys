@@ -19,14 +19,16 @@
 <br>
 
 <% if current_user %>
-	<iframe 
-		id="forecast_embed" 
-		type="text/html" 
-		frameborder="0" 
-		height="245" 
-		width="100%" 
-		src="https://forecast.io/embed/#lat=<%=@lat%>&lon=<%=@lng%>&name=<%=@city%>&color=#00aaff&font=Georgia&units=uk"> 
-	</iframe>
+	<% if @hash %>
+		<iframe 
+			id="forecast_embed" 
+			type="text/html" 
+			frameborder="0" 
+			height="245" 
+			width="100%" 
+			src="https://forecast.io/embed/#lat=<%=@lat%>&lon=<%=@lng%>&name=<%=@city%>&color=#00aaff&font=Georgia&units=uk"> 
+		</iframe>
+	<% end %>
 <% else %>
     <p align="center">Sign in for weather update of your city</p>
 <% end %>
