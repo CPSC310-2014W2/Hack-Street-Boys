@@ -15,6 +15,8 @@ gem "omniauth-google-oauth2", "~> 0.2.1"
 # Facebook OmniAuth http://mkdynamic.github.com/omniauth-facebook
 gem 'omniauth-facebook'
 
+gem 'social-share-button', '~> 0.1.6'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use sqlite3 as the database for Active Record
