@@ -11,7 +11,7 @@
 			<div id="userpreference">
 				<h3>Define your weather preference here:</h3>
 				<p>Based on seven days forecast</p>
-				<%= form_for :preference, url: weather_search_path, :method => :get do |f| %>
+				<%= form_for :preference, url: weather_search_path, :method => :get, :remote => false do |f| %>
 					<div id="weather-preference-box">
 			    		<%= check_box_tag(:clear_day, 1, @clear_day) %>
 						<%= label_tag(:clear_day, "Clear Day") %>
