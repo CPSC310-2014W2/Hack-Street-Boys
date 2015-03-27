@@ -197,7 +197,7 @@ $(document).ready(function(){
                 $('.tooltipevent').css('left', e.pageX + 20);
             });
 
-            // console.log(event);
+            console.log(event);
         },
 
         eventMouseout: function( event, jsEvent, view ) { 
@@ -206,29 +206,4 @@ $(document).ready(function(){
             $('.tooltipevent').remove();
         }
 	});
-	// $('#create_event_dialog, #desc_dialog').on('submit', "#event_form", function(event) {
- //    	var $spinner = $('.spinner');
- //    	event.preventDefault();
- //    	$.ajax({
-	// 		type: "POST",
-	// 		data: $(this).serialize(),
-	// 		url: $(this).attr('action'),
-	// 		beforeSend: show_spinner,
-	// 		complete: hide_spinner,
-	// 		success: refetch_events_and_close_dialog,
-	// 		error: handle_error
- //    	});
-
-	//     function show_spinner() {
-	//       	$spinner.show();
-	//     }
-
-	//     function hide_spinner() {
-	//       	$spinner.hide();
-	//     }
-
-	//     function handle_error(xhr) {
-	//       	alert(xhr.responseText);
-	//     }
- //  	})
 });
