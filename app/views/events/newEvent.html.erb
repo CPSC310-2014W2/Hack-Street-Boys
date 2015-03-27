@@ -1,4 +1,6 @@
-<%= link_to "Back", events_index_path, :method => :get, :class => "coloring" %>
+<div class="text-container" style="padding: 20px;">
+
+<%= button_to "Back", events_index_path, :method => :get, :class => "coloring" %>
 
 <%= form_for :events, url: createEvent_events_path, :method => :post do |f| %>
   <p>
@@ -130,8 +132,20 @@
     <%= f.text_field :location, placeholder: "Enter city or address", required: true %>
   </p>
   <p>
+    <%= f.label "Weather preference" %><br>
+    <%= f.select :weatherPreference, 
+      [
+        ['rain'],
+        ['partly-cloudy-day'], 
+        ['sunny'],
+      ]
+    %>
+  </p>
+  <p>
     <%= f.label "Description" %><br>
     <%= f.text_field :description %>
   </p>
   <%= f.submit "Add new event" %>  
 <% end %>
+
+</div>

@@ -3,8 +3,15 @@ Rails.application.routes.draw do
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroy', as: 'signout'
-  get 'weather_search', to: 'weather_search#index'
+
+  get 'auth/:provider/callback', to: 'sessions#createFacebookUser'
+  get 'auth/failure', to: redirect('/')
+  get 'signout', to: 'sessions#destroyFacebookUser', as: 'facebook_signout'
   
+  get 'weather_search', to: 'weather_search#index'
+
+  get 'sessions/createFacebookUser'
+  get 'sessions/destroyFacebookUser'
   get 'sessions/create'
   get 'sessions/destroy'
   get 'home/index'
@@ -16,7 +23,8 @@ Rails.application.routes.draw do
   
   root 'home#index'
 
-  resources :events, only: [:showEvent, :editEvent, :newEvent, :createEvent, :deleteEvent, :updateEvent] do
+  resources :events, only: [:showEvent, :editEvent, :newEvent, :createEvent, :deleteEvent, :updateEvent, :test] do
+    get :test, :on => :collection
     get :showEvent, :on => :collection
     get :editEvent, :on => :collection
     get :newEvent, :on => :collection

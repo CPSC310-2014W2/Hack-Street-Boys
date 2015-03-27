@@ -4,4 +4,4 @@ Weathr is an application that a user can go to for all of their weather scheduli
 
 Weathr will also be used for weather tourism. A user of the application will be able to type in exactly what climate he wishes to travel to, and the application will provide the nearest location that satisfies his desires. And of course add that location to his favorites.
 
-Weathr will use the Yahoo weather API for weather data [https://developer.yahoo.com/weather/] and the Google Maps API [https://developers.google.com/maps/] for location data. The application will use Ruby on Rails, and will be deployed on the Google App Engine. [https://cloud.google.com/solutions/ruby/]
+Weathr will use The Dark Sky Forecast API for weather data [https://developer.forecast.io] and the Google Maps API [https://developers.google.com/maps/] for location data. The application will use Ruby on Rails, and will be deployed on the Google App Engine. [https://cloud.google.com/solutions/ruby/]

@@ -11,6 +11,10 @@
             <p id="error" style="color: red"><%= flash[:error] %></p>
   		</p>
 	<% end %>
-	<p>Current city is: <%= @current_city.gsub('_',', ') %></p>
+	<% if @current_city %>
+		<p>Current city is: <%= @current_city.gsub('_',', ') %></p>
+	<% else %>
+	    <p>You have not defined your city</p>
+	<% end %>
   </div>
 </div>

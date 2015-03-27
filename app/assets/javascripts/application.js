@@ -145,17 +145,26 @@ $(document).ready(function(){
             week: 'MMM D YYYY',
             day: 'MMMM D YYYY'
         },
+        fixedWeekCount: false,
 		events: function(start, end, timezone, callback) {
 	        $.ajax({
 	            url: '/events/showEvent',
-	            dataType: 'xml',
 	            type: "GET",
 				dataType: "json",
 	            success: function(data) {
+                    console.log(data);
 	                var events = [];
+                    console.log(data);
 	                for (key in data) {
+                        var tempRange = ''; 
+                        if (data[key].value.weatherTempMin && data[key].value.weatherTempMax) {
+                            tempRange = ' : ' + data[key].value.weatherTempMin + '°F' + ' - ' + data[key].value.weatherTempMax + '°F';
+                        }
 	                	events.push({
-	                        title: data[key].value.title,
+                            key: data[key].path.key,
+	                        title: data[key].value.title + tempRange,
+                            tempRange: tempRange,
+                            weatherSummary: data[key].value.weatherSummary,
 	                        start: data[key].value.startDate + 'T' + data[key].value.startTime,
 	                        end: data[key].value.endDate + 'T' + data[key].value.endTime,
 	                        description: data[key].value.description
@@ -168,36 +177,33 @@ $(document).ready(function(){
 					console.log("Ajax error!");
 				}
 	        });
-	    }
-		
-	    // dayClick: function(date, jsEvent, view) {
-	    //     // change the day's background color just for fun
-	    //     $(this).css('background-color', 'red');
-	    // }
+	    },
+
+        eventClick: function(event, jsEvent, view) {
+            window.location.href = "editEvent?eventId=" + event.key;
+        },
+
+        eventMouseover: function( event, jsEvent, view ) { 
+            $('html,body').css('cursor','pointer');
+
+            var tooltip = '<div class="tooltipevent" style="width:200px;height:auto;padding:10px;background:#fff;position:absolute;z-index:10001;box-shadow: 2px 2px 10px #B1B1B1;"><div>' + event.title + '</div><br/><div>' + event.weatherSummary + '</div></div>';
+            $("body").append(tooltip);
+            $(this).mouseover(function(e) {
+                $(this).css('z-index', 10000);
+                $('.tooltipevent').fadeIn('500');
+                $('.tooltipevent').fadeTo('10', 1.9);
+            }).mousemove(function(e) {
+                $('.tooltipevent').css('top', e.pageY + 10);
+                $('.tooltipevent').css('left', e.pageX + 20);
+            });
+
+            console.log(event);
+        },
+
+        eventMouseout: function( event, jsEvent, view ) { 
+            $('html,body').css('cursor','auto');
+            $(this).css('z-index', 8);
+            $('.tooltipevent').remove();
+        }
 	});
-	// $('#create_event_dialog, #desc_dialog').on('submit', "#event_form", function(event) {
- //    	var $spinner = $('.spinner');
- //    	event.preventDefault();
- //    	$.ajax({
-	// 		type: "POST",
-	// 		data: $(this).serialize(),
-	// 		url: $(this).attr('action'),
-	// 		beforeSend: show_spinner,
-	// 		complete: hide_spinner,
-	// 		success: refetch_events_and_close_dialog,
-	// 		error: handle_error
- //    	});
-
-	//     function show_spinner() {
-	//       	$spinner.show();
-	//     }
-
-	//     function hide_spinner() {
-	//       	$spinner.hide();
-	//     }
-
-	//     function handle_error(xhr) {
-	//       	alert(xhr.responseText);
-	//     }
- //  	})
 });

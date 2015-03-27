@@ -6,8 +6,18 @@
   <%= stylesheet_link_tag "//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.css" %>
 
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <!-- JQuery Libs -->
+  <%= javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" %>
+  <%= javascript_include_tag "//ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js" %>
+
+  <!-- Google Map Libs -->
+  <%= javascript_include_tag "//maps.google.com/maps/api/js?v=3.13&amp;sensor=false&amp;libraries=geometry" %>
+  <%= javascript_include_tag "//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js" %>
+  <%= javascript_include_tag "//google-maps-utility-library-v3.googlecode.com/svn/trunk/richmarker/src/richmarker-compiled.js" %>
+
+  <!-- Calender Libs -->
   <%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js" %>
-  <%= csrf_meta_tags %>
   <%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.js" %>
   <%= csrf_meta_tags %>
 </head>
@@ -25,6 +35,18 @@
       <% end %>
 	</div>
 </div>
+
+<div align="right">
+  <div align="right">
+  <% if current_facebook_user %>
+    Signed in as <strong><%= current_facebook_user.name %></strong>!
+    <%= link_to "Sign out", facebook_signout_path, id: "facebook_sign_out" %>
+  <% else %>
+    <%= link_to "Sign in with Facebook", "/auth/facebook", id: "facebook_sign_in" %>
+  <% end %>
+</div>
+</div>
+
 
 <h1 align="center">Weather Application</h1>
 
