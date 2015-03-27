@@ -21,8 +21,8 @@ module FavCitiesHelper
         
             client = Orchestrate::Client.new(ORC_API_KEY);
             
-            jsonOfFavCities = client.get_relations(:googleuser, userId, :city)
-            puts "this is jsonoffavcities: ", jsonOfFavCities
+            # jsonOfFavCities = client.get_relations(:googleuser, userId, :city)
+            #puts "this is jsonoffavcities: ", jsonOfFavCities
             
             #listOfFavCities = JSON.parse(jsonOfFavCities)
             #puts "this is listoffavcities", listOfFavCities

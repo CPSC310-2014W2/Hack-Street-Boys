@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require social-share-button
 //= require underscore
+//= require bootstrap-sprockets
 //= require gmaps/google
 //= require_tree .
 

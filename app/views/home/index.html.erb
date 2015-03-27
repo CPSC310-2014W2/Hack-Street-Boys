@@ -3,7 +3,11 @@
 <script src='//google-maps-utility-library-v3.googlecode.com/svn/trunk/richmarker/src/richmarker-compiled.js' type='text/javascript'></script>
 
 <br>
- 
+
+<% if !@hash %>
+	<p align="center">You have not defined your home city, do so by clicking the setting button on the top right hand corner.</p>
+<% end %>
+
 <div id="map-container" align="center">
   <div id="map" align="center" >
   	<script type="text/javascript">
@@ -15,16 +19,18 @@
 <br>
 
 <% if current_user %>
-	<iframe 
-		id="forecast_embed" 
-		type="text/html" 
-		frameborder="0" 
-		height="245" 
-		width="100%" 
-		src="https://forecast.io/embed/#lat=<%=@lat%>&lon=<%=@lng%>&name=<%=@city%>&color=#00aaff&font=Georgia&units=uk"> 
-	</iframe>
+	<% if @hash %>
+		<iframe 
+			id="forecast_embed" 
+			type="text/html" 
+			frameborder="0" 
+			height="245" 
+			width="100%" 
+			src="https://forecast.io/embed/#lat=<%=@lat%>&lon=<%=@lng%>&name=<%=@city%>&color=#00aaff&font=Georgia&units=uk"> 
+		</iframe>
+	<% end %>
 <% else %>
-    <%= link_to "Sign in with Google for weather of your city", "/auth/google_oauth2", id: "sign_in", :class => "signin_button" %>
+    <p align="center">Sign in for weather update of your city</p>
 <% end %>
 
 
