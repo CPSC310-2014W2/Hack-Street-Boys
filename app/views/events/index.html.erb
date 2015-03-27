@@ -1,19 +1,22 @@
 <% if @allEvents != nil %> 
   <div class="text-container">
-    <table style="margin: 40px;">
-      <% @allEvents.each do |event| %>
-        <% if event["value"]["ifReschedule"] %>
-          <tr>
+    <h3 style="margin: 40px;">Your Events:</h3>
+    <table style="margin: 0 40px 40px 40px;">
+      <% @allEvents.each do |event| %> 
+        <tr>
+          <td><%= link_to 'Edit', editEvent_events_path(:eventId => event["path"]["key"]) %></td>
+          <td><strong><%= event["value"]["title"] %></strong></td>
+          <td><%= event["value"]["weatherSummary"] %></td>
+          <% if event["value"]["ifReschedule"] == true %> 
             <td>Event doesn't match your weather preference, reschedule?</td>
-            <td><strong><%= event["value"]["title"] %></strong></td>
-            <td style="padding:0 0 0 20px;"><%= link_to 'Edit', editEvent_events_path(:eventId => event["path"]["key"]) %></td>
-          </tr>
-        <% end %>
+          <% end %>
+        </tr>
       <% end %>
     </table>
-    <div style="margin: 40px;">
-      <%= button_to "Create", newEvent_events_path, :method => :get, :class => "coloring" %>
-    </div>
+  </div>
+
+  <div style="margin: 40px;">
+    <%= button_to "Create New Event", newEvent_events_path, :method => :get, :class => "coloring" %>
   </div>
 
   <div id='calendar' style="margin: 40px;"></div>

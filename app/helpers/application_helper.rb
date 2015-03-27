@@ -228,7 +228,9 @@ module ApplicationHelper
   class Geocoder
     
     GOOGLE_URL = 'https://maps.googleapis.com/maps/api/geocode/json?';
-    GGEOCODE_API_KEY = "AIzaSyCOvnSbUGSJfQFEZfAHk7zgpP83f9QJrp8";
+    # Adam's api key
+    # GGEOCODE_API_KEY = "AIzaSyCOvnSbUGSJfQFEZfAHk7zgpP83f9QJrp8";
+    GGEOCODE_API_KEY = "AIzaSyDvsyIuTEZzQCXsZZXT2dQhn9foP66qH60";
     
     # REQUIRE: address            : a string address
     # EFFECT : return a geoInfo hash map based on google geocoder

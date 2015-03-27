@@ -37,6 +37,7 @@ class EventsController < ApplicationController
   end
 
   def test
+    render :json => Geocoder.getGeoInfo( 'burnaby, bc' )
   end
 
   def showEvent
