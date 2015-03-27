@@ -37,36 +37,6 @@ class EventsController < ApplicationController
   end
 
   def test
-    if current_user() != nil
-      userID = current_user().uid;
-      allEvents = ScheduleItems.getAllEvents(userID)["results"];
-    
-      allEvents.each do |event|
-        startDateUnix = Date.parse( event['value']['startDate'] ).to_time.to_i;
-        endDateUnix = Date.parse( event['value']['endDate'] ).to_time.to_i;
-
-        weather = OrchestrateDatabase.getCityWeatherData( Geocoder.getGeoInfo( allEvents[0]['value']['location'] ) );
-        dailyWeather = weather['daily_this_week']['data'];
-
-        dailyWeather.each do |day|
-          if day['time'] == startDateUnix
-            event['value']['weatherSummary'] = day['summary'];
-            event['value']['icon'] = day['icon'];
-            event['value']['weatherTempMin'] = day['temperatureMin'];
-            event['value']['weatherTempMax'] = day['temperatureMax'];
-            if day['icon'] != event['value']['weatherPreference'] && event['value']['weatherPreference']
-              event['value']['ifReschedule'] = true;
-            else
-              event['value']['ifReschedule'] = false;
-            end
-          end
-        end
-      end
-      
-      weather = OrchestrateDatabase.getCityWeatherData( Geocoder.getGeoInfo( 'victoria, bc' ));
-      
-      render :json => allEvents
-    end
   end
 
   def showEvent
@@ -178,7 +148,7 @@ class EventsController < ApplicationController
 
   def deleteEvent
     response = ScheduleItems.deleteEvent( params[:eventId] );
-    redirect_to :back
+    redirect_to events_index_path
   end
   
   def self.getEpochTime( event, time_str )

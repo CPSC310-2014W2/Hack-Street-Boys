@@ -163,6 +163,8 @@ $(document).ready(function(){
 	                	events.push({
                             key: data[key].path.key,
 	                        title: data[key].value.title + tempRange,
+                            tempRange: tempRange,
+                            weatherSummary: data[key].value.weatherSummary,
 	                        start: data[key].value.startDate + 'T' + data[key].value.startTime,
 	                        end: data[key].value.endDate + 'T' + data[key].value.endTime,
 	                        description: data[key].value.description
@@ -183,10 +185,25 @@ $(document).ready(function(){
 
         eventMouseover: function( event, jsEvent, view ) { 
             $('html,body').css('cursor','pointer');
+
+            var tooltip = '<div class="tooltipevent" style="width:200px;height:auto;padding:10px;background:#fff;position:absolute;z-index:10001;box-shadow: 2px 2px 10px #B1B1B1;"><div>' + event.title + '</div><br/><div>' + event.weatherSummary + '</div></div>';
+            $("body").append(tooltip);
+            $(this).mouseover(function(e) {
+                $(this).css('z-index', 10000);
+                $('.tooltipevent').fadeIn('500');
+                $('.tooltipevent').fadeTo('10', 1.9);
+            }).mousemove(function(e) {
+                $('.tooltipevent').css('top', e.pageY + 10);
+                $('.tooltipevent').css('left', e.pageX + 20);
+            });
+
+            // console.log(event);
         },
 
         eventMouseout: function( event, jsEvent, view ) { 
             $('html,body').css('cursor','auto');
+            $(this).css('z-index', 8);
+            $('.tooltipevent').remove();
         }
 	});
 	// $('#create_event_dialog, #desc_dialog').on('submit', "#event_form", function(event) {
