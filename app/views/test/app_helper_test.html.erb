@@ -1,0 +1,40 @@
+<h1>Unit Testing</h1>
+<hr>
+	<h3>Test that if an valid geoInfo has given to getCityWeather, a valid weather data hash is returned</h3>
+    <p>geoInfo1 = Geocoder.getGeoInfo( "Commercial Drive, Vancouver, Canada" )</p>
+	<p>test of getCityWeatherData( geoInfo1 ): <strong><%= @getCityWeatherData_test1_result %></strong></p>
+	<p>Expected: Return weather data hash map for Vancouver, Canada</p>
+<hr>
+	<h3>Test that if nil is pass to getCityWeatherData, nil is returned</h3>
+	<p>test of getCityWeatherData( nil ): <strong><%= @getCityWeatherData_test2_result %></strong></p>
+	<p>Expected: Return nil</p>
+<hr>
+	<h3>Test that if a city weather is not already stored in Orchestrate, call to getCityWeatherData automatically update the data by querying forecast.io</h3>
+	<p>first remove vancouver city's weather from Orchestrate</p>
+	<p>test of getCityWeatherData( geoInfo1 ): <strong><%= @getCityWeatherData_test3_result %></strong></p>
+	<p>Expected: Return weather data for Vancouver, Canada</p>
+<hr>
+	<h3>Test that if an array of geoInfos are passed to getCitiesWeatherData, a hash map of weather data is returned</h3>
+	<p>test of getCityWeatherData( [ Geocoder.getGeoInfo('Vancouver_CA'), Geocoder.getGeoInfo('Toronto_CA') ] ): <strong><%= @getCitiesWeatherData_test1_result %></strong></p>
+	<p>Expected: Return weather data hash map for Vancouver, Canada and Toronto, Canada, with 'Vancouver_CA' and 'Toronto_CA' as keys</p>
+<hr>
+	<h3>Test that nil is passed to getCitiesWeatherData, nil is returned</h3>
+	<p>test of getCityWeatherData( nil ): <strong><%= @getCitiesWeatherData_test2_result %></strong></p>
+	<p>Expected: Return nil</p>
+<hr>
+	<h3>Test that if a valid city key is passed to getCityWeatherDataByKey, a weather data hash is returned</h3>
+	<p>Test of getCityWeatherDataByKey( 'Vancouver_CA' ): <strong><%= @getCityWeatherDataByKey_test1_result %></strong></p>
+	<p>Expected: Return weather data hash map for Vancouver, Canada</p>
+<hr>
+	<h3>Test that if a valid city key array is passed to getCitiesWeatherDataByKey, an array of weather data is returned</h3>
+	<p>test of getCitiesWeatherDataByKey( ['Vancouver_CA', 'Vancouver_US'] ): <strong><%= @getCitiesWeatherDataByKey_test1_result %></strong></p>
+	<p>Expected: Return weather data hash map for Vancouver, BC, Canada and Vancouver, WA, Canada, with 'Vancouver_CA' and 'Vancouver_US' as keys</p>
+<hr>
+	<h3>Test that if a test account is stored to Orchestrate.io by calling storeGoogleUser( {"Google_Testing","Testing_UserName","testing_token",Time.now.to_i}, 123456 ), then the same userInfo can be obtained by calling getGoogleUserInfo( 123456 )</h3>
+	<p>test of storeGoogleUser( user_info, user_id ), and getGoogleUserInfo ( user_id ): <strong><%= @getGoogleUserInfo_test1_result %></strong></p>
+	<p>Expected: Return userInfo hash map of testing user account</p>
+<hr>
+	<h3>Test that when try querying geoInfos from Orchestrate.io for 'Vancouver_CA'</h3>
+	<p>test of geoInfoSearchByKey( 'Vancouver_CA', 20, 200 ): <strong><%= @geoInfoSearchByKey_test1_result %></strong></p>
+	<p>Expected: at least 15 cities geoInfos are returned</p>
+<hr>
