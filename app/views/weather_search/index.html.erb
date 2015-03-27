@@ -11,36 +11,36 @@
 			<div id="userpreference">
 				<h3>Define your weather preference here:</h3>
 				<p>Based on seven days forecast</p>
-				<%= form_for :preference, url: weather_search_path, :method => :get do |f| %>
+				<%= form_for :preference, url: weather_search_path, :method => :get, :remote => false do |f| %>
 					<div id="weather-preference-box">
-			    		<%= check_box_tag(:clear_day) %>
+			    		<%= check_box_tag(:clear_day, 1, @clear_day) %>
 						<%= label_tag(:clear_day, "Clear Day") %>
 						<br>
-			    		<%= check_box_tag(:clear_night) %>
+			    		<%= check_box_tag(:clear_night, 1, @clear_night) %>
 						<%= label_tag(:clear_night, "Clear Night") %>
 						<br>
-			    		<%= check_box_tag(:cloudy) %>
+			    		<%= check_box_tag(:cloudy, 1, @cloudy) %>
 						<%= label_tag(:cloudy, "Cloudy") %>
 						<br>
-			    		<%= check_box_tag(:fog) %>
+			    		<%= check_box_tag(:fog, 1, @fog) %>
 						<%= label_tag(:fog, "Fog") %>
 						<br>
-			    		<%= check_box_tag(:partly_cloudy_day) %>
+			    		<%= check_box_tag(:partly_cloudy_day, 1, @partly_cloudy_day) %>
 						<%= label_tag(:partly_cloudy_day, "Partly Cloudy Day") %>
 						<br>
-			    		<%= check_box_tag(:partly_cloudy_night) %>
+			    		<%= check_box_tag(:partly_cloudy_night, 1, @partly_cloudy_night) %>
 						<%= label_tag(:partly_cloudy_night, "Partly Cloudy Night") %>
 						<br>
-			    		<%= check_box_tag(:rain) %>
+			    		<%= check_box_tag(:rain, 1, @rain) %>
 						<%= label_tag(:rain, "Rain") %>
 						<br>
-			    		<%= check_box_tag(:sleet) %>
+			    		<%= check_box_tag(:sleet, 1, @sleet) %>
 						<%= label_tag(:sleet, "Sleet") %>
 						<br>
-			    		<%= check_box_tag(:snow) %>
+			    		<%= check_box_tag(:snow, 1, @snow) %>
 						<%= label_tag(:snow, "Snow") %>
 						<br>
-			    		<%= check_box_tag(:wind) %>
+			    		<%= check_box_tag(:wind, 1, @wind) %>
 						<%= label_tag(:wind, "Windy") %>
 						<br>
 						<br>
@@ -73,7 +73,6 @@
 			<% else %>
 				<div>Result: No matching weather found in nearby area</div>
 			<% end %>
-			
 		</div>	
 		<div id="map1-container" align="center">
 		  <div id="map1" align="center" >

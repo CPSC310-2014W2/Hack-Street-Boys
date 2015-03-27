@@ -19,6 +19,8 @@ class RichMarkerBuilder extends Gmaps.Google.Builders.Marker #inherit from built
 	handler = Gmaps.build 'Google', { builders: { Marker: RichMarkerBuilder} } #dependency injection
 	
 	mapStyle = [ { featureType: "all", elementType: "labels", stylers: [ { visibility: "off" } ] } ]
+	#mapStyleBlackWhite = [ { "featureType": "all", "elementType": "geometry", "stylers": [ { "saturation": -100 }, { "lightness": 0 }, { "gamma": 5.18 } ] } ]
+	
 	
 	#then standard use
 	handler.buildMap { provider: { Zoom: 8, maxZoom: 15, minZoom: 8, styles: mapStyle }, internal: {id: 'map1'} }, ->

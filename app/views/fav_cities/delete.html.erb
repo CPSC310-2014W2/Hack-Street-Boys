@@ -1,0 +1,7 @@
+<%= form_for :city, url: fav_cities_path, :method => :post do |f| %>
+  <p>
+    <%= f.label "Name of city" %><br>
+    <%= f.text_field :name %>
+  </p>
+  <%= f.submit "Delete favorite city" %>  
+<% end %>
