@@ -3,28 +3,21 @@ Rails.application.routes.draw do
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroy', as: 'signout'
-
-  get 'auth/:provider/callback', to: 'sessions#createFacebookUser'
-  get 'auth/failure', to: redirect('/')
-  get 'signout', to: 'sessions#destroyFacebookUser', as: 'facebook_signout'
-  
   get 'weather_search', to: 'weather_search#index'
-
-  get 'sessions/createFacebookUser'
-  get 'sessions/destroyFacebookUser'
+  
   get 'sessions/create'
   get 'sessions/destroy'
   get 'home/index'
   get 'setting/index'
   get 'setting/update'
   get 'events/index'
-  
+  get 'trip_planner/index'
+
   get 'test/app_helper_test', to: 'test#app_helper_test'
   
   root 'home#index'
 
-  resources :events, only: [:showEvent, :editEvent, :newEvent, :createEvent, :deleteEvent, :updateEvent, :test] do
-    get :test, :on => :collection
+  resources :events, only: [:showEvent, :editEvent, :newEvent, :createEvent, :deleteEvent, :updateEvent] do
     get :showEvent, :on => :collection
     get :editEvent, :on => :collection
     get :newEvent, :on => :collection
@@ -33,6 +26,12 @@ Rails.application.routes.draw do
     post :updateEvent, :on => :collection
   end
   resources :fav_cities
+  
+  resources :trip_planner, only: [:index, :new] do
+      get :index, :on => :collection
+      get :new, :on => :collection
+  end
+  
   resources :sessions, only: [:create, :destroy]
   resources :home, only: [ :test_get_cities_weather, :test_google_latlon, :test_get_city_weather] do
     get :test_google_latlon, :on => :collection

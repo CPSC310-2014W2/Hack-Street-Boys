@@ -1,3 +1,59 @@
 <h1>Trip Planner</h1>
 
-<%= link_to "New trip", new_trip_planner_path %>
+<%= form_for :city, url: trip_planner_index_path, :method => :get do |f| %>
+  <p>
+    <%= f.label "Name of city" %><br>
+    <%= f.text_field :name %>
+  </p>
+  <%= f.submit "View trip weather" %>  
+<% end %>
+
+
+
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+</style>
+</head>
+
+<body>
+
+<table style="width:100%">
+  <caption>Weather forecast for "city"</caption>
+  <tr>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+    <th>Thursday</th>
+    <th>Friday</th>
+    <th>Saturday</th>
+    <th>Sunday</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+    <td>$100</td>
+    <td>$100</td>
+    <td>$100</td>
+    <td>$100</td>
+    <td>$100</td>
+  </tr>
+  <tr>
+    <td>February</td>
+    <td>$50</td>
+    <td>$100</td>
+    <td>$100</td>
+    <td>$100</td>
+    <td>$100</td>
+    <td>$100</td>	
+  </tr>
+</table>
+</body>
+</html>
