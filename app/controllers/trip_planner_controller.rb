@@ -20,9 +20,8 @@ class TripPlannerController < ApplicationController
       @weekData["data"].each do |data|
         @timeArray << Time.at(data["time"]).to_date.  strftime('%a %d %b %Y')
         @summaryArray << data["summary"]
-        @iconArray << "<img src=\"/assets/#{data["icon"]}.png\" alt=\"some_text\" style=\"width:60px;height:60px\">"
+        @iconArray << data["icon"]
       end
-      puts @timeArray
     end
   end
 end
