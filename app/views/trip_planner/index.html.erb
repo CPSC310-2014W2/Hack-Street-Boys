@@ -24,36 +24,38 @@ th, td {
 </head>
 
 <body>
-
-<table style="width:100%">
-  <caption>Weather forecast for "city"</caption>
+<% if @forecastData %>
+  <table style="width:100%">
+  <caption>Weather forecast for <%= @name %></caption>
+  <br>
   <tr>
-    <th>Monday</th>
-    <th>Tuesday</th>
-    <th>Wednesday</th>
-    <th>Thursday</th>
-    <th>Friday</th>
-    <th>Saturday</th>
-    <th>Sunday</th>
+    <th><%= @timeArray[0] %></th>
+    <th><%= @timeArray[1] %></th>
+    <th><%= @timeArray[2] %></th>
+    <th><%= @timeArray[3] %></th>
+    <th><%= @timeArray[4] %></th>
+    <th><%= @timeArray[5] %></th>
+    <th><%= @timeArray[6] %></th>
   </tr>
   <tr>
-    <td>January</td>
-    <td>$100</td>
-    <td>$100</td>
-    <td>$100</td>
-    <td>$100</td>
-    <td>$100</td>
-    <td>$100</td>
+    <th><%= @iconArray[0] %></th>
+    <th><%= @iconArray[1] %></th>
+    <th><%= @iconArray[2] %></th>
+    <th><%= @iconArray[3] %></th>
+    <th><%= @iconArray[4] %></th>
+    <th><%= @iconArray[5] %></th>
+    <th><%= @iconArray[6] %></th>
   </tr>
   <tr>
-    <td>February</td>
-    <td>$50</td>
-    <td>$100</td>
-    <td>$100</td>
-    <td>$100</td>
-    <td>$100</td>
-    <td>$100</td>	
+    <th><%= @summaryArray[0] %></th>
+    <th><%= @summaryArray[1] %></th>
+    <th><%= @summaryArray[2] %></th>
+    <th><%= @summaryArray[3] %></th>
+    <th><%= @summaryArray[4] %></th>
+    <th><%= @summaryArray[5] %></th>
+    <th><%= @summaryArray[6] %></th>
   </tr>
 </table>
 </body>
 </html>
+<% end %>
