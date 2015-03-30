@@ -23,7 +23,7 @@ class SettingController < ApplicationController
       OrchestrateDatabase.updateGeoInfo( geoInfo )
       newCityNameKey = Geocoder.getCityNameKey( geoInfo ); 
     else
-      redirect_to setting_index_path, :flash => { :error => "That address makes no sense. Don't waste my API calls!" }
+      redirect_to setting_index_path, :flash => { :error => "Please input only a Canadian or US address, remember to specify both city and country" }
       return;
     end
     
