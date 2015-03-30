@@ -1,0 +1,103 @@
+require 'orchestrate'
+require 'httparty'
+
+class TestController < ApplicationController
+  include ApplicationHelper;
+  
+  ORC_API_KEY = "f72b43bb-175a-49ea-826e-dded02aa73f6";
+  
+  def app_helper_test
+    
+    geoInfo1 = Geocoder.getGeoInfo( "Commercial Drive, Vancouver, Canada" );
+    geoInfo2 = Geocoder.getGeoInfo( "Toronto, Canada" );
+    
+    # test of getCityWeatherData( geoInfo )
+    returnData = OrchestrateDatabase.getCityWeatherData( geoInfo1 );
+    if ( returnData.has_key?("last_update_time") )
+      @getCityWeatherData_test1_result = "Pass";
+    else
+      @getCityWeatherData_test1_result = "Fail";
+    end
+    
+    # test of getCityWeatherData( nil )
+    returnData = OrchestrateDatabase.getCityWeatherData( nil );
+    if ( returnData == nil )
+      @getCityWeatherData_test2_result = "Pass";
+    else
+      @getCityWeatherData_test2_result = "Fail";
+    end
+    
+    # test of getCityWeatherData( geoInfo ): given that Orchestrate.io does not already store the city's weather
+    client = Orchestrate::Client.new( ORC_API_KEY );
+    client.delete(:cityweather, 'Vancouver_CA');
+    returnData = OrchestrateDatabase.getCityWeatherData( geoInfo1 );
+    if ( returnData.has_key?("last_update_time") )
+      @getCityWeatherData_test3_result = "Pass";
+    else
+      @getCityWeatherData_test3_result = "Fail";
+    end
+    
+    # test of getCitiesWeatherData ( geoInfoArray )
+    geoInfoArray = Array.new;
+    geoInfoArray << geoInfo1;
+    geoInfoArray << geoInfo2;
+    returnData = OrchestrateDatabase.getCitiesWeatherData( geoInfoArray );
+    if ( returnData.length == 2 && returnData.has_key?('Vancouver_CA') && returnData.has_key?('Toronto_CA') )
+      @getCitiesWeatherData_test1_result = "Pass";
+    else
+      @getCitiesWeatherData_test1_result = "Fail";
+    end
+    
+    # test of getCitiesWeatherData ( nil )
+    returnData = OrchestrateDatabase.getCitiesWeatherData( nil );
+    if ( returnData == nil )
+      @getCitiesWeatherData_test2_result = "Pass";
+    else
+      @getCitiesWeatherData_test2_result = "Fail";
+    end
+    
+    # test of getCityWeatherDataByKey( 'Vancouver_CA' )
+    returnData = OrchestrateDatabase.getCityWeatherDataByKey( 'Vancouver_CA' );
+    if ( returnData.has_key?("last_update_time") )
+      @getCityWeatherDataByKey_test1_result = "Pass";
+    else
+      @getCityWeatherDataByKey_test1_result = "Fail";
+    end
+    
+    # test of getCitiesWeatherDataByKey( [ 'Vancouver_CA', 'Vancouver_US' ] )
+    cityNameKeyArray = Array.new;
+    cityNameKeyArray << 'Vancouver_CA';
+    cityNameKeyArray << 'Vancouver_US';
+    returnData = OrchestrateDatabase.getCitiesWeatherDataByKey( cityNameKeyArray );
+    if ( returnData.has_key?("Vancouver_CA") && returnData.has_key?("Vancouver_US") )
+      @getCitiesWeatherDataByKey_test1_result = "Pass";
+    else
+      @getCitiesWeatherDataByKey_test1_result = "Fail";
+    end
+    
+    # test of storeGoogleUser ( user_info, user_id )
+    user_info = Hash.new;
+    user_info["provider"] = "Google_Testing";
+    user_info["username"] = "Testing_UserName";
+    user_info["token"] = "Testing_Token";
+    user_info["expires"] = 0;
+    user_id = 123456;
+    OrchestrateDatabase.storeGoogleUser( user_info, user_id );
+    returnData = OrchestrateDatabase.getGoogleUserInfo( user_id );
+    if ( returnData["provider"] == "Google_Testing" && returnData["username"] == "Testing_UserName" && returnData["token"] == "Testing_Token" && returnData["expires"] == 0 )
+      @getGoogleUserInfo_test1_result = "Pass"
+    else
+      @getGoogleUserInfo_test1_result = "Fail"
+    end
+    
+    # test of geoInfoSearchByKey( cityNameKey, cityCount, searchDistance )
+    returnData = OrchestrateDatabase.geoInfoSearchByKey( 'Vancouver_CA', 20, 200 );
+    if ( returnData.length >= 15 )
+      @geoInfoSearchByKey_test1_result = "Pass";
+    else
+      @geoInfoSearchByKey_test1_result = "Fail";
+    end
+    
+  end
+  
+end
