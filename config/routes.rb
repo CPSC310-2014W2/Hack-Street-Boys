@@ -23,7 +23,8 @@ Rails.application.routes.draw do
   
   root 'home#index'
 
-  resources :events, only: [:showEvent, :editEvent, :newEvent, :createEvent, :deleteEvent, :updateEvent] do
+  resources :events, only: [:showEvent, :editEvent, :newEvent, :createEvent, :deleteEvent, :updateEvent, :test] do
+    get :test, :on => :collection
     get :showEvent, :on => :collection
     get :editEvent, :on => :collection
     get :newEvent, :on => :collection
