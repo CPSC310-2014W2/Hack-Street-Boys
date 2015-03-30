@@ -64,6 +64,3 @@ span > div#loading {
 h1{
 	font-size: 16px;
 }
-
-@import "bootstrap-sprockets"
-@import "bootstrap"
