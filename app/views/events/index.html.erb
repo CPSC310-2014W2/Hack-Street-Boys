@@ -1,4 +1,30 @@
 <% if @allEvents != nil %> 
+<<<<<<< HEAD
+  <table style="margin: 40px;">
+    <tr>
+      <th>Title</th>
+      <th>Start</th>
+      <th>End</th>
+      <th>Location</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+    <% @allEvents.each do |event| %>
+    <tr>
+      <td><%= event["value"]["title"] %></td>
+        <td><%= event["value"]["startDate"] %>T<%= event["value"]["startTime"] %></td>
+        <td><%= event["value"]["endDate"] %>T<%= event["value"]["endTime"] %></td>
+        <td><%= event["value"]["location"] %></td>
+        <td><%= event["value"]["description"] %></td>
+        <td><%= event["value"]["weatherDesc"] %></td>
+
+        <td><%= link_to 'Edit', editEvent_events_path(:eventId => event["path"]["key"]) %></td>
+        <td><%= link_to 'Delete', deleteEvent_events_path(:eventId => event["path"]["key"]), method: :post %></td>
+        <td><%= social_share_button_tag("This is my event:", :url => "http://localhost:3000") %></td>
+    </tr>
+    <% end %>
+  </table>
+=======
   <div class="text-container">
     <h3 style="margin: 40px;">Your Events:</h3>
     <table style="margin: 0 40px 40px 40px;">
@@ -14,6 +40,7 @@
       <% end %>
     </table>
   </div>
+>>>>>>> d7aba63a9275a2b5a29568a0b4fcd642caa8bb8f
 
   <div style="margin: 40px;">
     <%= button_to "Create New Event", newEvent_events_path, :method => :get, :class => "coloring" %>
