@@ -76,33 +76,6 @@ module ApplicationHelper
       return citiesWeatherData;
     end
     
-    # REQUIRE: geoInfo              : a hash map containing geoInfo of a particular address (based on google)
-    # EFFECT : Update the current weather data stored in Orchestrate.io
-    #          NOTE: Generally, there is no need to call this method. getCityWeatherData and getCitiesWeatherData
-    #                automatically update weather data in Orchestrate.io if the weather data requested is over an
-    #                hour old in Orchestrate.io
-    def self.updateWeatherData ( geoInfo )      
-      latLon = Geocoder.getLatLon( geoInfo );
-      updateOrchestrate( :cityweather, Geocoder.getCityNameKey( geoInfo ), queryForecastIO( latLon ) );
-    end
-    
-    # REQUIRE: latLon               : a latitude and longitude pair
-    # EFFECT : return a hash map containing the forecast data from Forecast.io
-    def self.queryForecastIO ( latLon )
-      lat = latLon[:lat];
-      lon = latLon[:lng];      
-      puts "querying forecast.io"; #TODO     
-      ForecastIO.api_key = FORECAST_IO_API_KEY;
-      forecast = ForecastIO.forecast( lat.to_i, lon.to_i );
-      forecast_hash = Hash.new; 
-      forecast_hash[:last_update_time] = Time.now.to_i;
-      forecast_hash[:latLon] = latLon;
-      forecast_hash[:currently] = forecast.currently;
-      forecast_hash[:hourly] = forecast.hourly;
-      forecast_hash[:daily_this_week] = forecast.daily;      
-      return JSON.parse( forecast_hash.to_json, :symbolize_names => true );          
-    end
-    
     # REQUIRE: user_id              : A valid google user id that is already stored in Orchestrate.io
     # EFFECT : Retrieve the hash map google user information from Orchestrate.io with the user id as the key
     #           - Return nil if the key cannot be found
@@ -144,17 +117,14 @@ module ApplicationHelper
         return result;
     end 
     
-    # REQUIRE: geoInfo        : A geoInfo hash map of a particular Canadian or US city
-    # EFFECT : store/update the Orchestrate.io database with the said geoInfo Hash 
-    def self.updateGeoInfo( geoInfo )
-      if ( Geocoder.isValidAddress( geoInfo ) )
-        cityNameKey = Geocoder.getCityNameKey( geoInfo );
-        geoInfoData = Hash.new;
-        geoInfoData[:geoInfo] = geoInfo;
-        updateOrchestrate( :citygeoinfo, cityNameKey, geoInfoData );
-      end
-    end
-    
+    # REQUIRE: cityNameKey          : a city name key in the form '[city name]_[country code]' e.g. Vancouver_CA
+    #          cityCount            : the number of cities geoInfos try to obtain
+    #          searchDistance       : the search distance
+    # EFFECT : return an array of geoInfos stored in Orchestrate.io surrounding the given central city. This method will first 
+    #          try to obtain #cityCount number of cities' geoInfos surrounding the central city with a radius of searchDistance
+    #          km. If less than (#cityCount * 0.7) geoInfos are found, this method will try to generate a new list of geoInfos
+    #          of length #cityCount by offsetting the latitude and longitude of the central city and making calls to google
+    #          geocoder.
     def self.geoInfoSearchByKey( cityNameKey, cityCount, searchDistance )
       client = Orchestrate::Client.new( ORC_API_KEY );
       geoInfo = getGeoInfoByKey( cityNameKey );
@@ -177,8 +147,48 @@ module ApplicationHelper
     end
     
     ######################################################
-    # Helper
+    #                                                    #
+    # Helper                                             #
+    #                                                    #
     ######################################################
+    
+    # REQUIRE: geoInfo              : a hash map containing geoInfo of a particular address (based on google)
+    # EFFECT : Update the current weather data stored in Orchestrate.io
+    #          NOTE: Generally, there is no need to call this method. getCityWeatherData and getCitiesWeatherData
+    #                automatically update weather data in Orchestrate.io if the weather data requested is over an
+    #                hour old in Orchestrate.io
+    def self.updateWeatherData ( geoInfo )      
+      latLon = Geocoder.getLatLon( geoInfo );
+      updateOrchestrate( :cityweather, Geocoder.getCityNameKey( geoInfo ), queryForecastIO( latLon ) );
+    end
+
+    # REQUIRE: latLon               : a latitude and longitude pair
+    # EFFECT : return a hash map containing the forecast data from Forecast.io
+    def self.queryForecastIO ( latLon )
+      lat = latLon[:lat];
+      lon = latLon[:lng];      
+      puts "querying forecast.io"; #TODO     
+      ForecastIO.api_key = FORECAST_IO_API_KEY;
+      forecast = ForecastIO.forecast( lat.to_i, lon.to_i );
+      forecast_hash = Hash.new; 
+      forecast_hash[:last_update_time] = Time.now.to_i;
+      forecast_hash[:latLon] = latLon;
+      forecast_hash[:currently] = forecast.currently;
+      forecast_hash[:hourly] = forecast.hourly;
+      forecast_hash[:daily_this_week] = forecast.daily;      
+      return JSON.parse( forecast_hash.to_json, :symbolize_names => true );          
+    end
+        
+    # REQUIRE: geoInfo        : A geoInfo hash map of a particular Canadian or US city
+    # EFFECT : store/update the Orchestrate.io database with the said geoInfo Hash 
+    def self.updateGeoInfo( geoInfo )
+      if ( Geocoder.isValidAddress( geoInfo ) )
+        cityNameKey = Geocoder.getCityNameKey( geoInfo );
+        geoInfoData = Hash.new;
+        geoInfoData[:geoInfo] = geoInfo;
+        updateOrchestrate( :citygeoinfo, cityNameKey, geoInfoData );
+      end
+    end
     
     # REQUIRE: response             : a json response from Orchestrate.io
     # EFFECT : return true if the orchestrate response contains a body 
@@ -200,7 +210,6 @@ module ApplicationHelper
       return response;
     end
 
-
     def self.storeFacebookUser ( uid, name )
       client = Orchestrate::Client.new(ORC_API_KEY);
       client.put( :facebookuser, uid, name);
@@ -219,7 +228,9 @@ module ApplicationHelper
   class Geocoder
     
     GOOGLE_URL = 'https://maps.googleapis.com/maps/api/geocode/json?';
-    GGEOCODE_API_KEY = "AIzaSyCOvnSbUGSJfQFEZfAHk7zgpP83f9QJrp8";
+    # Adam's api key
+    # GGEOCODE_API_KEY = "AIzaSyCOvnSbUGSJfQFEZfAHk7zgpP83f9QJrp8";
+    GGEOCODE_API_KEY = "AIzaSyDvsyIuTEZzQCXsZZXT2dQhn9foP66qH60";
     
     # REQUIRE: address            : a string address
     # EFFECT : return a geoInfo hash map based on google geocoder
