@@ -10,8 +10,45 @@
   <%= csrf_meta_tags %>
   <%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.js" %>
   <%= csrf_meta_tags %>
+
+  <meta property="og:title" content="Here is my scheduled event on Weathr: "/>
+  <meta property="og:site_name" content="Weather Application"/>
+  <meta property="og:url" content="http://salty-badlands-4905.herokuapp.com"/>
+
 </head>
 <body>
+
+  <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1580886888863240',
+          xfbml      : true,
+          version    : 'v2.3'
+        });
+
+        FB.ui({
+          method: 'share',
+          href: 'http://salty-badlands-4905.herokuapp.com',
+          caption: 'An example caption',
+        },
+        function(response) {
+          if (response && !response.error_code) {
+            alert('Posting completed.');
+            } else {
+              alert('Error while posting.');
+            }
+          }
+          );
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
 
 <div align="right">
 	<div align="right">

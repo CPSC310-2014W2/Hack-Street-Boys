@@ -19,6 +19,9 @@
 
         <td><%= link_to 'Edit', editEvent_events_path(:eventId => event["path"]["key"]) %></td>
         <td><%= link_to 'Delete', deleteEvent_events_path(:eventId => event["path"]["key"]), method: :post %></td>
+
+        <td><div class="fb-share-button" data-href="http://salty-badlands-4905.herokuapp.com" data-layout="button"></div></td>
+
     </tr>
     <% end %>
   </table>
