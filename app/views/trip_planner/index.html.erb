@@ -24,6 +24,7 @@ th, td {
 </head>
 
 <body>
+<% if @geoInfo %>
 <% if @forecastData %>
   <table style="width:100%">
   <caption>Weather forecast for <%= @name %></caption>
@@ -58,4 +59,7 @@ th, td {
 </table>
 </body>
 </html>
+<% else %>
+<p>Please enter a correct city name (must be in US/Canada) </p>
+<% end %>
 <% end %>
