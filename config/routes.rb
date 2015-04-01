@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get 'setting/index'
   get 'setting/update'
   get 'events/index'
-  get 'trip_planner/index'
+  get 'weather_forecast/index'
 
   get 'test/app_helper_test', to: 'test#app_helper_test'
   
@@ -27,9 +27,8 @@ Rails.application.routes.draw do
   end
   resources :fav_cities
   
-  resources :trip_planner, only: [:index, :new] do
+  resources :weather_forecast, only: [:index] do
       get :index, :on => :collection
-      get :new, :on => :collection
   end
   
   resources :sessions, only: [:create, :destroy]

@@ -1,5 +1,5 @@
 require 'date'
-class TripPlannerController < ApplicationController
+class WeatherForecastController < ApplicationController
   include ApplicationHelper
     
   def index
@@ -12,16 +12,24 @@ class TripPlannerController < ApplicationController
       
       if (@forecastData != nil)
         @weekData = @forecastData["daily_this_week"]
+        puts @weekData
 
         @timeArray = Array.new
         @summaryArray = Array.new
         @iconArray = Array.new
+
+        @tempAvgArray = Array.new
+
+        @apparentTempAvgArray = Array.new
 
 
         @weekData["data"].each do |data|
           @timeArray << Time.at(data["time"]).to_date.strftime('%a %d %b %Y')
           @summaryArray << data["summary"]
           @iconArray << data["icon"]
+
+          @tempAvgArray << ((data["temperatureMin"] + data["temperatureMax"]) / 2).round(1)
+          @apparentTempAvgArray << ((data["apparentTemperatureMin"] + data["apparentTemperatureMax"]) / 2).round(1)
         end
       end
     end

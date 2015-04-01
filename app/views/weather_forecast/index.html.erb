@@ -1,6 +1,6 @@
 <h1>Trip Planner</h1>
 
-<%= form_for :city, url: trip_planner_index_path, :method => :get do |f| %>
+<%= form_for :city, url: weather_forecast_index_path, :method => :get do |f| %>
   <p>
     <%= f.label "Name of city" %><br>
     <%= f.text_field :name %>
@@ -15,21 +15,31 @@
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
 }
-th, td {
+th {
     padding: 5px;
     text-align: left;
+    width: (100/7)%;
+}
+td
+{
+    padding: 5px;
+    text-align: left;
+    width: 70px;
 }
 </style>
 </head>
 
+
 <body>
 <% if @geoInfo %>
 <% if @forecastData %>
-  <table style="width:100%">
+  <table>
   <caption>Weather forecast for <%= @name %></caption>
-  <br>
   <tr>
+    <td style="visibility: hidden"></td>
     <th><%= @timeArray[0] %></th>
     <th><%= @timeArray[1] %></th>
     <th><%= @timeArray[2] %></th>
@@ -39,6 +49,7 @@ th, td {
     <th><%= @timeArray[6] %></th>
   </tr>
   <tr>
+    <td style="visibility: hidden"></td>
     <th><img src= "/assets/<%= @iconArray[0] %>.png" alt= <%= @iconArray[0] %> style="width:60px;height:60px;display: block;margin-left: auto;margin-right: auto "></th>
     <th><img src= "/assets/<%= @iconArray[1] %>.png" alt= <%= @iconArray[1] %> style="width:60px;height:60px;display: block;margin-left: auto;margin-right: auto "></th>
     <th><img src= "/assets/<%= @iconArray[2] %>.png" alt= <%= @iconArray[2] %> style="width:60px;height:60px;display: block;margin-left: auto;margin-right: auto "></th>
@@ -48,6 +59,7 @@ th, td {
     <th><img src= "/assets/<%= @iconArray[6] %>.png" alt= <%= @iconArray[6] %> style="width:60px;height:60px;display: block;margin-left: auto;margin-right: auto "></th>
   </tr>
   <tr>
+    <td style="visibility: hidden"></td>
     <th><%= @summaryArray[0] %></th>
     <th><%= @summaryArray[1] %></th>
     <th><%= @summaryArray[2] %></th>
@@ -55,6 +67,26 @@ th, td {
     <th><%= @summaryArray[4] %></th>
     <th><%= @summaryArray[5] %></th>
     <th><%= @summaryArray[6] %></th>
+  </tr>
+  <tr>
+    <td>Average temperature</td>
+    <th><%= @tempAvgArray[0] %>°F</th>
+    <th><%= @tempAvgArray[1] %>°F</th>
+    <th><%= @tempAvgArray[2] %>°F</th>
+    <th><%= @tempAvgArray[3] %>°F</th>
+    <th><%= @tempAvgArray[4] %>°F</th>
+    <th><%= @tempAvgArray[5] %>°F</th>
+    <th><%= @tempAvgArray[6] %>°F</th>
+  </tr>
+  <tr>
+    <td>Feels like</td>
+    <th><%= @apparentTempAvgArray[0] %>°F</th>
+    <th><%= @apparentTempAvgArray[1] %>°F</th>
+    <th><%= @apparentTempAvgArray[2] %>°F</th>
+    <th><%= @apparentTempAvgArray[3] %>°F</th>
+    <th><%= @apparentTempAvgArray[4] %>°F</th>
+    <th><%= @apparentTempAvgArray[5] %>°F</th>
+    <th><%= @apparentTempAvgArray[6] %>°F</th>
   </tr>
 </table>
 </body>
