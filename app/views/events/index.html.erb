@@ -1,25 +1,36 @@
 <% if @allEvents != nil %> 
-  <div class="text-container">
-    <h3 style="margin: 40px;">Your Events:</h3>
-    <table style="margin: 0 40px 40px 40px;">
-      <% @allEvents.each do |event| %> 
-        <tr>
-          <td><%= link_to 'Edit', editEvent_events_path(:eventId => event["path"]["key"]) %></td>
-          <td><strong><%= event["value"]["title"] %></strong></td>
-          <td><%= event["value"]["weatherSummary"] %></td>
-          <% if event["value"]["ifReschedule"] == true %> 
-            <td>Event doesn't match your weather preference, reschedule?</td>
-          <% end %>
-        </tr>
-      <% end %>
-    </table>
-  </div>
+  <table style="margin: 40px;">
+    <tr>
+      <th>Title</th>
+      <th>Start</th>
+      <th>End</th>
+      <th>Location</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+    <% @allEvents.each do |event| %>
+    <tr>
+      <td><%= event["value"]["title"] %></td>
+        <td><%= event["value"]["startDate"] %>T<%= event["value"]["startTime"] %></td>
+        <td><%= event["value"]["endDate"] %>T<%= event["value"]["endTime"] %></td>
+        <td><%= event["value"]["location"] %></td>
+        <td><%= event["value"]["description"] %></td>
+        <td><%= event["value"]["weatherDesc"] %></td>
+
+        <td><%= link_to 'Edit', editEvent_events_path(:eventId => event["path"]["key"]) %></td>
+        <td><%= link_to 'Delete', deleteEvent_events_path(:eventId => event["path"]["key"]), method: :post %></td>
+
+        <td><div class="fb-share-button" data-href="http://salty-badlands-4905.herokuapp.com" data-layout="button"></div></td>
+
+    </tr>
+    <% end %>
+  </table>
 
   <div style="margin: 40px;">
-    <%= button_to "Create New Event", newEvent_events_path, :method => :get, :class => "coloring" %>
+    <%= button_to "Create", newEvent_events_path, :method => :get, :class => "coloring" %>
   </div>
 
   <div id='calendar' style="margin: 40px;"></div>
 <% else %>
-  <div class="text-container" style="padding: 20px;">Please Login</div>
+  <div>Please Login</div>
 <% end %>
