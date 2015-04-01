@@ -11,7 +11,32 @@ class EventsController < ApplicationController
     if current_user() != nil
       userID = current_user().uid;
       @allEvents = ScheduleItems.getAllEvents(userID)["results"];
+   
+      @allEvents.each do |event|
+        startDateUnix = Date.parse( event['value']['startDate'] ).to_time.to_i;
+        endDateUnix = Date.parse( event['value']['endDate'] ).to_time.to_i;
+
+        weather = OrchestrateDatabase.getCityWeatherData( Geocoder.getGeoInfo( @allEvents[0]['value']['location'] ) );
+        dailyWeather = weather['daily_this_week']['data'];
+
+        dailyWeather.each do |day|
+          if day['time'] == startDateUnix
+            event['value']['weatherSummary'] = day['summary'];
+            event['value']['icon'] = day['icon'];
+            event['value']['weatherTempMin'] = day['temperatureMin'];
+            event['value']['weatherTempMax'] = day['temperatureMax'];
+            if day['icon'] != event['value']['weatherPreference'] && event['value']['weatherPreference']
+              event['value']['ifReschedule'] = true;
+            else
+              event['value']['ifReschedule'] = false;
+            end
+          end
+        end
+      end
     end
+  end
+
+  def test
   end
 
   def showEvent
@@ -19,6 +44,23 @@ class EventsController < ApplicationController
       userID = current_user().uid;
       allEvents = ScheduleItems.getAllEvents(userID)["results"];
     
+      allEvents.each do |event|
+        startDateUnix = Date.parse( event['value']['startDate'] ).to_time.to_i;
+        endDateUnix = Date.parse( event['value']['endDate'] ).to_time.to_i;
+
+        weather = OrchestrateDatabase.getCityWeatherData( Geocoder.getGeoInfo( allEvents[0]['value']['location'] ) );
+        dailyWeather = weather['daily_this_week']['data'];
+
+        dailyWeather.each do |day|
+          if day['time'] == startDateUnix
+            event['value']['weatherSummary'] = day['summary'];
+            event['value']['weatherTempMin'] = day['temperatureMin'];
+            event['value']['weatherTempMax'] = day['temperatureMax'];
+            # event['value']['icon'] = day['icon'];
+          end
+        end
+      end
+
       render :json => allEvents
     end
   end
@@ -39,32 +81,32 @@ class EventsController < ApplicationController
     startTime = params[:events]["startTime"];
     endTime = params[:events]["endTime"];
     location = params[:events]["location"];
+    weatherPreference = params[:events]["weatherPreference"];
     description = params[:events]["description"];
     userId = current_user().uid;
 
-    # Needed when getting the weather data for the location of an event
-    #latLon = Geocoder.getLatLon( location );
-    #jsonData = OpenWeather.getCitiesCurrentWeather( latLon[:lat], latLon[:lng], 1 );
-    #weatherDesc = jsonData['list'][0]['weather'][0]['description'];
+    geoInfo = Geocoder.getGeoInfo( location );
+    validAddress = Geocoder.isValidAddress(geoInfo);
 
-    eventInfo = {
-      title: title,
-      startDate: startDate,
-      endDate: endDate,
-      startTime: startTime,
-      endTime: endTime,
-      location: location,
-      description: description,
-      #weatherDesc: weatherDesc,
-      userId: userId
-    };
-    response = ScheduleItems.createEvent( eventInfo );
-    redirect_to :back
-  end
-
-  def deleteEvent
-    response = ScheduleItems.deleteEvent( params[:eventId] );
-    redirect_to :back
+    if validAddress
+      cityNameKey = Geocoder.getCityNameKey(geoInfo);
+      eventInfo = {
+        cityKey: cityNameKey,
+        title: title,
+        startDate: startDate,
+        endDate: endDate,
+        startTime: startTime,
+        endTime: endTime,
+        location: location,
+        weatherPreference: weatherPreference,
+        description: description,
+        userId: userId
+      };
+      response = ScheduleItems.createEvent( eventInfo );
+    else
+      render :json => "not valid address"
+    end
+    redirect_to events_index_path
   end
   
   def updateEvent
@@ -76,20 +118,36 @@ class EventsController < ApplicationController
     startTime = params[:events]["startTime"];
     endTime = params[:events]["endTime"];
     location = params[:events]["location"];
+    weatherPreference = params[:events]["weatherPreference"];
     description = params[:events]["description"];
     userId = current_user().uid;
 
-    eventInfo = {
-      title: title,
-      startDate: startDate,
-      endDate: endDate,
-      startTime: startTime,
-      endTime: endTime,
-      location: location,
-      description: description,
-      userId: userId
-    };
-    response = ScheduleItems.updateEvent( eventID, eventInfo );
+    geoInfo = Geocoder.getGeoInfo( location );
+    validAddress = Geocoder.isValidAddress(geoInfo);
+
+    if validAddress
+      cityNameKey = Geocoder.getCityNameKey(geoInfo);
+      eventInfo = {
+        cityKey: cityNameKey,
+        title: title,
+        startDate: startDate,
+        endDate: endDate,
+        startTime: startTime,
+        endTime: endTime,
+        location: location,
+        weatherPreference: weatherPreference,
+        description: description,
+        userId: userId
+      };
+      response = ScheduleItems.updateEvent( eventID, eventInfo );
+    else
+      render :json => "not valid address"
+    end
+    redirect_to events_index_path
+  end
+
+  def deleteEvent
+    response = ScheduleItems.deleteEvent( params[:eventId] );
     redirect_to events_index_path
   end
   
@@ -103,5 +161,5 @@ class EventsController < ApplicationController
     
     return Time.parse( datetime ).to_time.to_i
   end
-  
+
 end
