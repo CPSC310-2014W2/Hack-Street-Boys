@@ -3,8 +3,8 @@
   <meta property="fb:app_id"          content="1580886888863240" /> 
   <meta property="og:type"            content="article" /> 
   <meta property="og:url"             content="https://cherry-tart-2858.herokuapp.com/" /> 
-  <meta property="og:title"           content="Just scheduled my events on Weathr!" /> 
-  <meta property="og:description"     content="Weather Application" />
+  <meta property="og:title"           content="This is awesome - just scheduled my events on Weathr! Try it out yourself" /> 
+  <meta property="og:description"     content="Weathr is a web application that a user can go to for all of their weather scheduling needs." />
 </head>
 <body>
 <script>
@@ -35,21 +35,21 @@
     <h3 style="margin: 40px;">Your Events:</h3>
     <table style="margin: 0 40px 40px 40px;">
       <tr>
-        <th></th>
         <th style="text-align:left;">Event Title</th>
         <th style="text-align:left;">Weather Summary</th> 
         <th style="text-align:left;">Weather Preference</th>   
       </tr>
       <% @allEvents.each do |event| %> 
         <tr>
-          <td><%= link_to 'Edit', editEvent_events_path(:eventId => event["path"]["key"]) %></td>
           <td><strong><%= event["value"]["title"] %></strong></td>
           <td><%= event["value"]["weatherSummary"] %></td>
           <td><%= event["value"]["weatherPreference"] %></td>
           <% if event["value"]["ifReschedule"] == true %> 
             <td>Event doesn't match your weather preference, reschedule?</td>
           <% end %>
-          <td><div class="fb-share-button" data-href="https://cherry-tart-2858.herokuapp.com/" data-layout="button"></div></td>
+          <td><%= link_to 'Edit', editEvent_events_path(:eventId => event["path"]["key"]) %></td>
+          <td> </td>
+          <td> <%= fb_share('1580886888863240', 'https://cherry-tart-2858.herokuapp.com/events/index?', opts={:link => "https://cherry-tart-2858.herokuapp.com/", :name => "#{event["value"]["title"]}", :caption => "#{event["value"]["location"]}", :description => 'Weathr is a web application that a user can go to for all of their weather scheduling needs.'} )%></td>
         </tr>
       <% end %>
     </table>
@@ -58,6 +58,11 @@
   <div style="margin: 40px;">
     <%= button_to "Create New Event", newEvent_events_path, :method => :get, :class => "coloring" %>
   </div>
+
+<div style="margin: 0 40px;"> Like the website? Sharing is caring.
+  <div class="fb-share-button" data-href="https://cherry-tart-2858.herokuapp.com/" data-layout="button" ></div>
+</div>
+
 
   <div id='calendar' style="margin: 40px;"></div>
 <% else %>
