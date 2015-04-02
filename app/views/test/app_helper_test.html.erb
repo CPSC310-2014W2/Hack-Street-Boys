@@ -34,7 +34,23 @@
 	<p>test of storeGoogleUser( user_info, user_id ), and getGoogleUserInfo ( user_id ): <strong><%= @getGoogleUserInfo_test1_result %></strong></p>
 	<p>Expected: Return userInfo hash map of testing user account</p>
 <hr>
-	<h3>Test that when try querying geoInfos from Orchestrate.io for 'Vancouver_CA'</h3>
+	<h3>Test that when try querying geoInfos from Orchestrate.io for 'Vancouver_CA', at least 15 cities of geoInfos are returned</h3>
 	<p>test of geoInfoSearchByKey( 'Vancouver_CA', 20, 200 ): <strong><%= @geoInfoSearchByKey_test1_result %></strong></p>
 	<p>Expected: at least 15 cities geoInfos are returned</p>
+<hr>
+	<h3>Test that when a valid Canadian address, containing both city and country elements is passed to Geocoder.getGeoInfo( address ), a valid geoInfo is return</h3>
+	<p>test of getGeoInfo( 'Commercial Drive, Vancouver, Canada' ): <strong><%= @getGeoInfo_test1_result %></strong></p>
+	<p>Expected: A valid geoInfo hash map is returned</p>
+<hr>
+	<h3>Test that when a valid US address, containing both city and country elements is passed to Geocoder.getGeoInfo( address ), a valid geoInfo is return</h3>
+	<p>test of getGeoInfo( 'Vancouver, US' ): <strong><%= @getGeoInfo_test2_result %></strong></p>
+	<p>Expected: A valid geoInfo hash map is returned</p>
+<hr>
+	<h3>Test that when an invalid Canadian address, containing no address elements below or equal to that of the city level is passed to Geocoder.getGeoInfo( address ), an invalid geoInfo is returned</h3>
+	<p>test of getGeoInfo( 'BC, Canada' ): <strong><%= @getGeoInfo_test3_result %></strong></p>
+	<p>Expected: return an invalid geoInfo</p>
+<hr>
+	<h3>Test that when a valid geoInfo is passed to getLatLon( geoInfo ), a latitude and longitude pair hash map is returned with :lat and :lng as keys</h3>
+	<p>test of getGeoInfo( Geocoder.getGeoInfo( "Commercial Drive, Vancouver, Canada" ) ): <strong><%= @getLatLon_test1_result %></strong></p>
+	<p>Expected: return a latitude and longitude pair hash map is returned with :lat and :lng as keys</p>
 <hr>

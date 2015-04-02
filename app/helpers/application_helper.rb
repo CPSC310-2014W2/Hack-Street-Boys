@@ -247,7 +247,7 @@ module ApplicationHelper
     end
     
     # REQUIRE: A valid geoInfo Hash Map (i.e. a city address belonging to a Canadian or US City)
-    # EFFECT : return a hash map { :lat => [...], :lng => [...]}
+    # EFFECT : return a latitude and longitude pair hash map { :lat => [...], :lng => [...]}
     def self.getLatLon ( geoInfo )
       if ( isValidAddress( geoInfo ) )
         return geoInfo[0][:geometry][:location];
@@ -280,6 +280,68 @@ module ApplicationHelper
       latLonArray << centralLatLon;
       return generateLatLons( latLonArray, count, degree );
     end
+    
+    # REQUIRE: latLon             : a latitude and longitude pair hash map
+    # EFFECT : return the geoInfo of the location using google reverse geocoding API
+    #          - return nil if google reverse geocoding API return no result
+    def self.getReverseGeoInfo( latLon )
+      lat = latLon[:lat];
+      lon = latLon[:lng];
+      g_geocode_url = GOOGLE_URL + 'latlng=' + lat.to_s + ',' + lon.to_s + '&key=' + GGEOCODE_API_KEY;
+      response = JSON.parse( HTTParty.get( g_geocode_url.to_s ).to_json, :symbolize_names => true )[:results];
+      if ( response == [] )
+        return nil;
+      else
+        return response;
+      end      
+    end
+    
+    # REQUIRE: geoInfo            : a geoInfo hash map
+    # EFFECT : return true if the geoInfo belongs to a particular Canadian or US city
+    def self.isValidAddress ( geoInfo )
+      
+      if ( geoInfo == [] || geoInfo == nil )
+        return false;
+      end
+      if ( !( geoInfo[0].has_key?(:address_components) ) )
+        return false;
+      end
+      addr_compon_arr = geoInfo[0][:address_components];
+      addr_types = Array.new;
+      addr_compon_arr.each { |component|
+        addr_types << component[:types][0];
+        if ( component[:types][0] == "country" && component[:long_name] != "Canada" && component[:long_name] != "United States" )
+          return false;
+        end
+      }
+      if ( addr_types.include?("locality") && addr_types.include?("country") )
+        return true;
+      end
+      return false;
+    end
+    
+    # REQUIRE: geoInfo            : a valid geoInfo (a valid address belonging to a Canadian or US city)
+    # EFFECT : return the unique city name key for each city e.g. Vancouver is Vancouver_CA
+    def self.getCityNameKey ( geoInfo )
+      addr_compon_arr = geoInfo[0][:address_components];
+      city = "";
+      country = "";
+      addr_compon_arr.each { |component|
+        if ( component[:types][0] == "locality" )
+          city = component[:long_name];
+        end
+        if ( component[:types][0] == "country")
+          country = component[:short_name];
+        end
+      }
+      return city + "_" + country;
+    end
+    
+    ######################################################
+    #                                                    #
+    # Helper                                             #
+    #                                                    #
+    ######################################################
     
     # REQUIRE: latLonArray        : an array of latitude and longitude ( paired as hash element )
     #          count              : number of latitude and longitude pairs to be returned
@@ -345,62 +407,6 @@ module ApplicationHelper
       return shiftedLatLon;
     end
     
-    # REQUIRE: latLon             : a latitude and longitude pair hash map
-    # EFFECT : return the geoInfo of the location using google reverse geocoding API
-    #          - return nil if google reverse geocoding API return no result
-    def self.getReverseGeoInfo( latLon )
-      lat = latLon[:lat];
-      lon = latLon[:lng];
-      g_geocode_url = GOOGLE_URL + 'latlng=' + lat.to_s + ',' + lon.to_s + '&key=' + GGEOCODE_API_KEY;
-      response = JSON.parse( HTTParty.get( g_geocode_url.to_s ).to_json, :symbolize_names => true )[:results];
-      if ( response == [] )
-        return nil;
-      else
-        return response;
-      end      
-    end
-    
-    # REQUIRE: geoInfo            : a geoInfo hash map
-    # EFFECT : return true if the geoInfo belongs to a particular Canadian or US city
-    def self.isValidAddress ( geoInfo )
-      
-      if ( geoInfo == [] || geoInfo == nil )
-        return false;
-      end
-      if ( !( geoInfo[0].has_key?(:address_components) ) )
-        return false;
-      end
-      addr_compon_arr = geoInfo[0][:address_components];
-      addr_types = Array.new;
-      addr_compon_arr.each { |component|
-        addr_types << component[:types][0];
-        if ( component[:types][0] == "country" && component[:long_name] != "Canada" && component[:long_name] != "United States" )
-          return false;
-        end
-      }
-      if ( addr_types.include?("locality") && addr_types.include?("country") )
-        return true;
-      end
-      return false;
-    end
-    
-    # REQUIRE: geoInfo            : a valid geoInfo (a valid address belonging to a Canadian or US city)
-    # EFFECT : return the unique city name key for each city e.g. Vancouver is Vancouver_CA
-    def self.getCityNameKey ( geoInfo )
-      addr_compon_arr = geoInfo[0][:address_components];
-      city = "";
-      country = "";
-      addr_compon_arr.each { |component|
-        if ( component[:types][0] == "locality" )
-          city = component[:long_name];
-        end
-        if ( component[:types][0] == "country")
-          country = component[:short_name];
-        end
-      }
-      return city + "_" + country;
-    end
-    
     # REQUIRE: latLonArray        : an array of latitude and longitude hash map
     # EFFECT : return an array of geoInfo based on google geocoder API 
     #          - if any geoInfo relongs to the same Canadian or US city or is invalid, they will be removed
@@ -434,6 +440,7 @@ module ApplicationHelper
       }
       return noDuplicateArray;
     end
+    
     
   end
   

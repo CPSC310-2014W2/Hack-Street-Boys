@@ -20,6 +20,18 @@
   <%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js" %>
   <%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.js" %>
   <%= csrf_meta_tags %>
+
+  <!-- Facebook Open Graph meta tags -->
+  <meta property="fb:app_id"          content="1580886888863240" /> 
+  <meta property="og:type"            content="article" /> 
+  <meta property="og:url"             content="https://cherry-tart-2858.herokuapp.com/" /> 
+  <meta property="og:title"           content="Just scheduled my events on Weathr!" /> 
+  <meta property="og:description"     content="Weather Application" />
+  
+  <link rel="icon" 
+      type="image/png" 
+      href="/assets/rain.png">
+      
 </head>
 <body>
 
@@ -32,10 +44,13 @@
         <%= link_to "Sign out", signout_path, id: "sign_out", :class => "signout_button" %>
       <% else %>
         <%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in", :class => "signin_button" %>
+        <br>
+        <%= link_to "Sign in with Facebook", "/auth/facebook", id: "facebook_sign_in" %>
       <% end %>
 	</div>
 </div>
 
+<!--
 <div align="right">
   <div align="right">
   <% if current_facebook_user %>
@@ -46,7 +61,7 @@
   <% end %>
 </div>
 </div>
-
+-->
 
 <h1 align="center">Weather Application</h1>
 

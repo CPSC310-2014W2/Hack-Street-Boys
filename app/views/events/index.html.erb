@@ -1,15 +1,55 @@
+<head>
+  <!-- Facebook Open Graph meta tags -->
+  <meta property="fb:app_id"          content="1580886888863240" /> 
+  <meta property="og:type"            content="article" /> 
+  <meta property="og:url"             content="https://cherry-tart-2858.herokuapp.com/" /> 
+  <meta property="og:title"           content="Just scheduled my events on Weathr!" /> 
+  <meta property="og:description"     content="Weather Application" />
+</head>
+<body>
+<script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '1580886888863240',
+        xfbml      : true,
+        version    : 'v2.3'
+      });
+    };
+
+    (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    FB.ui({
+      method: 'share',
+      href: 'https://cherry-tart-2858.herokuapp.com/',
+    }, function(response){});
+</script>
+
 <% if @allEvents != nil %> 
   <div class="text-container">
     <h3 style="margin: 40px;">Your Events:</h3>
     <table style="margin: 0 40px 40px 40px;">
+      <tr>
+        <th></th>
+        <th style="text-align:left;">Event Title</th>
+        <th style="text-align:left;">Weather Summary</th> 
+        <th style="text-align:left;">Weather Preference</th>   
+      </tr>
       <% @allEvents.each do |event| %> 
         <tr>
           <td><%= link_to 'Edit', editEvent_events_path(:eventId => event["path"]["key"]) %></td>
           <td><strong><%= event["value"]["title"] %></strong></td>
           <td><%= event["value"]["weatherSummary"] %></td>
+          <td><%= event["value"]["weatherPreference"] %></td>
           <% if event["value"]["ifReschedule"] == true %> 
             <td>Event doesn't match your weather preference, reschedule?</td>
           <% end %>
+          <td><div class="fb-share-button" data-href="https://cherry-tart-2858.herokuapp.com/" data-layout="button"></div></td>
         </tr>
       <% end %>
     </table>
@@ -23,3 +63,5 @@
 <% else %>
   <div class="text-container" style="padding: 20px;">Please Login</div>
 <% end %>
+
+</body>

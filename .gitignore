@@ -9,11 +9,15 @@
 /test/tmp/
 /test/version_tmp/
 /tmp/
+log/*.log
 
 ## Specific to RubyMotion:
 .dat*
 .repl_history
 build/
+
+## Mac
+.DS_Store
 
 ## Documentation cache and generated files:
 /.yardoc/
