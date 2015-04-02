@@ -1,0 +1,13 @@
+<h1>Unit Testing</h1>
+<hr>
+	<h3>Test that if no user to city relationship has been established, calling RelationshipHelper.getUserCityNameKey returns nil</h3>
+	<p>test of RelationshipHelper.getUserCityNameKey( user_id ): <strong><%= @setting_test %></strong></p>
+	<p>Expected: Return nil</p>
+<hr>
+	<h3>Test that if calling RelationshipHelper.createUserCityRelation correctly establish user to city relationship</h3>
+	<p>test of RelationshipHelper.createUserCityRelation( user_id, 'Vancouver_CA' ): <strong><%= @setting_test1 %></strong></p>
+	<p>Expected: the user to city relationship is established</p>
+<hr>
+	<h3>Test that if calling RelationshipHelper.createUserCityRelation correctly remove user to city relationship</h3>
+	<p>test of RelationshipHelper.removeUserCityRelation( user_id, 'Vancouver_CA' ): <strong><%= @setting_test2 %></strong></p>
+	<p>Expected: the user to city relationship is removed</p>
