@@ -8,7 +8,8 @@ class WeatherForecastController < ApplicationController
 
       @name = params[:city]["name"]
       @geoInfo = Geocoder.getGeoInfo(@name)
-      @forecastData = OrchestrateDatabase.getCityWeatherData(@geoInfo)
+      @cityNameKey = Geocoder.getCityNameKey(@geoInfo)
+      @forecastData = OrchestrateDatabase.getCityWeatherDataByKey(@cityNameKey)
       
       if (@forecastData != nil)
         @weekData = @forecastData["daily_this_week"]
