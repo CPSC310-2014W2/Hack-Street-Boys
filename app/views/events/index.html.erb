@@ -1,26 +1,33 @@
+<head>
+  <!-- Facebook Open Graph meta tags -->
+  <meta property="fb:app_id"          content="1580886888863240" /> 
+  <meta property="og:type"            content="article" /> 
+  <meta property="og:url"             content="https://cherry-tart-2858.herokuapp.com/" /> 
+  <meta property="og:title"           content="Just scheduled my events on Weathr!" /> 
+  <meta property="og:description"     content="Weather Application" />
+</head>
 <body>
-
 <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '1580886888863240',
-          xfbml      : true,
-          version    : 'v2.3'
-        });
-      };
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '1580886888863240',
+        xfbml      : true,
+        version    : 'v2.3'
+      });
+    };
 
-        FB.ui({
-          method: 'share',
-          href: 'https://developers.facebook.com/docs/',
-        }, function(response){});
+    (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
 
-      (function(d, s, id){
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement(s); js.id = id;
-         js.src = "//connect.facebook.net/en_US/sdk.js";
-         fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
+    FB.ui({
+      method: 'share',
+      href: 'https://cherry-tart-2858.herokuapp.com/',
+    }, function(response){});
 </script>
 
 <% if @allEvents != nil %> 
@@ -42,7 +49,7 @@
           <% if event["value"]["ifReschedule"] == true %> 
             <td>Event doesn't match your weather preference, reschedule?</td>
           <% end %>
-          <td><div class="fb-share-button" data-href="http://salty-badlands-4905.herokuapp.com" data-layout="button"></div></td>
+          <td><div class="fb-share-button" data-href="https://cherry-tart-2858.herokuapp.com/" data-layout="button"></div></td>
         </tr>
       <% end %>
     </table>
