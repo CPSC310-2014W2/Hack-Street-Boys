@@ -39450,3 +39450,1336 @@ TypeError (no implicit conversion of nil into String):
   Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
   Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
   Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (190.8ms)
+
+
+Started GET "/weather_forecast/index?utf8=%E2%9C%93&city%5Bname%5D=Vancouver%2C+BC&commit=View+trip+weather" for ::1 at 2015-04-01 20:52:57 -0700
+Processing by WeatherForecastController#index as HTML
+  Parameters: {"utf8"=>"✓", "city"=>{"name"=>"Vancouver, BC"}, "commit"=>"View trip weather"}
+  Rendered weather_forecast/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 1972ms (Views: 1214.3ms)
+
+
+Started GET "/assets/events-9faddeae353c4c203743e31cd3d90f61.css?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/home-613d44700358417877e3993e05f5bf72.css?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/weather_search-67989c507702a30d4e9ca93892a8141f.css?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/setting-fe84ecfaad251be2089e9ccc7c39ca8d.css?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/underscore-d896593a6eaf631f476bf3407c295f6e.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/application-857e4ddf2c60b991e6289a94a30fcd76.css?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/gmaps/base/base-dca563082e65c8b42ab83b418286714b.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/gmaps/base-123dd305868fd1a61725551efeba068e.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/gmaps/objects/base_builder-32c3edd5bf9b7fee1fb65c9a292432ed.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/gmaps/objects/builder-3a2d17758d4383c26c7c11552b91900d.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/gmaps/objects/handler-62a5722bc03f7e1805af55255244cb5c.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/gmaps/google/objects/common-247de1048a365563e2df3d5d5ae9e56c.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/gmaps/objects/null_clusterer-184ef159404bbc224e9c51150c4efa63.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/gmaps/google/builders/bound-57d3060c7fe3ce4d42931e8abf50b9dc.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/gmaps/google/builders/circle-99da4ddcaddd05a8c1097a06eeeefb90.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/gmaps/google/builders/map-325aa8626b5a5fa44312722237e15305.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/gmaps/google/builders/kml-6e2f09d2a688b881881a5f4357796aae.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/gmaps/google/builders/clusterer-6d81d0eb27c8c4e24380b2aacddc8511.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/gmaps/google/builders/marker-7432667e64b338c2c2895f4b4bd6349d.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polyline-796ac5f6a3a13881730d0c4d5d10644b.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polygon-691f759a007e4be8af9d091666d09699.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/gmaps/google/objects/bound-8b2391b8eaddc8625a459f0ce89c5c06.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/gmaps/google/objects/circle-abf49c4f2045e915f44fb1e5c99e5af7.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/gmaps/google/objects/kml-d4d5c668f5c4f7980f33620de06e4360.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/gmaps/google/objects/map-8462fffee7e2f45f07d15346aeedfa59.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/gmaps/google/objects/clusterer-2f010c47b83a2b1b084e393161211ede.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/gmaps/google/objects/marker-55c756f18e3d1226031094349eb102ec.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polygon-e9b75c55c73813811a991fd83c931218.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polyline-bd1d1f394197fdf7782eba9cdbae373b.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/gmaps/google/primitives-f49c8e12ce8f7b5e295e8f04c590a4ce.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/gmaps/google-a30741f757343b7174ebd9c5710c9591.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/home-032d050119a8f775c772bcc99282774d.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/setting-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/application-b3640d390b47eb82fa7cda3129a34903.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/weather_search-4f4c418c008e4a3ac18af93c414c04ac.js?body=1" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/partly-cloudy-day.png" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/rain.png" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/assets/partly-cloudy-night.png" for ::1 at 2015-04-01 20:52:59 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-04-01 20:52:59 -0700
+Processing by EventsController#showEvent as JSON
+Completed 500 Internal Server Error in 717ms
+
+TypeError (no implicit conversion of nil into String):
+  app/controllers/events_controller.rb:49:in `parse'
+  app/controllers/events_controller.rb:49:in `block in showEvent'
+  app/controllers/events_controller.rb:48:in `each'
+  app/controllers/events_controller.rb:48:in `showEvent'
+
+
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.2ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (4.7ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (81.7ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (2.4ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (3.6ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.6ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (79.0ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (167.6ms)
+
+
+Started GET "/weather_forecast/index?utf8=%E2%9C%93&city%5Bname%5D=san+fransico&commit=View+trip+weather" for ::1 at 2015-04-01 20:53:48 -0700
+Processing by WeatherForecastController#index as HTML
+  Parameters: {"utf8"=>"✓", "city"=>{"name"=>"san fransico"}, "commit"=>"View trip weather"}
+  Rendered weather_forecast/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 3974ms (Views: 982.5ms)
+
+
+Started GET "/assets/events-9faddeae353c4c203743e31cd3d90f61.css?body=1" for ::1 at 2015-04-01 20:53:52 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-01 20:53:52 -0700
+
+
+Started GET "/assets/home-613d44700358417877e3993e05f5bf72.css?body=1" for ::1 at 2015-04-01 20:53:52 -0700
+
+
+Started GET "/assets/setting-fe84ecfaad251be2089e9ccc7c39ca8d.css?body=1" for ::1 at 2015-04-01 20:53:52 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/weather_search-67989c507702a30d4e9ca93892a8141f.css?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/application-857e4ddf2c60b991e6289a94a30fcd76.css?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/gmaps/base/base-dca563082e65c8b42ab83b418286714b.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/gmaps/base-123dd305868fd1a61725551efeba068e.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/underscore-d896593a6eaf631f476bf3407c295f6e.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/gmaps/objects/base_builder-32c3edd5bf9b7fee1fb65c9a292432ed.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/gmaps/objects/builder-3a2d17758d4383c26c7c11552b91900d.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/gmaps/objects/handler-62a5722bc03f7e1805af55255244cb5c.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/gmaps/objects/null_clusterer-184ef159404bbc224e9c51150c4efa63.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/gmaps/google/objects/common-247de1048a365563e2df3d5d5ae9e56c.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/gmaps/google/builders/circle-99da4ddcaddd05a8c1097a06eeeefb90.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/gmaps/google/builders/kml-6e2f09d2a688b881881a5f4357796aae.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/gmaps/google/builders/clusterer-6d81d0eb27c8c4e24380b2aacddc8511.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/gmaps/google/builders/bound-57d3060c7fe3ce4d42931e8abf50b9dc.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/gmaps/google/builders/map-325aa8626b5a5fa44312722237e15305.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/gmaps/google/builders/marker-7432667e64b338c2c2895f4b4bd6349d.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polygon-691f759a007e4be8af9d091666d09699.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polyline-796ac5f6a3a13881730d0c4d5d10644b.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/gmaps/google/objects/bound-8b2391b8eaddc8625a459f0ce89c5c06.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/gmaps/google/objects/clusterer-2f010c47b83a2b1b084e393161211ede.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/gmaps/google/objects/kml-d4d5c668f5c4f7980f33620de06e4360.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/gmaps/google/objects/map-8462fffee7e2f45f07d15346aeedfa59.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/gmaps/google/objects/circle-abf49c4f2045e915f44fb1e5c99e5af7.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/gmaps/google/objects/marker-55c756f18e3d1226031094349eb102ec.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polygon-e9b75c55c73813811a991fd83c931218.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/gmaps/google/primitives-f49c8e12ce8f7b5e295e8f04c590a4ce.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polyline-bd1d1f394197fdf7782eba9cdbae373b.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/gmaps/google-a30741f757343b7174ebd9c5710c9591.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/home-032d050119a8f775c772bcc99282774d.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/weather_search-4f4c418c008e4a3ac18af93c414c04ac.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/application-b3640d390b47eb82fa7cda3129a34903.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/partly-cloudy-day.png" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/setting-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/partly-cloudy-night.png" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/rain.png" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/assets/clear-day.png" for ::1 at 2015-04-01 20:53:53 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-04-01 20:53:53 -0700
+Processing by EventsController#showEvent as JSON
+Completed 500 Internal Server Error in 796ms
+
+TypeError (no implicit conversion of nil into String):
+  app/controllers/events_controller.rb:49:in `parse'
+  app/controllers/events_controller.rb:49:in `block in showEvent'
+  app/controllers/events_controller.rb:48:in `each'
+  app/controllers/events_controller.rb:48:in `showEvent'
+
+
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.0ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.2ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (7.9ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (125.4ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (99.7ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (4.6ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (220.3ms)
+
+
+Started GET "/weather_forecast/index?utf8=%E2%9C%93&city%5Bname%5D=san+francisco&commit=View+trip+weather" for ::1 at 2015-04-01 20:54:27 -0700
+Processing by WeatherForecastController#index as HTML
+  Parameters: {"utf8"=>"✓", "city"=>{"name"=>"san francisco"}, "commit"=>"View trip weather"}
+  Rendered weather_forecast/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 1768ms (Views: 671.8ms)
+
+
+Started GET "/assets/events-9faddeae353c4c203743e31cd3d90f61.css?body=1" for ::1 at 2015-04-01 20:54:29 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-01 20:54:29 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-01 20:54:29 -0700
+
+
+Started GET "/assets/weather_search-67989c507702a30d4e9ca93892a8141f.css?body=1" for ::1 at 2015-04-01 20:54:29 -0700
+
+
+Started GET "/assets/application-857e4ddf2c60b991e6289a94a30fcd76.css?body=1" for ::1 at 2015-04-01 20:54:29 -0700
+
+
+Started GET "/assets/setting-fe84ecfaad251be2089e9ccc7c39ca8d.css?body=1" for ::1 at 2015-04-01 20:54:29 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-01 20:54:29 -0700
+
+
+Started GET "/assets/home-613d44700358417877e3993e05f5bf72.css?body=1" for ::1 at 2015-04-01 20:54:29 -0700
+
+
+Started GET "/assets/underscore-d896593a6eaf631f476bf3407c295f6e.js?body=1" for ::1 at 2015-04-01 20:54:29 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-01 20:54:29 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-01 20:54:29 -0700
+
+
+Started GET "/assets/gmaps/base-123dd305868fd1a61725551efeba068e.js?body=1" for ::1 at 2015-04-01 20:54:29 -0700
+
+
+Started GET "/assets/gmaps/objects/base_builder-32c3edd5bf9b7fee1fb65c9a292432ed.js?body=1" for ::1 at 2015-04-01 20:54:29 -0700
+
+
+Started GET "/assets/gmaps/base/base-dca563082e65c8b42ab83b418286714b.js?body=1" for ::1 at 2015-04-01 20:54:29 -0700
+
+
+Started GET "/assets/gmaps/objects/handler-62a5722bc03f7e1805af55255244cb5c.js?body=1" for ::1 at 2015-04-01 20:54:29 -0700
+
+
+Started GET "/assets/gmaps/objects/builder-3a2d17758d4383c26c7c11552b91900d.js?body=1" for ::1 at 2015-04-01 20:54:29 -0700
+
+
+Started GET "/assets/gmaps/google/objects/common-247de1048a365563e2df3d5d5ae9e56c.js?body=1" for ::1 at 2015-04-01 20:54:29 -0700
+
+
+Started GET "/assets/gmaps/objects/null_clusterer-184ef159404bbc224e9c51150c4efa63.js?body=1" for ::1 at 2015-04-01 20:54:29 -0700
+
+
+Started GET "/assets/gmaps/google/builders/bound-57d3060c7fe3ce4d42931e8abf50b9dc.js?body=1" for ::1 at 2015-04-01 20:54:29 -0700
+
+
+Started GET "/assets/gmaps/google/builders/clusterer-6d81d0eb27c8c4e24380b2aacddc8511.js?body=1" for ::1 at 2015-04-01 20:54:29 -0700
+
+
+Started GET "/assets/gmaps/google/builders/circle-99da4ddcaddd05a8c1097a06eeeefb90.js?body=1" for ::1 at 2015-04-01 20:54:30 -0700
+
+
+Started GET "/assets/gmaps/google/builders/kml-6e2f09d2a688b881881a5f4357796aae.js?body=1" for ::1 at 2015-04-01 20:54:30 -0700
+
+
+Started GET "/assets/gmaps/google/builders/map-325aa8626b5a5fa44312722237e15305.js?body=1" for ::1 at 2015-04-01 20:54:30 -0700
+
+
+Started GET "/assets/gmaps/google/builders/marker-7432667e64b338c2c2895f4b4bd6349d.js?body=1" for ::1 at 2015-04-01 20:54:30 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polygon-691f759a007e4be8af9d091666d09699.js?body=1" for ::1 at 2015-04-01 20:54:30 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polyline-796ac5f6a3a13881730d0c4d5d10644b.js?body=1" for ::1 at 2015-04-01 20:54:30 -0700
+
+
+Started GET "/assets/gmaps/google/objects/bound-8b2391b8eaddc8625a459f0ce89c5c06.js?body=1" for ::1 at 2015-04-01 20:54:30 -0700
+
+
+Started GET "/assets/gmaps/google/objects/circle-abf49c4f2045e915f44fb1e5c99e5af7.js?body=1" for ::1 at 2015-04-01 20:54:30 -0700
+
+
+Started GET "/assets/gmaps/google/objects/clusterer-2f010c47b83a2b1b084e393161211ede.js?body=1" for ::1 at 2015-04-01 20:54:30 -0700
+
+
+Started GET "/assets/gmaps/google/objects/kml-d4d5c668f5c4f7980f33620de06e4360.js?body=1" for ::1 at 2015-04-01 20:54:30 -0700
+
+
+Started GET "/assets/gmaps/google/objects/map-8462fffee7e2f45f07d15346aeedfa59.js?body=1" for ::1 at 2015-04-01 20:54:30 -0700
+
+
+Started GET "/assets/gmaps/google/objects/marker-55c756f18e3d1226031094349eb102ec.js?body=1" for ::1 at 2015-04-01 20:54:30 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polygon-e9b75c55c73813811a991fd83c931218.js?body=1" for ::1 at 2015-04-01 20:54:30 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polyline-bd1d1f394197fdf7782eba9cdbae373b.js?body=1" for ::1 at 2015-04-01 20:54:30 -0700
+
+
+Started GET "/assets/gmaps/google/primitives-f49c8e12ce8f7b5e295e8f04c590a4ce.js?body=1" for ::1 at 2015-04-01 20:54:30 -0700
+
+
+Started GET "/assets/gmaps/google-a30741f757343b7174ebd9c5710c9591.js?body=1" for ::1 at 2015-04-01 20:54:30 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-01 20:54:30 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-01 20:54:30 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-01 20:54:30 -0700
+
+
+Started GET "/assets/home-032d050119a8f775c772bcc99282774d.js?body=1" for ::1 at 2015-04-01 20:54:30 -0700
+
+
+Started GET "/assets/setting-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-01 20:54:30 -0700
+
+
+Started GET "/assets/weather_search-4f4c418c008e4a3ac18af93c414c04ac.js?body=1" for ::1 at 2015-04-01 20:54:30 -0700
+
+
+Started GET "/assets/application-b3640d390b47eb82fa7cda3129a34903.js?body=1" for ::1 at 2015-04-01 20:54:30 -0700
+
+
+Started GET "/assets/partly-cloudy-day.png" for ::1 at 2015-04-01 20:54:30 -0700
+
+
+Started GET "/assets/clear-day.png" for ::1 at 2015-04-01 20:54:30 -0700
+
+
+Started GET "/assets/partly-cloudy-night.png" for ::1 at 2015-04-01 20:54:30 -0700
+
+
+Started GET "/assets/rain.png" for ::1 at 2015-04-01 20:54:30 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-04-01 20:54:30 -0700
+Processing by EventsController#showEvent as JSON
+Completed 500 Internal Server Error in 390ms
+
+TypeError (no implicit conversion of nil into String):
+  app/controllers/events_controller.rb:49:in `parse'
+  app/controllers/events_controller.rb:49:in `block in showEvent'
+  app/controllers/events_controller.rb:48:in `each'
+  app/controllers/events_controller.rb:48:in `showEvent'
+
+
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (4.9ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.0ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (76.1ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (4.0ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (72.0ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (163.5ms)
+
+
+Started GET "/weather_forecast/index?utf8=%E2%9C%93&city%5Bname%5D=san+francisco%2C+CA&commit=View+trip+weather" for ::1 at 2015-04-01 20:54:42 -0700
+Processing by WeatherForecastController#index as HTML
+  Parameters: {"utf8"=>"✓", "city"=>{"name"=>"san francisco, CA"}, "commit"=>"View trip weather"}
+  Rendered weather_forecast/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 1443ms (Views: 685.9ms)
+
+
+Started GET "/assets/events-9faddeae353c4c203743e31cd3d90f61.css?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/home-613d44700358417877e3993e05f5bf72.css?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/setting-fe84ecfaad251be2089e9ccc7c39ca8d.css?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/weather_search-67989c507702a30d4e9ca93892a8141f.css?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/application-857e4ddf2c60b991e6289a94a30fcd76.css?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/underscore-d896593a6eaf631f476bf3407c295f6e.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/gmaps/base-123dd305868fd1a61725551efeba068e.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/gmaps/objects/builder-3a2d17758d4383c26c7c11552b91900d.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/gmaps/objects/base_builder-32c3edd5bf9b7fee1fb65c9a292432ed.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/gmaps/base/base-dca563082e65c8b42ab83b418286714b.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/gmaps/objects/handler-62a5722bc03f7e1805af55255244cb5c.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/gmaps/objects/null_clusterer-184ef159404bbc224e9c51150c4efa63.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/gmaps/google/objects/common-247de1048a365563e2df3d5d5ae9e56c.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/gmaps/google/builders/circle-99da4ddcaddd05a8c1097a06eeeefb90.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/gmaps/google/builders/bound-57d3060c7fe3ce4d42931e8abf50b9dc.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/gmaps/google/builders/clusterer-6d81d0eb27c8c4e24380b2aacddc8511.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/gmaps/google/builders/map-325aa8626b5a5fa44312722237e15305.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/gmaps/google/builders/marker-7432667e64b338c2c2895f4b4bd6349d.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polygon-691f759a007e4be8af9d091666d09699.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polyline-796ac5f6a3a13881730d0c4d5d10644b.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/gmaps/google/objects/bound-8b2391b8eaddc8625a459f0ce89c5c06.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/gmaps/google/builders/kml-6e2f09d2a688b881881a5f4357796aae.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/gmaps/google/objects/clusterer-2f010c47b83a2b1b084e393161211ede.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/gmaps/google/objects/circle-abf49c4f2045e915f44fb1e5c99e5af7.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/gmaps/google/objects/map-8462fffee7e2f45f07d15346aeedfa59.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/gmaps/google/objects/marker-55c756f18e3d1226031094349eb102ec.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polygon-e9b75c55c73813811a991fd83c931218.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/gmaps/google/objects/kml-d4d5c668f5c4f7980f33620de06e4360.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polyline-bd1d1f394197fdf7782eba9cdbae373b.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/gmaps/google/primitives-f49c8e12ce8f7b5e295e8f04c590a4ce.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/gmaps/google-a30741f757343b7174ebd9c5710c9591.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/home-032d050119a8f775c772bcc99282774d.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/setting-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/application-b3640d390b47eb82fa7cda3129a34903.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/weather_search-4f4c418c008e4a3ac18af93c414c04ac.js?body=1" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/partly-cloudy-day.png" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/clear-day.png" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/rain.png" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/assets/partly-cloudy-night.png" for ::1 at 2015-04-01 20:54:44 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-04-01 20:54:44 -0700
+Processing by EventsController#showEvent as JSON
+Completed 500 Internal Server Error in 398ms
+
+TypeError (no implicit conversion of nil into String):
+  app/controllers/events_controller.rb:49:in `parse'
+  app/controllers/events_controller.rb:49:in `block in showEvent'
+  app/controllers/events_controller.rb:48:in `each'
+  app/controllers/events_controller.rb:48:in `showEvent'
+
+
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.4ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.7ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.9ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (73.2ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (5.0ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (76.4ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (153.5ms)
+
+
+Started GET "/weather_forecast/index?utf8=%E2%9C%93&city%5Bname%5D=Canada&commit=View+trip+weather" for ::1 at 2015-04-01 20:54:54 -0700
+Processing by WeatherForecastController#index as HTML
+  Parameters: {"utf8"=>"✓", "city"=>{"name"=>"Canada"}, "commit"=>"View trip weather"}
+  Rendered weather_forecast/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 1231ms (Views: 1077.3ms)
+
+
+Started GET "/assets/events-9faddeae353c4c203743e31cd3d90f61.css?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/home-613d44700358417877e3993e05f5bf72.css?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/setting-fe84ecfaad251be2089e9ccc7c39ca8d.css?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/weather_search-67989c507702a30d4e9ca93892a8141f.css?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/application-857e4ddf2c60b991e6289a94a30fcd76.css?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/gmaps/base-123dd305868fd1a61725551efeba068e.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/underscore-d896593a6eaf631f476bf3407c295f6e.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/gmaps/base/base-dca563082e65c8b42ab83b418286714b.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/gmaps/objects/base_builder-32c3edd5bf9b7fee1fb65c9a292432ed.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/gmaps/objects/builder-3a2d17758d4383c26c7c11552b91900d.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/gmaps/objects/handler-62a5722bc03f7e1805af55255244cb5c.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/gmaps/objects/null_clusterer-184ef159404bbc224e9c51150c4efa63.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/gmaps/google/builders/bound-57d3060c7fe3ce4d42931e8abf50b9dc.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/gmaps/google/objects/common-247de1048a365563e2df3d5d5ae9e56c.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/gmaps/google/builders/clusterer-6d81d0eb27c8c4e24380b2aacddc8511.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/gmaps/google/builders/circle-99da4ddcaddd05a8c1097a06eeeefb90.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/gmaps/google/builders/kml-6e2f09d2a688b881881a5f4357796aae.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/gmaps/google/builders/marker-7432667e64b338c2c2895f4b4bd6349d.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/gmaps/google/builders/map-325aa8626b5a5fa44312722237e15305.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polygon-691f759a007e4be8af9d091666d09699.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polyline-796ac5f6a3a13881730d0c4d5d10644b.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/gmaps/google/objects/bound-8b2391b8eaddc8625a459f0ce89c5c06.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/gmaps/google/objects/clusterer-2f010c47b83a2b1b084e393161211ede.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/gmaps/google/objects/circle-abf49c4f2045e915f44fb1e5c99e5af7.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/gmaps/google/objects/map-8462fffee7e2f45f07d15346aeedfa59.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/gmaps/google/objects/kml-d4d5c668f5c4f7980f33620de06e4360.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/gmaps/google/objects/marker-55c756f18e3d1226031094349eb102ec.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polygon-e9b75c55c73813811a991fd83c931218.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polyline-bd1d1f394197fdf7782eba9cdbae373b.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/gmaps/google/primitives-f49c8e12ce8f7b5e295e8f04c590a4ce.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/gmaps/google-a30741f757343b7174ebd9c5710c9591.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/home-032d050119a8f775c772bcc99282774d.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/setting-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/weather_search-4f4c418c008e4a3ac18af93c414c04ac.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/assets/application-b3640d390b47eb82fa7cda3129a34903.js?body=1" for ::1 at 2015-04-01 20:54:56 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-04-01 20:54:56 -0700
+Processing by EventsController#showEvent as JSON
+Completed 500 Internal Server Error in 686ms
+
+TypeError (no implicit conversion of nil into String):
+  app/controllers/events_controller.rb:49:in `parse'
+  app/controllers/events_controller.rb:49:in `block in showEvent'
+  app/controllers/events_controller.rb:48:in `each'
+  app/controllers/events_controller.rb:48:in `showEvent'
+
+
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.9ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.1ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (75.3ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (66.9ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (149.0ms)
+
+
+Started GET "/weather_forecast/index?utf8=%E2%9C%93&city%5Bname%5D=US&commit=View+trip+weather" for ::1 at 2015-04-01 20:55:01 -0700
+Processing by WeatherForecastController#index as HTML
+  Parameters: {"utf8"=>"✓", "city"=>{"name"=>"US"}, "commit"=>"View trip weather"}
+  Rendered weather_forecast/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 1173ms (Views: 1045.7ms)
+
+
+Started GET "/assets/events-9faddeae353c4c203743e31cd3d90f61.css?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/setting-fe84ecfaad251be2089e9ccc7c39ca8d.css?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/application-857e4ddf2c60b991e6289a94a30fcd76.css?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/home-613d44700358417877e3993e05f5bf72.css?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/weather_search-67989c507702a30d4e9ca93892a8141f.css?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/underscore-d896593a6eaf631f476bf3407c295f6e.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/gmaps/base/base-dca563082e65c8b42ab83b418286714b.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/gmaps/base-123dd305868fd1a61725551efeba068e.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/gmaps/objects/null_clusterer-184ef159404bbc224e9c51150c4efa63.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/gmaps/objects/builder-3a2d17758d4383c26c7c11552b91900d.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/gmaps/objects/base_builder-32c3edd5bf9b7fee1fb65c9a292432ed.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/gmaps/objects/handler-62a5722bc03f7e1805af55255244cb5c.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/gmaps/google/objects/common-247de1048a365563e2df3d5d5ae9e56c.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/gmaps/google/builders/bound-57d3060c7fe3ce4d42931e8abf50b9dc.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/gmaps/google/builders/clusterer-6d81d0eb27c8c4e24380b2aacddc8511.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/gmaps/google/builders/circle-99da4ddcaddd05a8c1097a06eeeefb90.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/gmaps/google/builders/kml-6e2f09d2a688b881881a5f4357796aae.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/gmaps/google/builders/map-325aa8626b5a5fa44312722237e15305.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polygon-691f759a007e4be8af9d091666d09699.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/gmaps/google/builders/marker-7432667e64b338c2c2895f4b4bd6349d.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polyline-796ac5f6a3a13881730d0c4d5d10644b.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/gmaps/google/objects/bound-8b2391b8eaddc8625a459f0ce89c5c06.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/gmaps/google/objects/circle-abf49c4f2045e915f44fb1e5c99e5af7.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/gmaps/google/objects/clusterer-2f010c47b83a2b1b084e393161211ede.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/gmaps/google/objects/kml-d4d5c668f5c4f7980f33620de06e4360.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/gmaps/google/objects/map-8462fffee7e2f45f07d15346aeedfa59.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/gmaps/google/objects/marker-55c756f18e3d1226031094349eb102ec.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polygon-e9b75c55c73813811a991fd83c931218.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polyline-bd1d1f394197fdf7782eba9cdbae373b.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/gmaps/google/primitives-f49c8e12ce8f7b5e295e8f04c590a4ce.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/gmaps/google-a30741f757343b7174ebd9c5710c9591.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/home-032d050119a8f775c772bcc99282774d.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/weather_search-4f4c418c008e4a3ac18af93c414c04ac.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/setting-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/assets/application-b3640d390b47eb82fa7cda3129a34903.js?body=1" for ::1 at 2015-04-01 20:55:03 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-04-01 20:55:03 -0700
+Processing by EventsController#showEvent as JSON
+Completed 500 Internal Server Error in 1066ms
+
+TypeError (no implicit conversion of nil into String):
+  app/controllers/events_controller.rb:49:in `parse'
+  app/controllers/events_controller.rb:49:in `block in showEvent'
+  app/controllers/events_controller.rb:48:in `each'
+  app/controllers/events_controller.rb:48:in `showEvent'
+
+
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.1ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (78.0ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (68.1ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (146.4ms)
+
+
+Started GET "/weather_forecast/index?utf8=%E2%9C%93&city%5Bname%5D=massachussets&commit=View+trip+weather" for ::1 at 2015-04-01 20:55:07 -0700
+Processing by WeatherForecastController#index as HTML
+  Parameters: {"utf8"=>"✓", "city"=>{"name"=>"massachussets"}, "commit"=>"View trip weather"}
+  Rendered weather_forecast/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 888ms (Views: 671.1ms)
+
+
+Started GET "/assets/events-9faddeae353c4c203743e31cd3d90f61.css?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/home-613d44700358417877e3993e05f5bf72.css?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/setting-fe84ecfaad251be2089e9ccc7c39ca8d.css?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/weather_search-67989c507702a30d4e9ca93892a8141f.css?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/application-857e4ddf2c60b991e6289a94a30fcd76.css?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/underscore-d896593a6eaf631f476bf3407c295f6e.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/gmaps/base-123dd305868fd1a61725551efeba068e.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/gmaps/base/base-dca563082e65c8b42ab83b418286714b.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/gmaps/objects/base_builder-32c3edd5bf9b7fee1fb65c9a292432ed.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/gmaps/objects/builder-3a2d17758d4383c26c7c11552b91900d.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/gmaps/objects/handler-62a5722bc03f7e1805af55255244cb5c.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/gmaps/objects/null_clusterer-184ef159404bbc224e9c51150c4efa63.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/gmaps/google/objects/common-247de1048a365563e2df3d5d5ae9e56c.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/gmaps/google/builders/bound-57d3060c7fe3ce4d42931e8abf50b9dc.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/gmaps/google/builders/circle-99da4ddcaddd05a8c1097a06eeeefb90.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/gmaps/google/builders/clusterer-6d81d0eb27c8c4e24380b2aacddc8511.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/gmaps/google/builders/kml-6e2f09d2a688b881881a5f4357796aae.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/gmaps/google/builders/map-325aa8626b5a5fa44312722237e15305.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polygon-691f759a007e4be8af9d091666d09699.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polyline-796ac5f6a3a13881730d0c4d5d10644b.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/gmaps/google/builders/marker-7432667e64b338c2c2895f4b4bd6349d.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/gmaps/google/objects/bound-8b2391b8eaddc8625a459f0ce89c5c06.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/gmaps/google/objects/circle-abf49c4f2045e915f44fb1e5c99e5af7.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/gmaps/google/objects/kml-d4d5c668f5c4f7980f33620de06e4360.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/gmaps/google/objects/clusterer-2f010c47b83a2b1b084e393161211ede.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/gmaps/google/objects/map-8462fffee7e2f45f07d15346aeedfa59.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polygon-e9b75c55c73813811a991fd83c931218.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polyline-bd1d1f394197fdf7782eba9cdbae373b.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/gmaps/google/primitives-f49c8e12ce8f7b5e295e8f04c590a4ce.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/gmaps/google/objects/marker-55c756f18e3d1226031094349eb102ec.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/gmaps/google-a30741f757343b7174ebd9c5710c9591.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/home-032d050119a8f775c772bcc99282774d.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/setting-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/application-b3640d390b47eb82fa7cda3129a34903.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/assets/weather_search-4f4c418c008e4a3ac18af93c414c04ac.js?body=1" for ::1 at 2015-04-01 20:55:08 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-04-01 20:55:08 -0700
+Processing by EventsController#showEvent as JSON
+Completed 500 Internal Server Error in 684ms
+
+TypeError (no implicit conversion of nil into String):
+  app/controllers/events_controller.rb:49:in `parse'
+  app/controllers/events_controller.rb:49:in `block in showEvent'
+  app/controllers/events_controller.rb:48:in `each'
+  app/controllers/events_controller.rb:48:in `showEvent'
+
+
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.9ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.9ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (74.3ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (67.1ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (145.5ms)
+
+
+Started GET "/weather_forecast/index?utf8=%E2%9C%93&city%5Bname%5D=california&commit=View+trip+weather" for ::1 at 2015-04-01 20:55:12 -0700
+Processing by WeatherForecastController#index as HTML
+  Parameters: {"utf8"=>"✓", "city"=>{"name"=>"california"}, "commit"=>"View trip weather"}
+  Rendered weather_forecast/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 895ms (Views: 680.4ms)
+
+
+Started GET "/assets/events-9faddeae353c4c203743e31cd3d90f61.css?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/home-613d44700358417877e3993e05f5bf72.css?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/setting-fe84ecfaad251be2089e9ccc7c39ca8d.css?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/weather_search-67989c507702a30d4e9ca93892a8141f.css?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/application-857e4ddf2c60b991e6289a94a30fcd76.css?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/underscore-d896593a6eaf631f476bf3407c295f6e.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/gmaps/base-123dd305868fd1a61725551efeba068e.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/gmaps/base/base-dca563082e65c8b42ab83b418286714b.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/gmaps/objects/base_builder-32c3edd5bf9b7fee1fb65c9a292432ed.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/gmaps/objects/null_clusterer-184ef159404bbc224e9c51150c4efa63.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/gmaps/objects/builder-3a2d17758d4383c26c7c11552b91900d.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/gmaps/google/objects/common-247de1048a365563e2df3d5d5ae9e56c.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/gmaps/objects/handler-62a5722bc03f7e1805af55255244cb5c.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/gmaps/google/builders/bound-57d3060c7fe3ce4d42931e8abf50b9dc.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/gmaps/google/builders/circle-99da4ddcaddd05a8c1097a06eeeefb90.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/gmaps/google/builders/clusterer-6d81d0eb27c8c4e24380b2aacddc8511.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/gmaps/google/builders/map-325aa8626b5a5fa44312722237e15305.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/gmaps/google/builders/kml-6e2f09d2a688b881881a5f4357796aae.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polygon-691f759a007e4be8af9d091666d09699.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/gmaps/google/builders/marker-7432667e64b338c2c2895f4b4bd6349d.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polyline-796ac5f6a3a13881730d0c4d5d10644b.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/gmaps/google/objects/circle-abf49c4f2045e915f44fb1e5c99e5af7.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/gmaps/google/objects/bound-8b2391b8eaddc8625a459f0ce89c5c06.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/gmaps/google/objects/clusterer-2f010c47b83a2b1b084e393161211ede.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/gmaps/google/objects/map-8462fffee7e2f45f07d15346aeedfa59.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/gmaps/google/objects/kml-d4d5c668f5c4f7980f33620de06e4360.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/gmaps/google/objects/marker-55c756f18e3d1226031094349eb102ec.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polyline-bd1d1f394197fdf7782eba9cdbae373b.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polygon-e9b75c55c73813811a991fd83c931218.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/gmaps/google/primitives-f49c8e12ce8f7b5e295e8f04c590a4ce.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/gmaps/google-a30741f757343b7174ebd9c5710c9591.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/home-032d050119a8f775c772bcc99282774d.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/setting-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/weather_search-4f4c418c008e4a3ac18af93c414c04ac.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/assets/application-b3640d390b47eb82fa7cda3129a34903.js?body=1" for ::1 at 2015-04-01 20:55:13 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-04-01 20:55:14 -0700
+Processing by EventsController#showEvent as JSON
+Completed 500 Internal Server Error in 864ms
+
+TypeError (no implicit conversion of nil into String):
+  app/controllers/events_controller.rb:49:in `parse'
+  app/controllers/events_controller.rb:49:in `block in showEvent'
+  app/controllers/events_controller.rb:48:in `each'
+  app/controllers/events_controller.rb:48:in `showEvent'
+
+
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.7ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.9ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (72.1ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (77.5ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (160.8ms)
