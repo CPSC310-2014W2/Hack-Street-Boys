@@ -3,6 +3,7 @@ require 'httparty'
 
 class TestController < ApplicationController
   include ApplicationHelper;
+  include SettingHelper;
   
   ORC_API_KEY = "f72b43bb-175a-49ea-826e-dded02aa73f6";
   
@@ -128,6 +129,41 @@ class TestController < ApplicationController
       @getLatLon_test1_result = "Pass";
     else
       @getLatLon_test1_result = "Fail";
+    end
+    
+  end
+  
+  def setting_helper_test
+    
+    OrchestrateDatabase.getGeoInfoByKey( 'Vancouver_CA' );
+    
+    user_info = Hash.new;
+    user_info["provider"] = "Setting_Test";
+    user_info["username"] = "Setting_Test";
+    user_info["token"] = "Setting_Test";
+    user_info["expires"] = 0;
+    user_id = 654321;
+    OrchestrateDatabase.storeGoogleUser( user_info, user_id );
+    userInfo = OrchestrateDatabase.getGoogleUserInfo( user_id );
+    
+    if ( RelationshipHelper.getUserCityNameKey( user_id ) == nil )
+      @setting_test = "Pass";
+    else
+      @setting_test = "Fail"
+    end
+    
+    RelationshipHelper.createUserCityRelation( user_id, 'Vancouver_CA' );
+    if ( RelationshipHelper.getUserCityNameKey( user_id ) == 'Vancouver_CA' )
+      @setting_test1 = "Pass";
+    else
+      @setting_test1 = "Fail"
+    end
+    
+    RelationshipHelper.removeUserCityRelation( user_id, 'Vancouver_CA' );
+    if ( RelationshipHelper.getUserCityNameKey( user_id ) == nil )
+      @setting_test2 = "Pass"
+    else
+      @setting_test2 = "Fail"
     end
     
   end

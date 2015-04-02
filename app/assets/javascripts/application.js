@@ -138,7 +138,7 @@ $(document).ready(function(){
 		header: {
             left: 'prev, next, today',
             center: 'title',
-            right : 'basicDay, basicWeek, month'
+            right : 'month'
         },
         titleFormat: {
             month: 'MMMM YYYY',
@@ -186,7 +186,14 @@ $(document).ready(function(){
         eventMouseover: function( event, jsEvent, view ) { 
             $('html,body').css('cursor','pointer');
 
-            var tooltip = '<div class="tooltipevent" style="width:200px;height:auto;padding:10px;background:#fff;position:absolute;z-index:10001;box-shadow: 2px 2px 10px #B1B1B1;"><div>' + event.title + '</div><br/><div>' + event.weatherSummary + '</div></div>';
+            var weatherSummary;
+            if(event.weatherSummary) {
+                weatherSummary = event.weatherSummary;
+            } else {
+                weatherSummary = '';
+            }
+
+            var tooltip = '<div class="tooltipevent" style="width:200px;height:auto;padding:10px;background:#fff;position:absolute;z-index:10001;box-shadow: 2px 2px 10px #B1B1B1;"><div>' + event.title + '</div><br/><div>' + weatherSummary + '</div></div>';
             $("body").append(tooltip);
             $(this).mouseover(function(e) {
                 $(this).css('z-index', 10000);
