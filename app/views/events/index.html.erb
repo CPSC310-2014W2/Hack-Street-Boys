@@ -30,6 +30,35 @@
     }, function(response){});
 </script>
 
+<% def fb_share(app_id, redirect_uri, opts={})
+      o = {:text => 'Share on Facebook',
+          :name => '',
+          :display => '',
+          :caption => '',
+          :description => '',
+          :link => '',
+          :picture => '',
+          :source => '',
+          :properties => {},
+          :actions => {}}.merge!(opts)
+    
+          opts_array = []
+ 
+          opts.each do |key, value| 
+          case
+          when key.to_s == 'properties' 
+            @prop = value.to_json
+          when key.to_s == 'actions'
+            @action = value.to_json
+          else 
+            opts_array.push("#{key}=#{value}")
+          end
+        end   
+         url = "http://www.facebook.com/dialog/feed?app_id=#{app_id}&redirect_uri=#{redirect_uri}&#{opts_array.join("&")}&properties=#{@prop}&actions=#{@action}"
+        link_to("#{o[:text]}", url)       
+  end
+%>
+
 <% if @allEvents != nil %> 
   <div class="text-container">
     <h2 style="margin: 40px;">Your Events:</h2>
@@ -48,7 +77,6 @@
             <td>Event doesn't match your weather preference, reschedule?</td>
           <% end %>
           <td><%= link_to 'Edit', editEvent_events_path(:eventId => event["path"]["key"]) %></td>
-          <td> </td>
           <td style="padding: 0 30px;"> <%= fb_share('1580886888863240', 'https://cherry-tart-2858.herokuapp.com/events/index?', opts={:link => "https://cherry-tart-2858.herokuapp.com/", :name => "#{event["value"]["title"]}", :caption => "#{event["value"]["location"]}", :description => 'Weathr is a web application that a user can go to for all of their weather scheduling needs.'} )%></td>
         </tr>
       <% end %>
