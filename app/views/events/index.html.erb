@@ -1,3 +1,36 @@
+<body>
+
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1580886888863240',
+          xfbml      : true,
+          version    : 'v2.3'
+        });
+
+        FB.ui({
+          method: 'share',
+          href: 'http://salty-badlands-4905.herokuapp.com'
+        },
+        function(response) {
+          if (response && !response.error_code) {
+            alert('Posting completed.');
+            } else {
+              alert('Error while posting.');
+            }
+          }
+          );
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+</script>
+
 <% if @allEvents != nil %> 
   <div class="text-container">
     <h3 style="margin: 40px;">Your Events:</h3>
@@ -31,3 +64,5 @@
 <% else %>
   <div class="text-container" style="padding: 20px;">Please Login</div>
 <% end %>
+
+</body>
