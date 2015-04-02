@@ -98,6 +98,38 @@ class TestController < ApplicationController
       @geoInfoSearchByKey_test1_result = "Fail";
     end
     
+    # test of getGeoInfo( CA_city_address )
+    returnData = Geocoder.getGeoInfo( 'Commercial Drive, Vancouver, Canada' )
+    if ( Geocoder.isValidAddress( returnData ) )
+      @getGeoInfo_test1_result = "Pass";
+    else
+      @getGeoInfo_test1_result = "Fail";
+    end
+    
+    # test of getGeoInfo( US_city_address )
+    returnData = Geocoder.getGeoInfo( 'Vancouver, US' )
+    if ( Geocoder.isValidAddress( returnData ) )
+      @getGeoInfo_test2_result = "Pass";
+    else
+      @getGeoInfo_test2_result = "Fail";
+    end
+    
+    # test of getGeoInfo( BC_Canada_address )
+    returnData = Geocoder.getGeoInfo( 'BC, Canada' )
+    if !( Geocoder.isValidAddress( returnData ) )
+      @getGeoInfo_test3_result = "Pass";
+    else
+      @getGeoInfo_test3_result = "Fail";
+    end
+    
+    # test of getLatLon ( geoInfo )
+    returnData = Geocoder.getLatLon( geoInfo1 );
+    if ( returnData.has_key?( :lat ) && returnData.has_key?( :lng ) )
+      @getLatLon_test1_result = "Pass";
+    else
+      @getLatLon_test1_result = "Fail";
+    end
+    
   end
   
 end
