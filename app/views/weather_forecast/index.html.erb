@@ -1,11 +1,11 @@
-<h1>Trip Planner</h1>
+<h1>Weather Forecast</h1>
 
 <%= form_for :city, url: weather_forecast_index_path, :method => :get do |f| %>
   <p>
     <%= f.label "Name of city" %><br>
     <%= f.text_field :name %>
   </p>
-  <%= f.submit "View trip weather" %>  
+  <%= f.submit "View weather forecast" %>  
 <% end %>
 
 
