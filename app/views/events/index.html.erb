@@ -1,26 +1,18 @@
 <body>
 
 <script>
-    window.fbAsyncInit = function() {
+      window.fbAsyncInit = function() {
         FB.init({
           appId      : '1580886888863240',
           xfbml      : true,
           version    : 'v2.3'
         });
+      };
 
         FB.ui({
           method: 'share',
-          href: 'http://salty-badlands-4905.herokuapp.com'
-        },
-        function(response) {
-          if (response && !response.error_code) {
-            alert('Posting completed.');
-            } else {
-              alert('Error while posting.');
-            }
-          }
-          );
-      };
+          href: 'https://developers.facebook.com/docs/',
+        }, function(response){});
 
       (function(d, s, id){
          var js, fjs = d.getElementsByTagName(s)[0];
@@ -43,13 +35,13 @@
       </tr>
       <% @allEvents.each do |event| %> 
         <tr>
+          <td><%= link_to 'Edit', editEvent_events_path(:eventId => event["path"]["key"]) %></td>
           <td><strong><%= event["value"]["title"] %></strong></td>
           <td><%= event["value"]["weatherSummary"] %></td>
           <td><%= event["value"]["weatherPreference"] %></td>
           <% if event["value"]["ifReschedule"] == true %> 
             <td>Event doesn't match your weather preference, reschedule?</td>
           <% end %>
-          <td><%= link_to 'Edit', editEvent_events_path(:eventId => event["path"]["key"]) %></td>
           <td><div class="fb-share-button" data-href="http://salty-badlands-4905.herokuapp.com" data-layout="button"></div></td>
         </tr>
       <% end %>
