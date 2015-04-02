@@ -8,9 +8,9 @@ class WeatherSearchController < ApplicationController
   def index
     keepTrackOfUserPreferences();
     if ( current_user )
-      cityNameKey = RelationshipHelper.getUserCityNameKey( current_user.uid );
-      if ( cityNameKey )        
-        @geoInfos = OrchestrateDatabase.geoInfoSearchByKey( cityNameKey, 15, 200 );#cityNameKey, 15, 200 );
+      @cityNameKey = RelationshipHelper.getUserCityNameKey( current_user.uid );
+      if ( @cityNameKey )        
+        @geoInfos = OrchestrateDatabase.geoInfoSearchByKey( @cityNameKey, 15, 200 );#cityNameKey, 15, 200 );
         @latLons = Geocoder.getLatLonArray( @geoInfos );
         @weatherData = OrchestrateDatabase.getCitiesWeatherData( @geoInfos );
         @forecastData = getDailyForecastData( @weatherData);

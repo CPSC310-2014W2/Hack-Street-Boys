@@ -4,6 +4,14 @@
 
 <br>
 
+<% if current_user && !@cityNameKey %>
+	<strong><div align="center">You have not defined your home city, do so by clicking the setting button on the top right hand corner.</div></strong>
+<% else%>
+	<strong><div align="center">Search for weather around <%= @cityNameKey.gsub('_',', ') %></div></strong>
+<% end %>
+
+<br>
+
 <% if current_user %>
 	<div id="container" align="center">	 
 		<div id="userpreference-container" align="left">
