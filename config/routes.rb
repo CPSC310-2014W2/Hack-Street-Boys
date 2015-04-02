@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   get 'events/index'
   
   get 'test/app_helper_test', to: 'test#app_helper_test'
+  get 'test/setting_helper_test', to: 'test#setting_helper_test'
   
   root 'home#index'
 
@@ -43,6 +44,6 @@ Rails.application.routes.draw do
   resources :weather_search
   
   # The below is for testing only, comment out before deployment
-  resources :test, only: [ :app_helper_test ]
+  resources :test, only: [ :app_helper_test, :setting_helper_test ]
 
 end
