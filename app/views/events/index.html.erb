@@ -32,24 +32,24 @@
 
 <% if @allEvents != nil %> 
   <div class="text-container">
-    <h3 style="margin: 40px;">Your Events:</h3>
+    <h2 style="margin: 40px;">Your Events:</h2>
     <table style="margin: 0 40px 40px 40px;">
       <tr>
         <th></th>
-        <th style="text-align:left;">Event Title</th>
-        <th style="text-align:left;">Weather Summary</th> 
-        <th style="text-align:left;">Weather Preference</th>   
+        <th style="text-align:left; padding: 0 30px;">Event Title</th>
+        <th style="text-align:left; padding: 0 30px;">Weather Preference</th>  
+        <th style="text-align:left; padding: 0 30px;">Weather Summary</th>  
       </tr>
       <% @allEvents.each do |event| %> 
         <tr>
           <td><%= link_to 'Edit', editEvent_events_path(:eventId => event["path"]["key"]) %></td>
-          <td><strong><%= event["value"]["title"] %></strong></td>
-          <td><%= event["value"]["weatherSummary"] %></td>
-          <td><%= event["value"]["weatherPreference"] %></td>
+          <td style="padding: 0 30px;"><strong><%= event["value"]["title"] %></strong></td>
+          <td style="padding: 0 30px;"><%= event["value"]["weatherPreference"] %></td>
+          <td style="padding: 0 30px;"><%= event["value"]["weatherSummary"] %></td>
           <% if event["value"]["ifReschedule"] == true %> 
             <td>Event doesn't match your weather preference, reschedule?</td>
           <% end %>
-          <td><div class="fb-share-button" data-href="https://cherry-tart-2858.herokuapp.com/" data-layout="button"></div></td>
+          <td style="padding: 0 30px;"><div class="fb-share-button" data-href="https://cherry-tart-2858.herokuapp.com/" data-layout="button"></div></td>
         </tr>
       <% end %>
     </table>
