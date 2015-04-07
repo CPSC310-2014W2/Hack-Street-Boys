@@ -18,10 +18,10 @@ class WeatherForecastController < ApplicationController
         @timeArray = Array.new
         @summaryArray = Array.new
         @iconArray = Array.new
-
+        @precipProbabilityArray = Array.new
         @tempAvgArray = Array.new
-
         @apparentTempAvgArray = Array.new
+
 
 
         @weekData["data"].each do |data|
@@ -31,6 +31,7 @@ class WeatherForecastController < ApplicationController
 
           @tempAvgArray << ((data["temperatureMin"] + data["temperatureMax"]) / 2).round(1)
           @apparentTempAvgArray << ((data["apparentTemperatureMin"] + data["apparentTemperatureMax"]) / 2).round(1)
+          @precipProbabilityArray << (data["precipProbability"] * 100).round(0)
         end
       end
     end

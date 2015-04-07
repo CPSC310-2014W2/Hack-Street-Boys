@@ -1,11 +1,11 @@
-<h1>Trip Planner</h1>
+<h1>Weather Forecast</h1>
 
 <%= form_for :city, url: weather_forecast_index_path, :method => :get do |f| %>
   <p>
     <%= f.label "Name of city" %><br>
     <%= f.text_field :name %>
   </p>
-  <%= f.submit "View trip weather" %>  
+  <%= f.submit "View weather forecast" %>  
 <% end %>
 
 
@@ -87,6 +87,16 @@ td
     <th><%= @apparentTempAvgArray[4] %>°F</th>
     <th><%= @apparentTempAvgArray[5] %>°F</th>
     <th><%= @apparentTempAvgArray[6] %>°F</th>
+  </tr>
+  <tr>
+    <td>Precipitation Probability</td>
+    <th><%= @precipProbabilityArray[0] %>%</th>
+    <th><%= @precipProbabilityArray[1] %>%</th>
+    <th><%= @precipProbabilityArray[2] %>%</th>
+    <th><%= @precipProbabilityArray[3] %>%</th>
+    <th><%= @precipProbabilityArray[4] %>%</th>
+    <th><%= @precipProbabilityArray[5] %>%</th>
+    <th><%= @precipProbabilityArray[6] %>%</th>
   </tr>
 </table>
 </body>
