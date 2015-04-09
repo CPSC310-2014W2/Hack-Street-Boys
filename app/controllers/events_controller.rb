@@ -12,6 +12,9 @@ class EventsController < ApplicationController
       userID = current_user().uid;
       @allEvents = ScheduleItems.getAllEvents(userID)["results"];
    
+      testWeather = OrchestrateDatabase.getCityWeatherData( Geocoder.getGeoInfo( 'vancouver, bc' ) );
+      @testWeatherObj = testWeather['daily_this_week']['data'][0]['summary'];
+
       @allEvents.each do |event|
         startDateUnix = Date.parse( event['value']['startDate'] ).to_time.to_i;
         endDateUnix = Date.parse( event['value']['endDate'] ).to_time.to_i;
