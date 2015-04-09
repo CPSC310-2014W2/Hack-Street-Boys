@@ -36,7 +36,10 @@ class EventsController < ApplicationController
     end
   end
 
-  def test
+  def testEvent
+    weather = OrchestrateDatabase.getCityWeatherData( Geocoder.getGeoInfo( 'vancouver, bc' ) );
+
+    render :json => weather
   end
 
   def showEvent

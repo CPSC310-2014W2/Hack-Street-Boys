@@ -43152,3 +43152,1947 @@ ActionView::MissingTemplate (Missing template events/showEvent, application/show
   Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
   Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
   Rendered /Users/adrienfried/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (156.6ms)
+
+
+Started GET "/" for ::1 at 2015-04-09 14:19:34 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 4008ms (Views: 1106.6ms)
+
+
+Started GET "/" for ::1 at 2015-04-09 14:19:38 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 2913ms (Views: 485.7ms)
+
+
+Started GET "/assets/events-4a144161f27f989cb440b08b6a36860b.css?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/home-710e2f8063ac272b6fb1013ee6cd8529.css?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/setting-a12eb3aea718de85c06d7fffd817d332.css?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/application-68b18d63e05b05abafa664a8a6b9d6be.css?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/weather_search-afa75d34fafa6bea7c02e66ec77d1277.css?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/underscore-d896593a6eaf631f476bf3407c295f6e.js?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/gmaps/base-123dd305868fd1a61725551efeba068e.js?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/gmaps/base/base-dca563082e65c8b42ab83b418286714b.js?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/gmaps/objects/builder-3a2d17758d4383c26c7c11552b91900d.js?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/gmaps/objects/base_builder-32c3edd5bf9b7fee1fb65c9a292432ed.js?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/gmaps/objects/handler-62a5722bc03f7e1805af55255244cb5c.js?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/gmaps/objects/null_clusterer-184ef159404bbc224e9c51150c4efa63.js?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/gmaps/google/objects/common-247de1048a365563e2df3d5d5ae9e56c.js?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/gmaps/google/builders/bound-57d3060c7fe3ce4d42931e8abf50b9dc.js?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/gmaps/google/builders/circle-99da4ddcaddd05a8c1097a06eeeefb90.js?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/gmaps/google/builders/clusterer-6d81d0eb27c8c4e24380b2aacddc8511.js?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/gmaps/google/builders/kml-6e2f09d2a688b881881a5f4357796aae.js?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/gmaps/google/builders/map-325aa8626b5a5fa44312722237e15305.js?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polygon-691f759a007e4be8af9d091666d09699.js?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/gmaps/google/builders/marker-7432667e64b338c2c2895f4b4bd6349d.js?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polyline-796ac5f6a3a13881730d0c4d5d10644b.js?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/gmaps/google/objects/bound-8b2391b8eaddc8625a459f0ce89c5c06.js?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/gmaps/google/objects/circle-abf49c4f2045e915f44fb1e5c99e5af7.js?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/gmaps/google/objects/clusterer-2f010c47b83a2b1b084e393161211ede.js?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/gmaps/google/objects/kml-d4d5c668f5c4f7980f33620de06e4360.js?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/gmaps/google/objects/marker-55c756f18e3d1226031094349eb102ec.js?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polygon-e9b75c55c73813811a991fd83c931218.js?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/gmaps/google/objects/map-8462fffee7e2f45f07d15346aeedfa59.js?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polyline-bd1d1f394197fdf7782eba9cdbae373b.js?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/gmaps/google/primitives-f49c8e12ce8f7b5e295e8f04c590a4ce.js?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/gmaps/google-a30741f757343b7174ebd9c5710c9591.js?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:19:41 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:19:42 -0700
+
+
+Started GET "/assets/home-032d050119a8f775c772bcc99282774d.js?body=1" for ::1 at 2015-04-09 14:19:42 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:19:42 -0700
+
+
+Started GET "/assets/setting-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:19:42 -0700
+
+
+Started GET "/assets/weather_search-4f4c418c008e4a3ac18af93c414c04ac.js?body=1" for ::1 at 2015-04-09 14:19:42 -0700
+
+
+Started GET "/assets/application-4051289d69756784408cb4d07f6f7f3f.js?body=1" for ::1 at 2015-04-09 14:19:42 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-04-09 14:19:42 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 582ms (Views: 0.7ms)
+
+
+Started GET "/assets/rain.png" for ::1 at 2015-04-09 14:19:44 -0700
+
+
+Started GET "/assets/clear-day.png" for ::1 at 2015-04-09 14:19:44 -0700
+
+
+Started GET "/assets/partly-cloudy-day.png" for ::1 at 2015-04-09 14:19:44 -0700
+
+
+Started GET "/events/index" for ::1 at 2015-04-09 14:19:50 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 1472ms (Views: 541.1ms)
+
+
+Started GET "/events/showEvent" for ::1 at 2015-04-09 14:19:52 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 339ms (Views: 0.3ms)
+
+
+Started GET "/events/showEvent" for ::1 at 2015-04-09 14:19:52 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 335ms (Views: 0.3ms)
+
+
+Started GET "/events/newEvent" for ::1 at 2015-04-09 14:20:00 -0700
+Processing by EventsController#newEvent as HTML
+  Rendered events/newEvent.html.erb within layouts/application (27.6ms)
+Completed 200 OK in 1140ms (Views: 1139.5ms)
+
+
+Started GET "/events/showEvent" for ::1 at 2015-04-09 14:20:01 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 347ms (Views: 0.3ms)
+
+
+Started POST "/events/createEvent" for ::1 at 2015-04-09 14:20:29 -0700
+Processing by EventsController#createEvent as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bndrTn2aU1r/WYSUI0bKm4OzqJlShZiHb0fsu7+kA/uuCG3NuKBJGlasVcA/Z9FVXy1O+v7GzmmbG8XwnZOfBA==", "events"=>{"title"=>"fun time with cat", "startDate"=>"2015-04-10", "endDate"=>"2015-04-10", "startTime"=>"00:00:00", "endTime"=>"00:00:00", "location"=>"Vancouver, BC", "weatherPreference"=>"sunny", "description"=>"description"}, "commit"=>"Add new event"}
+Redirected to http://localhost:3000/events/index
+Completed 302 Found in 1094ms
+
+
+Started GET "/events/index" for ::1 at 2015-04-09 14:20:30 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 829ms (Views: 487.6ms)
+
+
+Started GET "/events/showEvent" for ::1 at 2015-04-09 14:20:31 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 491ms (Views: 0.4ms)
+
+
+Started GET "/events/showEvent" for ::1 at 2015-04-09 14:20:31 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 542ms (Views: 0.5ms)
+
+
+Started GET "/events/index" for ::1 at 2015-04-09 14:20:34 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 923ms (Views: 417.0ms)
+
+
+Started GET "/assets/home-710e2f8063ac272b6fb1013ee6cd8529.css?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/weather_search-afa75d34fafa6bea7c02e66ec77d1277.css?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/application-68b18d63e05b05abafa664a8a6b9d6be.css?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/setting-a12eb3aea718de85c06d7fffd817d332.css?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/events-4a144161f27f989cb440b08b6a36860b.css?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/underscore-d896593a6eaf631f476bf3407c295f6e.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/gmaps/base-123dd305868fd1a61725551efeba068e.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/gmaps/base/base-dca563082e65c8b42ab83b418286714b.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/gmaps/objects/base_builder-32c3edd5bf9b7fee1fb65c9a292432ed.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/gmaps/objects/builder-3a2d17758d4383c26c7c11552b91900d.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/gmaps/objects/handler-62a5722bc03f7e1805af55255244cb5c.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/gmaps/google/objects/common-247de1048a365563e2df3d5d5ae9e56c.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/gmaps/objects/null_clusterer-184ef159404bbc224e9c51150c4efa63.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/gmaps/google/builders/circle-99da4ddcaddd05a8c1097a06eeeefb90.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/gmaps/google/builders/clusterer-6d81d0eb27c8c4e24380b2aacddc8511.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/gmaps/google/builders/kml-6e2f09d2a688b881881a5f4357796aae.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/gmaps/google/builders/bound-57d3060c7fe3ce4d42931e8abf50b9dc.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/gmaps/google/builders/map-325aa8626b5a5fa44312722237e15305.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/gmaps/google/builders/marker-7432667e64b338c2c2895f4b4bd6349d.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polygon-691f759a007e4be8af9d091666d09699.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polyline-796ac5f6a3a13881730d0c4d5d10644b.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/gmaps/google/objects/bound-8b2391b8eaddc8625a459f0ce89c5c06.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/gmaps/google/objects/circle-abf49c4f2045e915f44fb1e5c99e5af7.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/gmaps/google/objects/clusterer-2f010c47b83a2b1b084e393161211ede.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/gmaps/google/objects/kml-d4d5c668f5c4f7980f33620de06e4360.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/gmaps/google/objects/map-8462fffee7e2f45f07d15346aeedfa59.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/gmaps/google/objects/marker-55c756f18e3d1226031094349eb102ec.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polygon-e9b75c55c73813811a991fd83c931218.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/gmaps/google/primitives-f49c8e12ce8f7b5e295e8f04c590a4ce.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/gmaps/google-a30741f757343b7174ebd9c5710c9591.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polyline-bd1d1f394197fdf7782eba9cdbae373b.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/home-032d050119a8f775c772bcc99282774d.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/setting-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/weather_search-4f4c418c008e4a3ac18af93c414c04ac.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/assets/application-4051289d69756784408cb4d07f6f7f3f.js?body=1" for ::1 at 2015-04-09 14:20:36 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-04-09 14:20:36 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 768ms (Views: 0.7ms)
+
+
+Started GET "/assets/rain.png" for ::1 at 2015-04-09 14:20:37 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-04-09 14:20:37 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 435ms (Views: 0.7ms)
+
+
+Started GET "/assets/rain.png" for ::1 at 2015-04-09 14:20:37 -0700
+
+
+Started GET "/assets/rain.png" for ::1 at 2015-04-09 14:20:37 -0700
+
+
+Started GET "/events/editEvent?eventId=0954f4b8f520f2ef" for ::1 at 2015-04-09 14:21:06 -0700
+Processing by EventsController#editEvent as HTML
+  Parameters: {"eventId"=>"0954f4b8f520f2ef"}
+  Rendered events/editEvent.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 1323ms (Views: 822.4ms)
+
+
+Started GET "/assets/home-710e2f8063ac272b6fb1013ee6cd8529.css?body=1" for ::1 at 2015-04-09 14:21:07 -0700
+
+
+Started GET "/assets/weather_search-afa75d34fafa6bea7c02e66ec77d1277.css?body=1" for ::1 at 2015-04-09 14:21:07 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 14:21:07 -0700
+
+
+Started GET "/assets/application-68b18d63e05b05abafa664a8a6b9d6be.css?body=1" for ::1 at 2015-04-09 14:21:07 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 14:21:07 -0700
+
+
+Started GET "/assets/setting-a12eb3aea718de85c06d7fffd817d332.css?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/gmaps/base/base-dca563082e65c8b42ab83b418286714b.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/events-4a144161f27f989cb440b08b6a36860b.css?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/gmaps/objects/base_builder-32c3edd5bf9b7fee1fb65c9a292432ed.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/gmaps/objects/builder-3a2d17758d4383c26c7c11552b91900d.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/gmaps/base-123dd305868fd1a61725551efeba068e.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/gmaps/objects/null_clusterer-184ef159404bbc224e9c51150c4efa63.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/gmaps/google/objects/common-247de1048a365563e2df3d5d5ae9e56c.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/gmaps/google/builders/bound-57d3060c7fe3ce4d42931e8abf50b9dc.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/gmaps/google/builders/kml-6e2f09d2a688b881881a5f4357796aae.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/gmaps/google/builders/circle-99da4ddcaddd05a8c1097a06eeeefb90.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/gmaps/google/builders/clusterer-6d81d0eb27c8c4e24380b2aacddc8511.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/gmaps/google/builders/map-325aa8626b5a5fa44312722237e15305.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/gmaps/google/builders/marker-7432667e64b338c2c2895f4b4bd6349d.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/underscore-d896593a6eaf631f476bf3407c295f6e.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polygon-691f759a007e4be8af9d091666d09699.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/gmaps/objects/handler-62a5722bc03f7e1805af55255244cb5c.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polyline-796ac5f6a3a13881730d0c4d5d10644b.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/gmaps/google/objects/bound-8b2391b8eaddc8625a459f0ce89c5c06.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/gmaps/google/objects/clusterer-2f010c47b83a2b1b084e393161211ede.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/gmaps/google/objects/circle-abf49c4f2045e915f44fb1e5c99e5af7.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/gmaps/google/objects/kml-d4d5c668f5c4f7980f33620de06e4360.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/gmaps/google/objects/map-8462fffee7e2f45f07d15346aeedfa59.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/gmaps/google/objects/marker-55c756f18e3d1226031094349eb102ec.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polyline-bd1d1f394197fdf7782eba9cdbae373b.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/gmaps/google/primitives-f49c8e12ce8f7b5e295e8f04c590a4ce.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/gmaps/google-a30741f757343b7174ebd9c5710c9591.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polygon-e9b75c55c73813811a991fd83c931218.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/home-032d050119a8f775c772bcc99282774d.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/setting-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/weather_search-4f4c418c008e4a3ac18af93c414c04ac.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/assets/application-4051289d69756784408cb4d07f6f7f3f.js?body=1" for ::1 at 2015-04-09 14:21:08 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-04-09 14:21:08 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 648ms (Views: 0.5ms)
+
+
+Started GET "/events/index" for ::1 at 2015-04-09 14:21:10 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 960ms (Views: 484.3ms)
+
+
+Started GET "/assets/events-4a144161f27f989cb440b08b6a36860b.css?body=1" for ::1 at 2015-04-09 14:21:11 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 14:21:11 -0700
+
+
+Started GET "/assets/home-710e2f8063ac272b6fb1013ee6cd8529.css?body=1" for ::1 at 2015-04-09 14:21:11 -0700
+
+
+Started GET "/assets/setting-a12eb3aea718de85c06d7fffd817d332.css?body=1" for ::1 at 2015-04-09 14:21:11 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 14:21:11 -0700
+
+
+Started GET "/assets/weather_search-afa75d34fafa6bea7c02e66ec77d1277.css?body=1" for ::1 at 2015-04-09 14:21:11 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 14:21:11 -0700
+
+
+Started GET "/assets/application-68b18d63e05b05abafa664a8a6b9d6be.css?body=1" for ::1 at 2015-04-09 14:21:11 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 14:21:11 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 14:21:11 -0700
+
+
+Started GET "/assets/underscore-d896593a6eaf631f476bf3407c295f6e.js?body=1" for ::1 at 2015-04-09 14:21:11 -0700
+
+
+Started GET "/assets/gmaps/base-123dd305868fd1a61725551efeba068e.js?body=1" for ::1 at 2015-04-09 14:21:11 -0700
+
+
+Started GET "/assets/gmaps/base/base-dca563082e65c8b42ab83b418286714b.js?body=1" for ::1 at 2015-04-09 14:21:11 -0700
+
+
+Started GET "/assets/gmaps/objects/builder-3a2d17758d4383c26c7c11552b91900d.js?body=1" for ::1 at 2015-04-09 14:21:11 -0700
+
+
+Started GET "/assets/gmaps/objects/handler-62a5722bc03f7e1805af55255244cb5c.js?body=1" for ::1 at 2015-04-09 14:21:11 -0700
+
+
+Started GET "/assets/gmaps/objects/base_builder-32c3edd5bf9b7fee1fb65c9a292432ed.js?body=1" for ::1 at 2015-04-09 14:21:12 -0700
+
+
+Started GET "/assets/gmaps/google/builders/kml-6e2f09d2a688b881881a5f4357796aae.js?body=1" for ::1 at 2015-04-09 14:21:12 -0700
+
+
+Started GET "/assets/gmaps/google/builders/map-325aa8626b5a5fa44312722237e15305.js?body=1" for ::1 at 2015-04-09 14:21:12 -0700
+
+
+Started GET "/assets/gmaps/google/builders/marker-7432667e64b338c2c2895f4b4bd6349d.js?body=1" for ::1 at 2015-04-09 14:21:12 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polygon-691f759a007e4be8af9d091666d09699.js?body=1" for ::1 at 2015-04-09 14:21:12 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polyline-796ac5f6a3a13881730d0c4d5d10644b.js?body=1" for ::1 at 2015-04-09 14:21:12 -0700
+
+
+Started GET "/assets/gmaps/google/objects/common-247de1048a365563e2df3d5d5ae9e56c.js?body=1" for ::1 at 2015-04-09 14:21:12 -0700
+
+
+Started GET "/assets/gmaps/google/objects/bound-8b2391b8eaddc8625a459f0ce89c5c06.js?body=1" for ::1 at 2015-04-09 14:21:12 -0700
+
+
+Started GET "/assets/gmaps/google/objects/clusterer-2f010c47b83a2b1b084e393161211ede.js?body=1" for ::1 at 2015-04-09 14:21:12 -0700
+
+
+Started GET "/assets/gmaps/google/objects/circle-abf49c4f2045e915f44fb1e5c99e5af7.js?body=1" for ::1 at 2015-04-09 14:21:12 -0700
+
+
+Started GET "/assets/gmaps/google/objects/kml-d4d5c668f5c4f7980f33620de06e4360.js?body=1" for ::1 at 2015-04-09 14:21:12 -0700
+
+
+Started GET "/assets/gmaps/objects/null_clusterer-184ef159404bbc224e9c51150c4efa63.js?body=1" for ::1 at 2015-04-09 14:21:12 -0700
+
+
+Started GET "/assets/gmaps/google/builders/circle-99da4ddcaddd05a8c1097a06eeeefb90.js?body=1" for ::1 at 2015-04-09 14:21:12 -0700
+
+
+Started GET "/assets/gmaps/google/builders/bound-57d3060c7fe3ce4d42931e8abf50b9dc.js?body=1" for ::1 at 2015-04-09 14:21:12 -0700
+
+
+Started GET "/assets/gmaps/google/builders/clusterer-6d81d0eb27c8c4e24380b2aacddc8511.js?body=1" for ::1 at 2015-04-09 14:21:12 -0700
+
+
+Started GET "/assets/gmaps/google/objects/marker-55c756f18e3d1226031094349eb102ec.js?body=1" for ::1 at 2015-04-09 14:21:12 -0700
+
+
+Started GET "/assets/gmaps/google/objects/map-8462fffee7e2f45f07d15346aeedfa59.js?body=1" for ::1 at 2015-04-09 14:21:12 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polygon-e9b75c55c73813811a991fd83c931218.js?body=1" for ::1 at 2015-04-09 14:21:12 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polyline-bd1d1f394197fdf7782eba9cdbae373b.js?body=1" for ::1 at 2015-04-09 14:21:12 -0700
+
+
+Started GET "/assets/gmaps/google-a30741f757343b7174ebd9c5710c9591.js?body=1" for ::1 at 2015-04-09 14:21:12 -0700
+
+
+Started GET "/assets/gmaps/google/primitives-f49c8e12ce8f7b5e295e8f04c590a4ce.js?body=1" for ::1 at 2015-04-09 14:21:12 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:21:12 -0700
+
+
+Started GET "/assets/home-032d050119a8f775c772bcc99282774d.js?body=1" for ::1 at 2015-04-09 14:21:12 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:21:12 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:21:12 -0700
+
+
+Started GET "/assets/setting-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:21:12 -0700
+
+
+Started GET "/assets/weather_search-4f4c418c008e4a3ac18af93c414c04ac.js?body=1" for ::1 at 2015-04-09 14:21:12 -0700
+
+
+Started GET "/assets/application-4051289d69756784408cb4d07f6f7f3f.js?body=1" for ::1 at 2015-04-09 14:21:12 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-04-09 14:21:12 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 686ms (Views: 0.4ms)
+
+
+Started GET "/events/showEvent" for ::1 at 2015-04-09 14:21:12 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 521ms (Views: 0.8ms)
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 14:22:35 -0700
+
+
+Started GET "/assets/events-4a144161f27f989cb440b08b6a36860b.css?body=1" for ::1 at 2015-04-09 14:22:35 -0700
+
+
+Started GET "/assets/home-710e2f8063ac272b6fb1013ee6cd8529.css?body=1" for ::1 at 2015-04-09 14:22:35 -0700
+
+
+Started GET "/assets/application-68b18d63e05b05abafa664a8a6b9d6be.css?body=1" for ::1 at 2015-04-09 14:22:35 -0700
+
+
+Started GET "/assets/setting-a12eb3aea718de85c06d7fffd817d332.css?body=1" for ::1 at 2015-04-09 14:22:35 -0700
+
+
+Started GET "/assets/weather_search-afa75d34fafa6bea7c02e66ec77d1277.css?body=1" for ::1 at 2015-04-09 14:22:35 -0700
+
+
+Started GET "/assets/underscore-min.map" for ::1 at 2015-04-09 14:22:35 -0700
+
+ActionController::RoutingError (No route matches [GET] "/assets/underscore-min.map"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (73.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (25.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (54.4ms)
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 14:22:35 -0700
+
+
+Started GET "/events/index" for ::1 at 2015-04-09 14:22:39 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 1686ms (Views: 506.7ms)
+
+
+Started GET "/assets/events-4a144161f27f989cb440b08b6a36860b.css?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/setting-a12eb3aea718de85c06d7fffd817d332.css?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/weather_search-afa75d34fafa6bea7c02e66ec77d1277.css?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/home-710e2f8063ac272b6fb1013ee6cd8529.css?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/application-68b18d63e05b05abafa664a8a6b9d6be.css?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/underscore-d896593a6eaf631f476bf3407c295f6e.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/gmaps/base-123dd305868fd1a61725551efeba068e.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/gmaps/objects/base_builder-32c3edd5bf9b7fee1fb65c9a292432ed.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/gmaps/base/base-dca563082e65c8b42ab83b418286714b.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/gmaps/objects/handler-62a5722bc03f7e1805af55255244cb5c.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/gmaps/google/objects/common-247de1048a365563e2df3d5d5ae9e56c.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/gmaps/objects/null_clusterer-184ef159404bbc224e9c51150c4efa63.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/gmaps/objects/builder-3a2d17758d4383c26c7c11552b91900d.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/gmaps/google/builders/clusterer-6d81d0eb27c8c4e24380b2aacddc8511.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/gmaps/google/builders/bound-57d3060c7fe3ce4d42931e8abf50b9dc.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/gmaps/google/builders/circle-99da4ddcaddd05a8c1097a06eeeefb90.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/gmaps/google/builders/kml-6e2f09d2a688b881881a5f4357796aae.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polygon-691f759a007e4be8af9d091666d09699.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/gmaps/google/builders/marker-7432667e64b338c2c2895f4b4bd6349d.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polyline-796ac5f6a3a13881730d0c4d5d10644b.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/gmaps/google/builders/map-325aa8626b5a5fa44312722237e15305.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/gmaps/google/objects/bound-8b2391b8eaddc8625a459f0ce89c5c06.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/gmaps/google/objects/circle-abf49c4f2045e915f44fb1e5c99e5af7.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/gmaps/google/objects/clusterer-2f010c47b83a2b1b084e393161211ede.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/gmaps/google/objects/kml-d4d5c668f5c4f7980f33620de06e4360.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/gmaps/google/objects/map-8462fffee7e2f45f07d15346aeedfa59.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/gmaps/google/objects/marker-55c756f18e3d1226031094349eb102ec.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polygon-e9b75c55c73813811a991fd83c931218.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polyline-bd1d1f394197fdf7782eba9cdbae373b.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/gmaps/google/primitives-f49c8e12ce8f7b5e295e8f04c590a4ce.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/gmaps/google-a30741f757343b7174ebd9c5710c9591.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/home-032d050119a8f775c772bcc99282774d.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/setting-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/weather_search-4f4c418c008e4a3ac18af93c414c04ac.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/application-4051289d69756784408cb4d07f6f7f3f.js?body=1" for ::1 at 2015-04-09 14:22:41 -0700
+
+
+Started GET "/assets/underscore-min.map" for ::1 at 2015-04-09 14:22:41 -0700
+
+ActionController::RoutingError (No route matches [GET] "/assets/underscore-min.map"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (48.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (17.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (39.4ms)
+
+
+Started GET "/events/showEvent" for ::1 at 2015-04-09 14:22:41 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 574ms (Views: 0.6ms)
+
+
+Started GET "/events/showEvent" for ::1 at 2015-04-09 14:22:42 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 777ms (Views: 0.3ms)
+
+
+Started GET "/assets/rain.png" for ::1 at 2015-04-09 14:22:43 -0700
+
+
+Started GET "/assets/rain.png" for ::1 at 2015-04-09 14:22:43 -0700
+
+
+Started GET "/assets/rain.png" for ::1 at 2015-04-09 14:22:43 -0700
+
+
+Started GET "/events/index" for ::1 at 2015-04-09 14:23:06 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 1769ms (Views: 698.4ms)
+
+
+Started GET "/assets/events-4a144161f27f989cb440b08b6a36860b.css?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/home-710e2f8063ac272b6fb1013ee6cd8529.css?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/setting-a12eb3aea718de85c06d7fffd817d332.css?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/weather_search-afa75d34fafa6bea7c02e66ec77d1277.css?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/application-68b18d63e05b05abafa664a8a6b9d6be.css?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/underscore-d896593a6eaf631f476bf3407c295f6e.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/gmaps/base-123dd305868fd1a61725551efeba068e.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/gmaps/base/base-dca563082e65c8b42ab83b418286714b.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/gmaps/objects/base_builder-32c3edd5bf9b7fee1fb65c9a292432ed.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/gmaps/objects/builder-3a2d17758d4383c26c7c11552b91900d.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/gmaps/objects/handler-62a5722bc03f7e1805af55255244cb5c.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/gmaps/objects/null_clusterer-184ef159404bbc224e9c51150c4efa63.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/gmaps/google/builders/circle-99da4ddcaddd05a8c1097a06eeeefb90.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/gmaps/google/builders/bound-57d3060c7fe3ce4d42931e8abf50b9dc.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/gmaps/google/objects/common-247de1048a365563e2df3d5d5ae9e56c.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/gmaps/google/builders/clusterer-6d81d0eb27c8c4e24380b2aacddc8511.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/gmaps/google/builders/kml-6e2f09d2a688b881881a5f4357796aae.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/gmaps/google/builders/map-325aa8626b5a5fa44312722237e15305.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/gmaps/google/builders/marker-7432667e64b338c2c2895f4b4bd6349d.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polygon-691f759a007e4be8af9d091666d09699.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/gmaps/google/objects/bound-8b2391b8eaddc8625a459f0ce89c5c06.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polyline-796ac5f6a3a13881730d0c4d5d10644b.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/gmaps/google/objects/circle-abf49c4f2045e915f44fb1e5c99e5af7.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/gmaps/google/objects/clusterer-2f010c47b83a2b1b084e393161211ede.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/gmaps/google/objects/kml-d4d5c668f5c4f7980f33620de06e4360.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/gmaps/google/objects/marker-55c756f18e3d1226031094349eb102ec.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/gmaps/google/objects/map-8462fffee7e2f45f07d15346aeedfa59.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polygon-e9b75c55c73813811a991fd83c931218.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polyline-bd1d1f394197fdf7782eba9cdbae373b.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/gmaps/google/primitives-f49c8e12ce8f7b5e295e8f04c590a4ce.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/gmaps/google-a30741f757343b7174ebd9c5710c9591.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/home-032d050119a8f775c772bcc99282774d.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/setting-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/weather_search-4f4c418c008e4a3ac18af93c414c04ac.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/application-4051289d69756784408cb4d07f6f7f3f.js?body=1" for ::1 at 2015-04-09 14:23:08 -0700
+
+
+Started GET "/assets/underscore-min.map" for ::1 at 2015-04-09 14:23:08 -0700
+
+ActionController::RoutingError (No route matches [GET] "/assets/underscore-min.map"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (11.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (127.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (30.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (96.6ms)
+
+
+Started GET "/events/showEvent" for ::1 at 2015-04-09 14:23:09 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 763ms (Views: 1.0ms)
+
+
+Started GET "/events/showEvent" for ::1 at 2015-04-09 14:23:09 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 795ms (Views: 0.5ms)
+
+
+Started GET "/assets/rain.png" for ::1 at 2015-04-09 14:23:10 -0700
+
+
+Started GET "/assets/rain.png" for ::1 at 2015-04-09 14:23:10 -0700
+
+
+Started GET "/assets/rain.png" for ::1 at 2015-04-09 14:23:10 -0700
+
+
+Started GET "/assets/rain.png" for ::1 at 2015-04-09 14:23:10 -0700
+
+
+Started GET "/assets/rain.png" for ::1 at 2015-04-09 14:23:10 -0700
+
+
+Started GET "/assets/rain.png" for ::1 at 2015-04-09 14:23:11 -0700
+
+
+Started GET "/events/index" for ::1 at 2015-04-09 14:40:54 -0700
+Processing by EventsController#index as HTML
+Completed 500 Internal Server Error in 1100ms
+
+NameError (undefined local variable or method `returnData' for #<EventsController:0x007f88ecddf500>):
+  app/controllers/events_controller.rb:20:in `block in index'
+  app/controllers/events_controller.rb:15:in `each'
+  app/controllers/events_controller.rb:15:in `index'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (91.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (32.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (2.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (65.8ms)
+
+
+Started GET "/events/index" for ::1 at 2015-04-09 14:41:18 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 1634ms (Views: 483.7ms)
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/events-4a144161f27f989cb440b08b6a36860b.css?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/home-710e2f8063ac272b6fb1013ee6cd8529.css?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/setting-a12eb3aea718de85c06d7fffd817d332.css?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/weather_search-afa75d34fafa6bea7c02e66ec77d1277.css?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/gmaps/objects/base_builder-32c3edd5bf9b7fee1fb65c9a292432ed.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/application-68b18d63e05b05abafa664a8a6b9d6be.css?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/underscore-d896593a6eaf631f476bf3407c295f6e.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/gmaps/base/base-dca563082e65c8b42ab83b418286714b.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/gmaps/base-123dd305868fd1a61725551efeba068e.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/gmaps/objects/null_clusterer-184ef159404bbc224e9c51150c4efa63.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/gmaps/google/builders/bound-57d3060c7fe3ce4d42931e8abf50b9dc.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/gmaps/google/objects/common-247de1048a365563e2df3d5d5ae9e56c.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/gmaps/objects/handler-62a5722bc03f7e1805af55255244cb5c.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/gmaps/objects/builder-3a2d17758d4383c26c7c11552b91900d.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/gmaps/google/builders/circle-99da4ddcaddd05a8c1097a06eeeefb90.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/gmaps/google/builders/clusterer-6d81d0eb27c8c4e24380b2aacddc8511.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/gmaps/google/builders/kml-6e2f09d2a688b881881a5f4357796aae.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/gmaps/google/builders/map-325aa8626b5a5fa44312722237e15305.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/gmaps/google/builders/marker-7432667e64b338c2c2895f4b4bd6349d.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polygon-691f759a007e4be8af9d091666d09699.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polyline-796ac5f6a3a13881730d0c4d5d10644b.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/gmaps/google/objects/circle-abf49c4f2045e915f44fb1e5c99e5af7.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/gmaps/google/objects/clusterer-2f010c47b83a2b1b084e393161211ede.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/gmaps/google/objects/kml-d4d5c668f5c4f7980f33620de06e4360.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/gmaps/google/objects/bound-8b2391b8eaddc8625a459f0ce89c5c06.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/gmaps/google/objects/map-8462fffee7e2f45f07d15346aeedfa59.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/gmaps/google/objects/marker-55c756f18e3d1226031094349eb102ec.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polygon-e9b75c55c73813811a991fd83c931218.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polyline-bd1d1f394197fdf7782eba9cdbae373b.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/gmaps/google/primitives-f49c8e12ce8f7b5e295e8f04c590a4ce.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/gmaps/google-a30741f757343b7174ebd9c5710c9591.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/home-032d050119a8f775c772bcc99282774d.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/setting-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/weather_search-4f4c418c008e4a3ac18af93c414c04ac.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/assets/application-4051289d69756784408cb4d07f6f7f3f.js?body=1" for ::1 at 2015-04-09 14:41:20 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-04-09 14:41:20 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 638ms (Views: 0.4ms)
+
+
+Started GET "/assets/rain.png" for ::1 at 2015-04-09 14:41:21 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-04-09 14:41:21 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 623ms (Views: 0.6ms)
+
+
+Started GET "/assets/rain.png" for ::1 at 2015-04-09 14:41:22 -0700
+
+
+Started GET "/assets/rain.png" for ::1 at 2015-04-09 14:41:22 -0700
+
+
+Started GET "/events/index" for ::1 at 2015-04-09 14:42:06 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 1272ms (Views: 455.4ms)
+
+
+Started GET "/assets/events-4a144161f27f989cb440b08b6a36860b.css?body=1" for ::1 at 2015-04-09 14:42:07 -0700
+
+
+Started GET "/assets/home-710e2f8063ac272b6fb1013ee6cd8529.css?body=1" for ::1 at 2015-04-09 14:42:07 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 14:42:07 -0700
+
+
+Started GET "/assets/setting-a12eb3aea718de85c06d7fffd817d332.css?body=1" for ::1 at 2015-04-09 14:42:07 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 14:42:07 -0700
+
+
+Started GET "/assets/application-68b18d63e05b05abafa664a8a6b9d6be.css?body=1" for ::1 at 2015-04-09 14:42:07 -0700
+
+
+Started GET "/assets/weather_search-afa75d34fafa6bea7c02e66ec77d1277.css?body=1" for ::1 at 2015-04-09 14:42:07 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 14:42:07 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 14:42:07 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 14:42:07 -0700
+
+
+Started GET "/assets/underscore-d896593a6eaf631f476bf3407c295f6e.js?body=1" for ::1 at 2015-04-09 14:42:07 -0700
+
+
+Started GET "/assets/gmaps/base-123dd305868fd1a61725551efeba068e.js?body=1" for ::1 at 2015-04-09 14:42:07 -0700
+
+
+Started GET "/assets/gmaps/base/base-dca563082e65c8b42ab83b418286714b.js?body=1" for ::1 at 2015-04-09 14:42:07 -0700
+
+
+Started GET "/assets/gmaps/objects/base_builder-32c3edd5bf9b7fee1fb65c9a292432ed.js?body=1" for ::1 at 2015-04-09 14:42:07 -0700
+
+
+Started GET "/assets/gmaps/objects/builder-3a2d17758d4383c26c7c11552b91900d.js?body=1" for ::1 at 2015-04-09 14:42:07 -0700
+
+
+Started GET "/assets/gmaps/objects/handler-62a5722bc03f7e1805af55255244cb5c.js?body=1" for ::1 at 2015-04-09 14:42:07 -0700
+
+
+Started GET "/assets/gmaps/objects/null_clusterer-184ef159404bbc224e9c51150c4efa63.js?body=1" for ::1 at 2015-04-09 14:42:07 -0700
+
+
+Started GET "/assets/gmaps/google/objects/common-247de1048a365563e2df3d5d5ae9e56c.js?body=1" for ::1 at 2015-04-09 14:42:07 -0700
+
+
+Started GET "/assets/gmaps/google/builders/bound-57d3060c7fe3ce4d42931e8abf50b9dc.js?body=1" for ::1 at 2015-04-09 14:42:07 -0700
+
+
+Started GET "/assets/gmaps/google/builders/circle-99da4ddcaddd05a8c1097a06eeeefb90.js?body=1" for ::1 at 2015-04-09 14:42:07 -0700
+
+
+Started GET "/assets/gmaps/google/builders/clusterer-6d81d0eb27c8c4e24380b2aacddc8511.js?body=1" for ::1 at 2015-04-09 14:42:07 -0700
+
+
+Started GET "/assets/gmaps/google/builders/kml-6e2f09d2a688b881881a5f4357796aae.js?body=1" for ::1 at 2015-04-09 14:42:07 -0700
+
+
+Started GET "/assets/gmaps/google/builders/map-325aa8626b5a5fa44312722237e15305.js?body=1" for ::1 at 2015-04-09 14:42:07 -0700
+
+
+Started GET "/assets/gmaps/google/builders/marker-7432667e64b338c2c2895f4b4bd6349d.js?body=1" for ::1 at 2015-04-09 14:42:07 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polygon-691f759a007e4be8af9d091666d09699.js?body=1" for ::1 at 2015-04-09 14:42:07 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polyline-796ac5f6a3a13881730d0c4d5d10644b.js?body=1" for ::1 at 2015-04-09 14:42:07 -0700
+
+
+Started GET "/assets/gmaps/google/objects/bound-8b2391b8eaddc8625a459f0ce89c5c06.js?body=1" for ::1 at 2015-04-09 14:42:07 -0700
+
+
+Started GET "/assets/gmaps/google/objects/circle-abf49c4f2045e915f44fb1e5c99e5af7.js?body=1" for ::1 at 2015-04-09 14:42:07 -0700
+
+
+Started GET "/assets/gmaps/google/objects/clusterer-2f010c47b83a2b1b084e393161211ede.js?body=1" for ::1 at 2015-04-09 14:42:07 -0700
+
+
+Started GET "/assets/gmaps/google/objects/kml-d4d5c668f5c4f7980f33620de06e4360.js?body=1" for ::1 at 2015-04-09 14:42:07 -0700
+
+
+Started GET "/assets/gmaps/google/objects/map-8462fffee7e2f45f07d15346aeedfa59.js?body=1" for ::1 at 2015-04-09 14:42:07 -0700
+
+
+Started GET "/assets/gmaps/google/objects/marker-55c756f18e3d1226031094349eb102ec.js?body=1" for ::1 at 2015-04-09 14:42:07 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polygon-e9b75c55c73813811a991fd83c931218.js?body=1" for ::1 at 2015-04-09 14:42:08 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polyline-bd1d1f394197fdf7782eba9cdbae373b.js?body=1" for ::1 at 2015-04-09 14:42:08 -0700
+
+
+Started GET "/assets/gmaps/google-a30741f757343b7174ebd9c5710c9591.js?body=1" for ::1 at 2015-04-09 14:42:08 -0700
+
+
+Started GET "/assets/gmaps/google/primitives-f49c8e12ce8f7b5e295e8f04c590a4ce.js?body=1" for ::1 at 2015-04-09 14:42:08 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:42:08 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:42:08 -0700
+
+
+Started GET "/assets/home-032d050119a8f775c772bcc99282774d.js?body=1" for ::1 at 2015-04-09 14:42:08 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:42:08 -0700
+
+
+Started GET "/assets/setting-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:42:08 -0700
+
+
+Started GET "/assets/weather_search-4f4c418c008e4a3ac18af93c414c04ac.js?body=1" for ::1 at 2015-04-09 14:42:08 -0700
+
+
+Started GET "/assets/application-4051289d69756784408cb4d07f6f7f3f.js?body=1" for ::1 at 2015-04-09 14:42:08 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-04-09 14:42:08 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 641ms (Views: 0.4ms)
+
+
+Started GET "/assets/rain.png" for ::1 at 2015-04-09 14:42:08 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-04-09 14:42:08 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 472ms (Views: 0.5ms)
+
+
+Started GET "/assets/rain.png" for ::1 at 2015-04-09 14:42:09 -0700
+
+
+Started GET "/assets/rain.png" for ::1 at 2015-04-09 14:42:09 -0700
+
+
+Started GET "/events/index" for ::1 at 2015-04-09 14:44:42 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 1265ms (Views: 525.1ms)
+
+
+Started GET "/assets/events-4a144161f27f989cb440b08b6a36860b.css?body=1" for ::1 at 2015-04-09 14:44:43 -0700
+
+
+Started GET "/assets/fav_cities-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 14:44:43 -0700
+
+
+Started GET "/assets/setting-a12eb3aea718de85c06d7fffd817d332.css?body=1" for ::1 at 2015-04-09 14:44:43 -0700
+
+
+Started GET "/assets/home-710e2f8063ac272b6fb1013ee6cd8529.css?body=1" for ::1 at 2015-04-09 14:44:43 -0700
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-09 14:44:43 -0700
+
+
+Started GET "/assets/weather_search-afa75d34fafa6bea7c02e66ec77d1277.css?body=1" for ::1 at 2015-04-09 14:44:43 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-09 14:44:43 -0700
+
+
+Started GET "/assets/application-68b18d63e05b05abafa664a8a6b9d6be.css?body=1" for ::1 at 2015-04-09 14:44:43 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-09 14:44:43 -0700
+
+
+Started GET "/assets/gmaps/base-123dd305868fd1a61725551efeba068e.js?body=1" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/assets/underscore-d896593a6eaf631f476bf3407c295f6e.js?body=1" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/assets/gmaps/objects/base_builder-32c3edd5bf9b7fee1fb65c9a292432ed.js?body=1" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/assets/gmaps/base/base-dca563082e65c8b42ab83b418286714b.js?body=1" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/assets/gmaps/objects/builder-3a2d17758d4383c26c7c11552b91900d.js?body=1" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/assets/gmaps/objects/handler-62a5722bc03f7e1805af55255244cb5c.js?body=1" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/assets/gmaps/objects/null_clusterer-184ef159404bbc224e9c51150c4efa63.js?body=1" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/assets/gmaps/google/objects/common-247de1048a365563e2df3d5d5ae9e56c.js?body=1" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/assets/gmaps/google/builders/bound-57d3060c7fe3ce4d42931e8abf50b9dc.js?body=1" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/assets/gmaps/google/builders/circle-99da4ddcaddd05a8c1097a06eeeefb90.js?body=1" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/assets/gmaps/google/builders/clusterer-6d81d0eb27c8c4e24380b2aacddc8511.js?body=1" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/assets/gmaps/google/builders/kml-6e2f09d2a688b881881a5f4357796aae.js?body=1" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/assets/gmaps/google/builders/map-325aa8626b5a5fa44312722237e15305.js?body=1" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/assets/gmaps/google/builders/marker-7432667e64b338c2c2895f4b4bd6349d.js?body=1" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polygon-691f759a007e4be8af9d091666d09699.js?body=1" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polyline-796ac5f6a3a13881730d0c4d5d10644b.js?body=1" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/assets/gmaps/google/objects/bound-8b2391b8eaddc8625a459f0ce89c5c06.js?body=1" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/assets/gmaps/google/objects/circle-abf49c4f2045e915f44fb1e5c99e5af7.js?body=1" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/assets/gmaps/google/objects/clusterer-2f010c47b83a2b1b084e393161211ede.js?body=1" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/assets/gmaps/google/objects/kml-d4d5c668f5c4f7980f33620de06e4360.js?body=1" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/assets/gmaps/google/objects/map-8462fffee7e2f45f07d15346aeedfa59.js?body=1" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/assets/gmaps/google/objects/marker-55c756f18e3d1226031094349eb102ec.js?body=1" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polygon-e9b75c55c73813811a991fd83c931218.js?body=1" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polyline-bd1d1f394197fdf7782eba9cdbae373b.js?body=1" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/assets/gmaps/google/primitives-f49c8e12ce8f7b5e295e8f04c590a4ce.js?body=1" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/assets/gmaps/google-a30741f757343b7174ebd9c5710c9591.js?body=1" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/assets/events-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/assets/fav_cities-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/assets/home-032d050119a8f775c772bcc99282774d.js?body=1" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/assets/setting-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/assets/weather_search-4f4c418c008e4a3ac18af93c414c04ac.js?body=1" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/assets/application-4051289d69756784408cb4d07f6f7f3f.js?body=1" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-04-09 14:44:44 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 461ms (Views: 0.8ms)
+
+
+Started GET "/assets/rain.png" for ::1 at 2015-04-09 14:44:44 -0700
+
+
+Started GET "/events/showEvent" for ::1 at 2015-04-09 14:44:44 -0700
+Processing by EventsController#showEvent as JSON
+Completed 200 OK in 378ms (Views: 0.6ms)
+
+
+Started GET "/assets/rain.png" for ::1 at 2015-04-09 14:44:45 -0700
+
+
+Started GET "/assets/rain.png" for ::1 at 2015-04-09 14:44:45 -0700
+
+
+Started GET "/events/index" for ::1 at 2015-04-09 14:44:46 -0700
+Processing by EventsController#index as HTML
+  Rendered events/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 1190ms (Views: 567.7ms)
+
+
+Started GET "/events/test" for ::1 at 2015-04-09 14:44:47 -0700
+
+ActionController::RoutingError (No route matches [GET] "/events/test"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (56.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (24.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (54.8ms)
+
+
+Started GET "/events/showEvent" for ::1 at 2015-04-09 14:45:19 -0700
+Processing by EventsController#showEvent as HTML
+Completed 200 OK in 638ms (Views: 0.6ms)
+
+
+Started GET "/events/test" for ::1 at 2015-04-09 14:46:02 -0700
+
+ActionController::RoutingError (No route matches [GET] "/events/test"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (48.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (16.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (39.4ms)
+
+
+Started GET "/events/test" for ::1 at 2015-04-09 14:46:04 -0700
+
+ActionController::RoutingError (No route matches [GET] "/events/test"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (49.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (72.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (87.7ms)
+
+
+Started GET "/events/test" for ::1 at 2015-04-09 14:47:58 -0700
+
+ActionController::RoutingError (No route matches [GET] "/events/test"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (63.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (27.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (59.6ms)
+
+
+Started GET "/events/testEvent" for ::1 at 2015-04-09 14:48:00 -0700
+
+AbstractController::ActionNotFound (The action 'testEvent' could not be found for EventsController):
+  actionpack (4.2.0) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/builder.rb:59:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (15.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (40.1ms)
+
+
+Started GET "/events/testEvent" for ::1 at 2015-04-09 14:48:01 -0700
+
+AbstractController::ActionNotFound (The action 'testEvent' could not be found for EventsController):
+  actionpack (4.2.0) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/builder.rb:59:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (19.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (39.4ms)
+
+
+Started GET "/events/testEvent" for ::1 at 2015-04-09 14:48:06 -0700
+Processing by EventsController#testEvent as HTML
+Completed 200 OK in 689ms (Views: 2.5ms)
+
+
+Started GET "/events/testEvent" for ::1 at 2015-04-09 14:48:30 -0700
+Processing by EventsController#testEvent as HTML
+Completed 200 OK in 726ms (Views: 57.5ms)
