@@ -20,9 +20,9 @@ class EventsController < ApplicationController
         endDateUnix = Date.parse( event['value']['endDate'] ).to_time.to_i;
 
         weather = OrchestrateDatabase.getCityWeatherData( Geocoder.getGeoInfo( @allEvents[0]['value']['location'] ) );
-        dailyWeather = weather['daily_this_week']['data'];
+        @dailyWeather = weather['daily_this_week']['data'];
 
-        dailyWeather.each do |day|
+        @dailyWeather.each do |day|
           if day['time'] == startDateUnix
             event['value']['weatherSummary'] = day['summary'];
             event['value']['icon'] = day['icon'];
